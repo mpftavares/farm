@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
-import Campaigns from './components/Campaigns.jsx';
-import Contacts from './components/Contacts.jsx';
-import Home from './components/Home.jsx';
-import NotFound from './components/NotFound.jsx';
-import Services from './components/Services.jsx';
+import Adress from './pages/Adress.jsx';
+import Contacts from './pages/Contacts.jsx';
+import Home from './pages/Home.jsx';
+import NotFound from './pages/NotFound.jsx';
+import Sales from './pages/Sales.jsx';
+import Services from './pages/Services.jsx';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -27,11 +28,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 						path="/services"
 						element={<Services />}></Route>
 					<Route
-						path="/campaigns"
-						element={<Campaigns />}></Route>
+						path="/sales"
+						element={<Sales />}></Route>
 					<Route
-						path="/location"
-						element={<Location />}></Route>
+						path="/adress"
+						element={<Adress />}></Route>
             <Route
 						path="/contacts"
 						element={<Contacts />}></Route>

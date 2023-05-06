@@ -1,6 +1,6 @@
 
 
-export default function Campaigns() {
+export default function Sales() {
   return (
     <div>Campaigns</div>
   )
