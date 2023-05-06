@@ -1,24 +1,29 @@
-import { useState } from "react";
-import Hamburguer from "./Hamburguer";
-import Nav from "./Nav";
-
+import { useState } from 'react';
+import Hamburguer from './Hamburguer';
+import Logo from './Logo';
+import Nav from './Nav';
 
 export default function Header() {
-
 	const [showNav, setShowNav] = useState(false);
-  const [burguerIcon, setBurguerIcon] = useState('menu')
 
-  
-  const hamburguerIcon = showNav ? setBurguerIcon('close') : setBurguerIcon('menu') ;
+	const hamburguerIcon = showNav ? 'close' : 'menu';
 
-  const handleHamburguerClick = () => {
+  const handleNavClick = () => {
     setShowNav(!showNav);
   }
 
-  return (
-<header>
-      <Hamburguer onClick={handleHamburguerClick} icon={hamburguerIcon}/>
-      {showNav ? <Nav /> : <></>}
-</header>
-  )
+  const navClass = showNav ? 'nav' : 'nav hide-m';
+
+	return (
+		<div className='header'>
+			<header className="header-m">
+				<Logo className="logo" />
+				<Hamburguer
+					onClick={handleNavClick}
+					icon={hamburguerIcon}
+				/>
+			</header>
+			<Nav onClick={handleNavClick} className={navClass} />
+		</div>
+	);
 }
