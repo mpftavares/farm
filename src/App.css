@@ -110,6 +110,10 @@
   cursor: pointer;
 }
 
+.map {
+  height: 300px;
+}
+
 * {
   margin: 0;
   padding: 0;

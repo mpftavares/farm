@@ -1,7 +1,11 @@
+import Map from "../components/Map";
 
 
 export default function Adress() {
   return (
-    <div>Location</div>
+
+    <div className="map">
+      <Map/>
+    </div>
   )
 }
