@@ -16,7 +16,7 @@ export default function Header() {
 
 	return (
 		<div className='header'>
-			<header className="header-m">
+			<header className="header-mobile">
 				<Logo className="logo" />
 				<Hamburguer
 					onClick={handleNavClick}

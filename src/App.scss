@@ -1,4 +1,6 @@
-@import 'variables';
+@import 'scss/variables';
+@import 'scss/header';
+@import 'scss/form';
 
 * {
 	margin: 0;
@@ -10,8 +12,8 @@
 }
 
 img {
-	width: 100%;
-	height: auto;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 body {
@@ -19,88 +21,18 @@ body {
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
-.header {
-	@media (min-width: $laptop) {
-        padding: 1em;
-		display: flex;
-        justify-content: space-between;
+.container {
+	padding: 1em;
+	border-radius: $radius;
+    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+	h1 {
+		margin: .5em 0 1em 0;
+		color: $dark-color-transparent;
 	}
-}
-
-.header-m {
-	padding: 0 1em;
-	max-height: 20vh;
-	gap: 2em;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	background-color: $primary-color;
-	box-shadow: 0px 0px 10px $primary-color;
-
-	@media (min-width: $laptop) {
-		background-color: $light-color;
-		box-shadow: none;
-        padding: 0;
-	}
-
-	.logo {
-		height: 10vh;
-		width: 30vh;
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
-
-		@media (min-width: $laptop) {
-            width: 20vh;
-			background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
-		}
-	}
-
-	.hamburguer {
-		color: $light-color;
-		cursor: pointer;
-
-		@media (min-width: $laptop) {
-			display: none;
-		}
-	}
-}
-
-.nav {
-	display: flex;
-	flex-direction: column;
-    background-color: $secondary-color;
-    @media (min-width: $laptop) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1em;
-
-        background-color: transparent;
-        padding: 2em;
-    }
-
-    a{
-        padding: .5em;
-        color: $light-color;
-
-        &:hover {
-            background-color: $primary-color-transparent;
-        }
-
-        @media (min-width: $laptop) {
-            color: $dark-color;
-            &:hover {
-                background-color: transparent;
-            }
-        }
-    }
 }
 
 .outlet {

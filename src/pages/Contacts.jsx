@@ -1,7 +1,8 @@
+import Form from "../components/Form";
 
 
 export default function Contacts() {
   return (
-    <div>Contacts</div>
+    <div><Form/></div>
   )
 }

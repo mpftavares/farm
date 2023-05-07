@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function Nav({ onClick, className }) {
 	return (
 		<nav className={className} onClick={onClick}>
-			<Link to="/home">Home</Link>
-			<Link to="/services">Serviços</Link>
-			<Link to="/sales">Promoções</Link>
-			<Link to="/adress">Localização</Link>
-			<Link to="/contacts">Contactos</Link>
+			<NavLink to="/home">Home</NavLink>
+			<NavLink to="/services">Serviços</NavLink>
+			<NavLink to="/sales">Promoções</NavLink>
+			<NavLink to="/adress">Localização</NavLink>
+			<NavLink to="/contacts">Contactos</NavLink>
 		</nav>
 	);
 }

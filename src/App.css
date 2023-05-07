@@ -1,25 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-body {
-  font-family: "Asap", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
 @media (min-width: 768px) {
   .header {
     padding: 1em;
@@ -27,8 +5,7 @@ a {
     justify-content: space-between;
   }
 }
-
-.header-m {
+.header-mobile {
   padding: 0 1em;
   max-height: 20vh;
   gap: 2em;
@@ -38,14 +15,7 @@ a {
   background-color: rgb(34, 139, 34);
   box-shadow: 0px 0px 10px rgb(34, 139, 34);
 }
-@media (min-width: 768px) {
-  .header-m {
-    background-color: rgb(255, 255, 255);
-    box-shadow: none;
-    padding: 0;
-  }
-}
-.header-m .logo {
+.header-mobile .logo {
   height: 10vh;
   width: 30vh;
   background-size: contain;
@@ -54,18 +24,25 @@ a {
   background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png");
 }
 @media (min-width: 768px) {
-  .header-m .logo {
+  .header-mobile .logo {
     width: 20vh;
     background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
   }
 }
-.header-m .hamburguer {
+.header-mobile .hamburguer {
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
 @media (min-width: 768px) {
-  .header-m .hamburguer {
+  .header-mobile .hamburguer {
     display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header-mobile {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    padding: 0;
   }
 }
 
@@ -83,6 +60,9 @@ a {
     background-color: transparent;
     padding: 2em;
   }
+  .nav .active {
+    color: rgb(34, 139, 34);
+  }
 }
 .nav a {
   padding: 0.5em;
@@ -93,11 +73,73 @@ a {
 }
 @media (min-width: 768px) {
   .nav a {
-    color: rgb(51, 51, 51);
+    color: rgba(51, 51, 51, 0.8);
   }
   .nav a:hover {
     background-color: transparent;
   }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.form label {
+  margin-bottom: 10px;
+}
+.form input,
+.form textarea {
+  font-family: "Asap", sans-serif;
+  margin-bottom: 20px;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 6px 12px;
+  width: 100%;
+  border: unset;
+  border-radius: 4px;
+  outline-color: rgba(34, 139, 34, 0.6);
+  background-color: rgb(255, 255, 255) 255, 255, 255;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+}
+.form input[type=submit] {
+  background-color: rgb(154, 205, 50);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(154, 205, 50) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+.container h1 {
+  margin: 0.5em 0 1em 0;
+  color: rgba(51, 51, 51, 0.8);
 }
 
 .outlet {
