@@ -1,7 +1,4 @@
 @import 'scss/variables';
-@import 'scss/header';
-@import 'scss/form';
-@import 'scss/map';
 
 * {
 	margin: 0;
@@ -19,6 +16,12 @@ img {
 
 body {
 	font-family: $font-stack;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -26,6 +29,7 @@ a {
 }
 
 .container {
+	margin: 1em;
 	padding: 1em;
 	border-radius: $radius;
     box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
@@ -36,9 +40,11 @@ a {
 	}
 }
 
-.outlet {
-	padding: 1em;
-}
+
+@import 'scss/header';
+@import 'scss/form';
+@import 'scss/map';
+@import 'scss/footer'; 
 
 .hide-m {
 	display: none;

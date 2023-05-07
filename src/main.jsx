@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 import App from './App.jsx';
 import Adress from './pages/Adress.jsx';
@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 				<Route
 					path="/"
 					element={<App />}>
-					<Route index element={<Home/>}></Route>
+					<Route index element={<Navigate to='/home' />}></Route>
 					<Route
 						path="/home"
 						element={<Home />}></Route>

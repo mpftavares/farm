@@ -1,10 +1,41 @@
-@media (min-width: 768px) {
-  .header {
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+body {
+  font-family: "Asap", sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+.container h1 {
+  margin: 0.5em 0 1em 0;
+  color: rgba(51, 51, 51, 0.8);
+}
+
 .header-mobile {
   padding: 0 1em;
   max-height: 20vh;
@@ -25,6 +56,7 @@
 }
 @media (min-width: 768px) {
   .header-mobile .logo {
+    margin-left: 2em;
     width: 20vh;
     background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
   }
@@ -43,6 +75,13 @@
     background-color: rgb(255, 255, 255);
     box-shadow: none;
     padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -111,43 +150,27 @@
 }
 
 .map {
+  padding: 0;
   height: 300px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-body {
-  font-family: "Asap", sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-.container {
+.footer {
   padding: 1em;
-  border-radius: 4px;
-  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 0.8em;
+  text-align: center;
 }
-.container h1 {
-  margin: 0.5em 0 1em 0;
+.footer h1 {
   color: rgba(51, 51, 51, 0.8);
+  margin: 0 0 0.5em 0;
 }
-
-.outlet {
-  padding: 1em;
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .hide-m {

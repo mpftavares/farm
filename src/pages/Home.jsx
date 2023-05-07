@@ -1,12 +1,17 @@
-import Form from "../components/Form";
-import Map from "../components/Map";
-
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Map from '../components/Map';
 
 export default function Home() {
-  return (
-<>
-      <Form/>
-      <Map/>
-</>
-  )
+	useEffect(() => {
+		document.title = 'Farmácia Patuleia | Home';
+	});
+
+	return (
+		<>
+			<Link to="/adress">
+				<Map />
+			</Link>
+		</>
+	);
 }

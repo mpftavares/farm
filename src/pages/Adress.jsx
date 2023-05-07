@@ -1,11 +1,14 @@
-import Map from "../components/Map";
-
+import { useEffect } from 'react';
+import Map from '../components/Map';
 
 export default function Adress() {
-  return (
+	useEffect(() => {
+		document.title = 'Farmácia Patuleia | Localização';
+	});
 
-    <div className="map">
-      <Map/>
-    </div>
-  )
+	return (
+		<div className="map">
+			<Map />
+		</div>
+	);
 }

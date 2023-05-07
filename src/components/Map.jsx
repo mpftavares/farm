@@ -1,4 +1,4 @@
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 
 // https://react-google-maps-api-docs.netlify.app/
 
@@ -16,9 +16,17 @@ export default function Map() {
     lng: -9.161105400048587,
   };
 
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: apiKey,
+  });
+
+  if (loadError) {
+    return <div>Error loading Google Maps API</div>;
+  }
+
   return (
-    <div className="map">
-      <LoadScript googleMapsApiKey={apiKey}>
+<div className="container map">
+      {isLoaded && (
         <GoogleMap
           mapContainerStyle={responsive}
           center={position}
@@ -26,7 +34,7 @@ export default function Map() {
         >
           <Marker position={position} />
         </GoogleMap>
-      </LoadScript>
+      )}
     </div>
   );
 }

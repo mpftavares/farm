@@ -1,55 +1,52 @@
 .header {
+	&-mobile {
+		padding: 0 1em;
+		max-height: 20vh;
+		gap: 2em;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		background-color: $primary-color;
+		box-shadow: 0px 0px 10px $primary-color;
+
+		.logo {
+			height: 10vh;
+			width: 30vh;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
+
+			@media (min-width: $laptop) {
+				margin-left: 2em;
+				width: 20vh;
+				background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
+			}
+		}
+
+		.hamburguer {
+			color: $light-color;
+			cursor: pointer;
+
+			@media (min-width: $laptop) {
+				display: none;
+			}
+		}
+		@media (min-width: $laptop) {
+			// logo
+			background-color: $light-color;
+			box-shadow: none;
+			padding: 0;
+		}
+	}
 	@media (min-width: $laptop) {
 		padding: 1em;
 		display: flex;
 		justify-content: space-between;
 	}
-	
-	&-mobile {
-	padding: 0 1em;
-	max-height: 20vh;
-	gap: 2em;
-
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-
-	background-color: $primary-color;
-	box-shadow: 0px 0px 10px $primary-color;
-
-	.logo {
-		height: 10vh;
-		width: 30vh;
-		background-size: contain;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
-
-		@media (min-width: $laptop) {
-			width: 20vh;
-			background-image: url('../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
-		}
-	}
-
-	.hamburguer {
-		color: $light-color;
-		cursor: pointer;
-
-		@media (min-width: $laptop) {
-			display: none;
-		}
-	}
-	@media (min-width: $laptop) {
-		// logo
-		background-color: $light-color;
-		box-shadow: none;
-		padding: 0;
-	}
-
 }
-}
-
-
 
 .nav {
 	// navlinks
