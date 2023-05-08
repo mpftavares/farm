@@ -13,7 +13,7 @@ export default function Footer() {
 			</article>
 			<article>
 				<h1>Horário</h1>
-				<p>2ª a 6ª feira das 9h00 às 20h00</p>
+				<p>2ª a 6ª feira das 9h00 às 13h00 e das 13h45 às 20h00</p>
 				<p>Sábados das 9h00 às 13h00</p>
 			</article>
 			<article>

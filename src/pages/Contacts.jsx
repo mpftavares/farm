@@ -10,7 +10,7 @@ export default function Contacts() {
 		<div className="container contacts">
 			<figure className="hide-tablet contacts-img">
 				<img
-					src="../../public/images/pharmacy/IMG_1570.jpg"
+					src="../../public/images/pharmacy/inside-left.jpg"
 					alt="pharmacy"
 				/>
 			</figure>

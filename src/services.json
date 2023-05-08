@@ -1,0 +1,30 @@
+{
+	"services": [
+		{
+			"title": "Medição da tensão arterial",
+			"image": "blood-pressure.jpg"
+		},
+		{
+			"title": "MAPA",
+			"image": "mapa.png"
+		},
+		{
+			"title": "Medição da glicemia, colesterol total e triglicéridos",
+			"image": "blood-test.jpg"
+		},
+
+		{
+			"title": "Administração de vacinas e medicamentos injectáveis",
+			"image": "vaccines.jpg"
+		},
+		{
+			"title": "Consultas de nutrição",
+			"image": "nutrition.jpg"
+		},
+
+		{
+			"title": "Pesagem de bebés",
+			"image": "baby-weight.jpg"
+		}
+	]
+}

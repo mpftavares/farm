@@ -6,7 +6,7 @@ import Header from './components/Header';
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			<div className='container-header no-padding'><Header /></div>
 			<div className="outlet">
 				<Outlet />
 				<div className="container">

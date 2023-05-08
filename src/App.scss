@@ -25,16 +25,24 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+
+	background-color: $background-color;
 }
 
 a {
 	text-decoration: none;
 }
 
+h1 {
+	font-family: $font-highlights;
+	font-weight: 600;
+}
+
 .container {
 	margin: 1em;
 	padding: 1em;
 	border-radius: $radius;
+	background-color: $light-color;
 	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
@@ -72,5 +80,15 @@ a {
 	display: none;
 	@media (min-width: $laptop) {
 		display: flex;
+	}
+}
+
+.no-padding {
+	padding: 0em;
+}
+
+.no-padding-mobile {
+	@media (min-width: $laptop) {
+		padding: 0em;
 	}
 }

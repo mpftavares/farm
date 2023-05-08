@@ -9,9 +9,3 @@
 .map {
 	height: 250px;
 }
-
-.no-padding {
-	@media (min-width: $laptop) {
-		padding: 0em;
-	}
-}

@@ -11,7 +11,7 @@ export default function Adress() {
 			<Map />
 			<figure className="hide-tablet adress-img">
 				<img
-					src="../../public/images/pharmacy/DSC_0128.jpg"
+					src="../../public/images/pharmacy/outside.jpg"
 					alt="pharmacy"
 				/>
 			</figure>
