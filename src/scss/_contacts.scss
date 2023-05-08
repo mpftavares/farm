@@ -1,17 +1,11 @@
 .contacts {
-
-h1 {
-	font-size:
-		1.5em;
-	
-}
+	h1 {
+		font-size: 1.5em;
+	}
 
 	@media (min-width: $tablet) {
-
 		h1 {
-			font-size:
-				1.75em;
-			
+			font-size: 1.75em;
 		}
 
 		.contacts-img {

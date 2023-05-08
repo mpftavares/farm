@@ -8,14 +8,14 @@ export default function Header() {
 
 	const hamburguerIcon = showNav ? 'close' : 'menu';
 
-  const handleNavClick = () => {
-    setShowNav(!showNav);
-  }
+	const handleNavClick = () => {
+		setShowNav(!showNav);
+	};
 
-  const navClass = showNav ? 'nav' : 'nav hide-mobile';
+	const navClass = showNav ? 'nav' : 'nav hide-mobile';
 
 	return (
-		<div className='header'>
+		<div className="header">
 			<header className="header-mobile">
 				<Logo className="logo" />
 				<Hamburguer
@@ -23,7 +23,10 @@ export default function Header() {
 					icon={hamburguerIcon}
 				/>
 			</header>
-			<Nav onClick={handleNavClick} className={navClass} />
+			<Nav
+				onClick={handleNavClick}
+				className={navClass}
+			/>
 		</div>
 	);
 }

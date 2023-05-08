@@ -10,7 +10,9 @@ export default function Home() {
 	return (
 		<>
 			<Link to="/adress">
-				<div className='container map-container no-padding'><Map /></div>
+				<div className="container map-container no-padding">
+					<Map />
+				</div>
 			</Link>
 		</>
 	);

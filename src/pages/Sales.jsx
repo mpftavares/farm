@@ -1,11 +1,8 @@
-import { useEffect } from "react";
-
+import { useEffect } from 'react';
 
 export default function Sales() {
-  useEffect(() => {
+	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Promoções';
 	});
-  return (
-    <div>Campaigns</div>
-  )
+	return <div>Campaigns</div>;
 }

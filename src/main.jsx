@@ -18,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 				<Route
 					path="/"
 					element={<App />}>
-					<Route index element={<Navigate to='/home' />}></Route>
+					<Route
+						index
+						element={<Navigate to="/home" />}></Route>
 					<Route
 						path="/home"
 						element={<Home />}></Route>
@@ -31,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 					<Route
 						path="/adress"
 						element={<Adress />}></Route>
-            <Route
+					<Route
 						path="/contacts"
 						element={<Contacts />}></Route>
 					<Route

@@ -1,25 +1,23 @@
 .adress {
-
-
 	@media (min-width: $tablet) {
 		.adress-img {
 			img {
 				border-radius: $radius;
 			}
 		}
+	}
+
+	@media (min-width: $laptop) {
+		display: flex;
+		align-items: stretch;
+		gap: 2em;
+
+		> * {
+			flex-basis: 50%;
 		}
 
-		@media (min-width: $laptop) {
-			display: flex;
-			align-items: stretch;
-			gap: 2em;
-
-			> * {
-				flex-basis: 50%;
-			}
-
-            .map {
-                height: 400px;
-            }
+		.map {
+			height: 400px;
 		}
 	}
+}

@@ -1,10 +1,8 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 export default function Services() {
-  useEffect(() => {
+	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Serviços';
 	});
-  return (
-    <div>Services</div>
-  )
+	return <div>Services</div>;
 }

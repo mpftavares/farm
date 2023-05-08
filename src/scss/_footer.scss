@@ -1,25 +1,23 @@
 .footer {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    font-size: .8em;
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	font-size: 0.8em;
 
-    text-align: center;
+	text-align: center;
 
-    h1 {
-        color: $dark-color-transparent;
-        margin: 0 0 .5em 0;
-    }
+	h1 {
+		color: $dark-color-transparent;
+		margin: 0 0 0.5em 0;
+	}
 
-    a {
-        color: $primary-color;
-    }
+	a {
+		color: $primary-color;
+	}
 
-    @media (min-width: $tablet) {
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-
-
+	@media (min-width: $tablet) {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
 }

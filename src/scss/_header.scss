@@ -28,7 +28,6 @@
 			@media (min-width: $laptop) {
 				height: 10vh;
 				width: 30vh;
-
 			}
 		}
 
@@ -68,7 +67,7 @@
 		background-color: transparent;
 		padding: 2em;
 
-		font-size: .9em;
+		font-size: 0.9em;
 		.active {
 			color: $primary-color;
 		}

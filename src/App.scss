@@ -35,12 +35,13 @@ a {
 	margin: 1em;
 	padding: 1em;
 	border-radius: $radius;
-    box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
-	font-size: .95em;
+	font-size: 0.95em;
 
 	h1 {
-		margin: .5em 0 1em 0;
+		margin: 0.5em 0 1em 0;
 		color: $dark-color-transparent;
 	}
 
@@ -49,11 +50,10 @@ a {
 	}
 }
 
-
 @import 'scss/header';
 @import 'scss/form';
 @import 'scss/map';
-@import 'scss/footer'; 
+@import 'scss/footer';
 @import 'scss/contacts';
 @import 'scss/adress';
 
