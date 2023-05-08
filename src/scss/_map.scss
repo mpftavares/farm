@@ -1,4 +1,17 @@
+.map-container {
+	padding: 0;
+
+	@media (min-width: $laptop) {
+		padding: 2em;
+	}
+}
+
 .map {
-    padding: 0;
-    height: 300px;
+	height: 300px;
+}
+
+.no-padding {
+	@media (min-width: $laptop) {
+		padding: 0em;
+	}
 }

@@ -25,7 +25,7 @@ export default function Map() {
   }
 
   return (
-<div className="container map">
+<div className="map">
       {isLoaded && (
         <GoogleMap
           mapContainerStyle={responsive}

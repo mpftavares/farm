@@ -7,12 +7,12 @@ export default function Form() {
 	  };
 
   return (
-    <div className="container">
+    <div >
       <h1>Contacte-nos</h1>
-      <form
+      <form className="form"
   				action="../../sendmail/send.php"
   				method="post"
-  				className="form">
+  				>
   				<label htmlFor="name">Nome:</label>
   				<input
   					type="text"

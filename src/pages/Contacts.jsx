@@ -7,8 +7,9 @@ export default function Contacts() {
 	});
 
 	return (
-		<div>
-			<Form />
+		<div className='container contacts'>
+      <figure className='hide-tablet contacts-img'><img src="../../public/images/pharmacy/IMG_1570.jpg" alt="pharmacy" /></figure>
+      <Form />
 		</div>
 	);
 }

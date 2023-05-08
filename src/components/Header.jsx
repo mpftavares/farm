@@ -12,7 +12,7 @@ export default function Header() {
     setShowNav(!showNav);
   }
 
-  const navClass = showNav ? 'nav' : 'nav hide-m';
+  const navClass = showNav ? 'nav' : 'nav hide-mobile';
 
 	return (
 		<div className='header'>

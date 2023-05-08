@@ -8,8 +8,11 @@
 }
 
 img {
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
 }
 
 body {
@@ -30,10 +33,16 @@ a {
   padding: 1em;
   border-radius: 4px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+  font-size: 0.95em;
 }
 .container h1 {
   margin: 0.5em 0 1em 0;
   color: rgba(51, 51, 51, 0.8);
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 2em;
+  }
 }
 
 .header-mobile {
@@ -56,9 +65,15 @@ a {
 }
 @media (min-width: 768px) {
   .header-mobile .logo {
-    margin-left: 2em;
     width: 20vh;
+    margin-left: 2em;
     background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
+  }
+}
+@media (min-width: 992px) {
+  .header-mobile .logo {
+    height: 10vh;
+    width: 30vh;
   }
 }
 .header-mobile .hamburguer {
@@ -98,9 +113,15 @@ a {
     gap: 1em;
     background-color: transparent;
     padding: 2em;
+    font-size: 0.9em;
   }
   .nav .active {
     color: rgb(34, 139, 34);
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    font-size: 1em;
   }
 }
 .nav a {
@@ -149,9 +170,23 @@ a {
   cursor: pointer;
 }
 
-.map {
+.map-container {
   padding: 0;
+}
+@media (min-width: 992px) {
+  .map-container {
+    padding: 2em;
+  }
+}
+
+.map {
   height: 300px;
+}
+
+@media (min-width: 992px) {
+  .no-padding {
+    padding: 0em;
+  }
 }
 
 .footer {
@@ -166,6 +201,9 @@ a {
   color: rgba(51, 51, 51, 0.8);
   margin: 0 0 0.5em 0;
 }
+.footer a {
+  color: rgb(34, 139, 34);
+}
 @media (min-width: 768px) {
   .footer {
     flex-direction: row;
@@ -173,11 +211,68 @@ a {
   }
 }
 
-.hide-m {
+.contacts h1 {
+  font-size: 1.5em;
+}
+@media (min-width: 768px) {
+  .contacts h1 {
+    font-size: 1.75em;
+  }
+  .contacts .contacts-img {
+    margin: 1em 0;
+  }
+  .contacts .contacts-img img {
+    border-radius: 4px;
+  }
+}
+@media (min-width: 768px) and (min-width: 992px) {
+  .contacts {
+    display: flex;
+    align-items: stretch;
+    gap: 2em;
+  }
+  .contacts > * {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .adress .adress-img img {
+    border-radius: 4px;
+  }
+}
+@media (min-width: 992px) {
+  .adress {
+    display: flex;
+    align-items: stretch;
+    gap: 2em;
+  }
+  .adress > * {
+    flex-basis: 50%;
+  }
+  .adress .map {
+    height: 400px;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.hide-mobile {
   display: none;
 }
 @media (min-width: 768px) {
-  .hide-m {
+  .hide-mobile {
+    display: flex;
+  }
+}
+
+.hide-tablet {
+  display: none;
+}
+@media (min-width: 992px) {
+  .hide-tablet {
     display: flex;
   }
 }/*# sourceMappingURL=App.css.map */

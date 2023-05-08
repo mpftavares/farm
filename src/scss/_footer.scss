@@ -12,7 +12,11 @@
         margin: 0 0 .5em 0;
     }
 
-    @media (min-width: $laptop) {
+    a {
+        color: $primary-color;
+    }
+
+    @media (min-width: $tablet) {
         flex-direction: row;
         justify-content: space-evenly;
     }

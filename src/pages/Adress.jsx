@@ -7,8 +7,14 @@ export default function Adress() {
 	});
 
 	return (
-		<div className="map">
+		<div className="container map-container adress">
 			<Map />
+			<figure className="hide-tablet adress-img">
+				<img
+					src="../../public/images/pharmacy/DSC_0128.jpg"
+					alt="pharmacy"
+				/>
+			</figure>
 		</div>
 	);
 }
