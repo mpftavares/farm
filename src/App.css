@@ -36,7 +36,6 @@ h1 {
 
 .container {
   margin: 1em;
-  padding: 1em;
   border-radius: 4px;
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
@@ -46,16 +45,10 @@ h1 {
   margin: 0.5em 0 1em 0;
   color: rgba(51, 51, 51, 0.8);
 }
-@media (min-width: 768px) {
-  .container {
-    padding: 2em;
-  }
-}
 
 @media (min-width: 768px) {
   .container-header {
     margin: 1em;
-    padding: 1em;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
@@ -79,6 +72,12 @@ h1 {
   align-items: center;
   background-color: rgb(34, 139, 34);
   box-shadow: 0px 0px 10px rgb(34, 139, 34);
+}
+@media (min-width: 768px) {
+  .header-mobile {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+  }
 }
 .header-mobile .logo {
   height: 10vh;
@@ -108,13 +107,6 @@ h1 {
 @media (min-width: 768px) {
   .header-mobile .hamburguer {
     display: none;
-  }
-}
-@media (min-width: 768px) {
-  .header-mobile {
-    background-color: rgb(255, 255, 255);
-    box-shadow: none;
-    padding: 0;
   }
 }
 
@@ -187,15 +179,6 @@ h1 {
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(154, 205, 50) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-}
-
-.map-container {
-  padding: 0;
-}
-@media (min-width: 992px) {
-  .map-container {
-    padding: 2em;
-  }
 }
 
 .map {
@@ -287,6 +270,15 @@ h1 {
 @media (min-width: 992px) {
   .hide-tablet {
     display: flex;
+  }
+}
+
+.padding {
+  padding: 1em;
+}
+@media (min-width: 992px) {
+  .padding {
+    padding: 2em;
   }
 }
 

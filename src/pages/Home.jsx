@@ -11,7 +11,7 @@ export default function Home() {
 	return (
 		<>
 			<Link to="/adress">
-				<div className="container map-container no-padding">
+				<div className="container">
 					<StaticMap />
 				</div>
 			</Link>

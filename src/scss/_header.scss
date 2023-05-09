@@ -1,7 +1,6 @@
 .container-header {
 	@media (min-width: $tablet) {
 		margin: 1em;
-		padding: 1em;
 		border-radius: $radius;
 		background-color: $light-color;
 		box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
@@ -16,8 +15,8 @@
 		padding: 1em;
 		display: flex;
 		justify-content: space-between;
-	}	
-	
+	}
+
 	&-mobile {
 		padding: 0 1em;
 		max-height: 20vh;
@@ -30,6 +29,12 @@
 		background-color: $primary-color;
 		box-shadow: 0px 0px 10px $primary-color;
 
+		@media (min-width: $tablet) {
+			// logo
+			background-color: $light-color;
+			box-shadow: none;
+		}
+		
 		.logo {
 			height: 10vh;
 			width: 30vh;
@@ -58,14 +63,7 @@
 				display: none;
 			}
 		}
-		@media (min-width: $tablet) {
-			// logo
-			background-color: $light-color;
-			box-shadow: none;
-			padding: 0;
-		}
 	}
-
 }
 
 .nav {

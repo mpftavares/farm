@@ -7,7 +7,7 @@ export default function Contacts() {
 	}, []);
 
 	return (
-		<div className="container contacts">
+		<div className="container padding contacts">
 			<figure className="hide-tablet contacts-img">
 				<img
 					src="../../images/pharmacy/inside-left.jpg"

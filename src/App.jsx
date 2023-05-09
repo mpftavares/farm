@@ -6,7 +6,7 @@ import Header from './features/header/components/Header';
 function App() {
 	return (
 		<div className="App">
-			<div className='container-header no-padding'><Header /></div>
+			<div className='container-header'><Header /></div>
 			<div className="outlet">
 				<Outlet />
 				<div className="container">

@@ -40,7 +40,6 @@ h1 {
 
 .container {
 	margin: 1em;
-	padding: 1em;
 	border-radius: $radius;
 	background-color: $light-color;
 	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
@@ -53,9 +52,6 @@ h1 {
 		color: $dark-color-transparent;
 	}
 
-	@media (min-width: $tablet) {
-		padding: 2em;
-	}
 }
 
 @import 'scss/header';
@@ -80,6 +76,13 @@ h1 {
 	display: none;
 	@media (min-width: $laptop) {
 		display: flex;
+	}
+}
+
+.padding {
+	padding: 1em;
+	@media (min-width: $laptop) {
+		padding: 2em;
 	}
 }
 
