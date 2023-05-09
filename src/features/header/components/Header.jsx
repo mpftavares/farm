@@ -1,31 +1,27 @@
-import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { closeNav, hamburguerClick } from '../headerSlice';
 import Hamburguer from './Hamburguer';
 import Nav from './Nav';
 
-
 export default function Header() {
-	const [showNav, setShowNav] = useState(false);
+	let dispatch = useDispatch();
 
-	const hamburguerIcon = showNav ? 'close' : 'menu';
+	const icon = useSelector((state) => state.nav.hamburguerIcon);
 
-	const handleNavClick = () => {
-		setShowNav(!showNav);
-	};
-
-	const navClass = showNav ? 'nav' : 'nav hide-mobile';
+	const classes = useSelector((state) => state.nav.navClass);
 
 	return (
 		<div className="header">
 			<header className="header-mobile">
-				<div className="logo">{/* // logo as backgroud image */}</div>
-				<Hamburguer 
-					onClick={handleNavClick}
-					icon={hamburguerIcon}
+				<div className="logo">{/* // logo as background image */}</div>
+				<Hamburguer
+					onClick={() => dispatch(hamburguerClick())}
+					icon={icon}
 				/>
 			</header>
 			<Nav
-				onClick={handleNavClick}
-				className={navClass}
+				onClick={() => dispatch(closeNav())}
+				className={classes}
 			/>
 		</div>
 	);
