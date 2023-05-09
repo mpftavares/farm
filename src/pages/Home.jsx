@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import StaticMap from '../components/StaticMap';
+import StaticMap from '../features/map/components/StaticMap';
+
 
 export default function Home() {
 	useEffect(() => {

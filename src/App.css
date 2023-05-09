@@ -87,13 +87,13 @@ h1 {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png");
+  background-image: url("../images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png");
 }
 @media (min-width: 768px) {
   .header-mobile .logo {
     width: 25vh;
     margin-left: 2em;
-    background-image: url("../public/images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
+    background-image: url("../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
   }
 }
 @media (min-width: 992px) {

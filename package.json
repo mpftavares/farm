@@ -12,9 +12,11 @@
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.15.1",
     "@react-google-maps/api": "^2.18.1",
+    "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
+    "redux": "^4.2.1",
     "sass": "^1.62.1"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Form from '../components/Form';
+import Form from '../features/form/components/Form';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -10,7 +10,7 @@ export default function Contacts() {
 		<div className="container contacts">
 			<figure className="hide-tablet contacts-img">
 				<img
-					src="../../public/images/pharmacy/inside-left.jpg"
+					src="../../images/pharmacy/inside-left.jpg"
 					alt="pharmacy"
 				/>
 			</figure>

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import Map from '../components/Map';
+import Map from '../features/map/components/Map';
 
 export default function Adress() {
 	useEffect(() => {
@@ -11,7 +11,7 @@ export default function Adress() {
 			<Map />
 			<figure className="hide-tablet adress-img">
 				<img
-					src="../../public/images/pharmacy/outside.jpg"
+					src="../../images/pharmacy/outside.jpg"
 					alt="pharmacy"
 				/>
 			</figure>
