@@ -31,6 +31,7 @@
 
 		@media (min-width: $tablet) {
 			// logo
+			padding: 0;
 			background-color: $light-color;
 			box-shadow: none;
 		}
@@ -45,11 +46,12 @@
 
 			@media (min-width: $tablet) {
 				width: 25vh;
-				margin-left: 2em;
+
 				background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
 			}
 
 			@media (min-width: $laptop) {
+				margin-left: 2em;				
 				height: 10vh;
 				width: 30vh;
 			}
@@ -79,14 +81,18 @@
 		gap: 1em;
 
 		background-color: transparent;
-		padding: 2em;
+		padding: 1em;
 
+		text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
 		font-size: 0.9em;
+
 		.active {
 			color: $primary-color;
+			text-shadow: 1px 1px 2px $primary-color-transparent;
 		}
 	}
 	@media (min-width: $laptop) {
+		padding: 2em;
 		font-size: 1em;
 	}
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import HomeBanner from '../features/banners/HomeBanner';
 import StaticMap from '../features/map/components/StaticMap';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
 
 	return (
 		<>
+			<HomeBanner />
 			<Link to="/adress">
 				<div className="container">
 					<StaticMap />

@@ -1,0 +1,26 @@
+.banner-home {
+	background-image: url('images/pharmacy/inside-right.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	height: 250px;
+
+	article {
+		background-color: $light-color-transparent;
+		flex-basis: 60%;
+		padding: 1em;
+		border-radius: $radius;
+
+		color: $dark-color;
+
+		display: flex;
+		align-items: center;
+
+		@media (min-width: $laptop) {
+            flex-basis: 35%;
+			font-size: 1.2em;
+		}
+	}
+}
