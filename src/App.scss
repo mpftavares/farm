@@ -19,6 +19,7 @@ img {
 
 body {
 	font-family: $font-stack;
+	min-width: $smartphone;
 	max-width: 1200px;
 	margin: 0 auto;
 
@@ -51,6 +52,16 @@ h1 {
 		margin: 0.5em 0 1em 0;
 		color: $dark-color-transparent;
 	}
+}
+
+.grid {
+	display: grid;
+	justify-content: space-evenly;
+	align-content: center;	
+	grid-template-columns: repeat(auto-fill, 250px);
+	gap: 1em;
+
+	text-align: center
 
 }
 
@@ -83,15 +94,5 @@ h1 {
 	padding: 1em;
 	@media (min-width: $laptop) {
 		padding: 2em;
-	}
-}
-
-.no-padding {
-	padding: 0em;
-}
-
-.no-padding-mobile {
-	@media (min-width: $laptop) {
-		padding: 0em;
 	}
 }

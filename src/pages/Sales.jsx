@@ -6,6 +6,6 @@ export default function Sales() {
 		document.title = 'Farmácia Patuleia | Promoções';
 	}, []);
 	return (
-	<SaleList/>
+	<section className='container padding'><SaleList/></section>
 		);
 }

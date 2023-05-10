@@ -16,11 +16,11 @@ export default function ServiceList() {
 	}, []);
 
 	return (
-		<section>
-			{serviceList.map((p, i) => (
+		<section className='container padding grid'>
+			{serviceList.map((s, i) => (
 				<Service
 					key={i}
-					service={p}
+					service={s}
 				/>
 			))}
 		</section>

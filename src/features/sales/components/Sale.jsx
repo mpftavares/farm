@@ -1,5 +1,12 @@
-export default function Sale() {
-  return (
-    <div>Sale</div>
-  )
+export default function Sale({ sale }) {
+	let { title, imageUrl } = sale;
+
+	return (
+		<figure>
+			<img
+				src={`images/sales/${imageUrl}`}
+				alt={title}
+			/>
+		</figure>
+	);
 }

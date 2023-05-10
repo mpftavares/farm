@@ -16,11 +16,11 @@ export default function SaleList() {
 	}, []);
 
 	return (
-		<section>
-			{saleList.map((p, i) => (
+		<section className="grid">
+			{saleList.map((s, i) => (
 				<Sale
 					key={i}
-					sale={p}
+					sale={s}
 				/>
 			))}
 		</section>

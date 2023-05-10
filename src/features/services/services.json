@@ -2,29 +2,29 @@
 	"serviceList": [
 		{
 			"title": "Medição da tensão arterial",
-			"image": "blood-pressure.jpg"
+			"imageUrl": "blood-pressure.jpg"
 		},
 		{
 			"title": "MAPA",
-			"image": "mapa.png"
+			"imageUrl": "mapa.png"
 		},
 		{
 			"title": "Medição da glicemia, colesterol total e triglicéridos",
-			"image": "blood-test.jpg"
+			"imageUrl": "blood-test.jpg"
 		},
 
 		{
 			"title": "Administração de vacinas e medicamentos injectáveis",
-			"image": "vaccines.jpg"
+			"imageUrl": "vaccines.jpg"
 		},
 		{
 			"title": "Consultas de nutrição",
-			"image": "nutrition.jpg"
+			"imageUrl": "nutrition.jpg"
 		},
 
 		{
 			"title": "Pesagem de bebés",
-			"image": "baby-weight.jpg"
+			"imageUrl": "baby-weight.jpg"
 		}
 	]
 }
