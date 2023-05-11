@@ -1,15 +1,14 @@
 export default function Service({ service }) {
-	let { title, imageUrl } = service;
+	let { title, imageUrl, description } = service;
 
 	return (
-		<article>
-			<figure>
-				<img
-					src={`images/services/${imageUrl}`}
-					alt={title}
-				/>
-			</figure>{' '}
+		<article
+			className="container card-service"
+			style={{ backgroundImage: `url(images/services/${imageUrl})` }}>
 			<h1>{title}</h1>
+			<div className="description ">
+				<p>{description}</p>
+			</div>
 		</article>
 	);
 }

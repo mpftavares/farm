@@ -1,16 +1,37 @@
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 export default function Form() {
-	const onInputChange = (e) => {
-		const { name, value } = e.target;
-		handleInputChange(name, value);
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				'service_akarsx9',
+				'template_auj8wky',
+				form.current,
+				'Q9odTI4vGNZr7iFEO'
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+					e.reset();
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
 	};
 
 	return (
 		<div>
 			<h1>Contacte-nos</h1>
 			<form
-				className="form"
-				action="../../sendmail/send.php"
-				method="post">
+				ref={form}
+				onSubmit={sendEmail}
+				className="form">
 				<label htmlFor="name">Nome:</label>
 				<input
 					type="text"
@@ -20,7 +41,6 @@ export default function Form() {
 					className="input"
 					autoComplete="off"
 					required
-					onChange={onInputChange}
 				/>
 
 				<label htmlFor="email">Telefone:</label>
@@ -32,7 +52,6 @@ export default function Form() {
 					className="input"
 					autoComplete="off"
 					required
-					onChange={onInputChange}
 				/>
 
 				<label htmlFor="email">Email:</label>
@@ -43,20 +62,17 @@ export default function Form() {
 					placeholder="Introduza o seu email"
 					className="input"
 					autoComplete="off"
-					required
-					onChange={onInputChange}
 				/>
 
-				<label htmlFor="subject">Assunto:</label>
+				<label htmlFor="message">Assunto:</label>
 				<textarea
-					name="subject"
-					id="subject"
+					name="message"
+					id="message"
 					placeholder="Diga-nos em que podemos ajudar"
 					rows="5"
 					className="input"
 					autoComplete="off"
-					required
-					onChange={onInputChange}></textarea>
+					required></textarea>
 				<input
 					type="submit"
 					value="Submeter"

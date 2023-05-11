@@ -1,4 +1,7 @@
 .container-header {
+	position: sticky;
+	top: 0;
+
 	@media (min-width: $tablet) {
 		margin: 1em;
 		border-radius: $radius;
@@ -7,6 +10,10 @@
 			rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 		font-size: 0.95em;
+	}
+
+	@media (min-width: $laptop) {
+		position: static;
 	}
 }
 
@@ -19,9 +26,8 @@
 
 	&-mobile {
 		padding: 0 1em;
-		max-height: 20vh;
 		gap: 2em;
-
+		height: 80px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -37,23 +43,19 @@
 		}
 
 		.logo {
-			height: 10vh;
-			width: 30vh;
+			height: 60px;
+			width: 250px;
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
 
 			@media (min-width: $tablet) {
-				width: 25vh;
-
 				background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
 			}
 
 			@media (min-width: $laptop) {
-				margin-left: 2em;				
-				height: 10vh;
-				width: 30vh;
+				margin-left: 2em;
 			}
 		}
 
@@ -74,6 +76,7 @@
 	flex-direction: column;
 	background-color: $secondary-color;
 	font-family: $font-highlights;
+
 	@media (min-width: $tablet) {
 		flex-direction: row;
 		justify-content: space-between;
@@ -83,7 +86,7 @@
 		background-color: transparent;
 		padding: 1em;
 
-		text-shadow: 1px 1px 2px rgba(0,0,0, 0.25);
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 		font-size: 0.9em;
 
 		.active {

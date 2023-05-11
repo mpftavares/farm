@@ -1,0 +1,77 @@
+.grid-service {
+	display: grid;
+	justify-content: stretch;
+	align-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	margin: 1em;
+	justify-items: stretch;
+	text-align: center;
+	gap: 1em;
+	@media (min-width: $tablet) {
+		justify-content: space-evenly;
+	}
+}
+
+.card-service {
+	margin: 0;
+	position: relative;
+	height: 200px;
+
+	font-size: 0.85em;
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (min-width: $laptop) {
+		height: 250px;
+		font-size: 0.9em;
+	}
+
+	h1 {
+		color: $light-color;
+		background-color: $secondary-color-transparent;
+		padding: 0.5em;
+		width: 90%;
+		height: 60px;
+		border-radius: $radius;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		opacity: 1;
+	}
+
+	.description {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: transparent;
+		opacity: 0;
+		color: $light-color;
+		padding: 1em;
+		box-sizing: border-box;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&:hover {
+		h1 {
+			opacity: 0;
+		}
+
+		.description {
+			opacity: 1;
+			background-color: $dark-color-transparent;
+		}
+	}
+}

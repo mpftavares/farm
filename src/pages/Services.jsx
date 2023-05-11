@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import ServiceBanner from '../features/banners/ServiceBanner';
 import ServiceList from '../features/services/components/ServiceList';
 
 export default function Services() {
@@ -6,5 +7,9 @@ export default function Services() {
 		document.title = 'Farmácia Patuleia | Serviços';
 	}, []);
 	return (
-	<ServiceList/>);
+		<>
+			<ServiceBanner />
+			<ServiceList />
+		</>
+	);
 }

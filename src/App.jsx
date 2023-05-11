@@ -11,7 +11,7 @@ function App() {
 			</div>
 			<div className="outlet">
 				<Outlet />
-				<div className="container padding">
+				<div className="container light-background padding">
 					<Footer />
 				</div>
 			</div>

@@ -7,7 +7,7 @@ export default function Adress() {
 	}, []);
 
 	return (
-		<div className="container padding adress">
+		<div className="container light-background padding adress">
 			<Map />
 			<figure className="hide-tablet adress-img">
 				<img
