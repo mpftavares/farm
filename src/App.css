@@ -335,10 +335,13 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 2em;
 }
 .card-sales img {
   object-fit: contain;
   height: 100%;
+  width: auto;
+  border-radius: 4px;
 }
 
 .card-service {
