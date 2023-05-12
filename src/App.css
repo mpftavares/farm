@@ -223,6 +223,9 @@ h1 {
 .map {
   height: 250px;
 }
+.map img {
+  height: 100%;
+}
 
 .footer {
   padding: 1em;
@@ -334,7 +337,8 @@ h1 {
   margin: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  cursor: pointer;
   gap: 2em;
 }
 .card-sales img {
@@ -342,6 +346,27 @@ h1 {
   height: 100%;
   width: auto;
   border-radius: 4px;
+}
+.card-sales .description {
+  display: none;
+}
+@media (min-width: 480px) {
+  .card-sales {
+    justify-content: space-between;
+  }
+}
+@media (min-width: 480px) and (min-width: 480px) {
+  .card-sales .description {
+    display: block;
+  }
+}
+
+.row {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
 .card-service {

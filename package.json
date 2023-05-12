@@ -4,13 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all --parallel mock-1 mock-2 dev",
+    "start": "npm-run-all --parallel mock dev",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "mock-1": "json-server --w src/features/services/services.json --port 3010",
-    "mock-2": "json-server --w src/features/sales/sales.json --port 3020"
+    "mock": "json-server --w src/data.json --port 3000"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",

@@ -9,7 +9,7 @@ export default function SaleList() {
 	let dispatch = useDispatch();
 
 	useEffect(() => {
-		fetch('http://localhost:3020/saleList')
+		fetch('http://localhost:3000/saleList')
 			.then((resp) => resp.json())
 			.then((data) => dispatch(getSales(data)))
 			.catch((err) => console.log('Error: ', err));
@@ -20,6 +20,7 @@ export default function SaleList() {
 			{saleList.map((s, i) => (
 				<Sale
 					key={i}
+					index={i}
 					sale={s}
 				/>
 			))}

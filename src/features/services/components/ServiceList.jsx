@@ -9,7 +9,7 @@ export default function ServiceList() {
 	let dispatch = useDispatch();
 
 	useEffect(() => {
-		fetch('http://localhost:3010/serviceList')
+		fetch('http://localhost:3000/serviceList')
 			.then((resp) => resp.json())
 			.then((data) => dispatch(getServices(data)))
 			.catch((err) => console.log('Error: ', err));
