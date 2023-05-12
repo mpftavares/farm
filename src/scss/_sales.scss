@@ -1,0 +1,11 @@
+.card-sales {
+	margin: 1em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	img {
+		object-fit: contain;
+		height: 100%;
+	}
+}

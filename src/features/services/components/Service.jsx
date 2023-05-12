@@ -3,7 +3,7 @@ export default function Service({ service }) {
 
 	return (
 		<article
-			className="container card-service"
+			className="container card card-service"
 			style={{ backgroundImage: `url(images/services/${imageUrl})` }}>
 			<h1>{title}</h1>
 			<div className="description ">

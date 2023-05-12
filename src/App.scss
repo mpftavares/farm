@@ -38,7 +38,7 @@ a {
 
 h1 {
 	font-family: $font-highlights;
-	}
+}
 
 .container {
 	margin: 1em;
@@ -51,6 +51,28 @@ h1 {
 	h1 {
 		margin: 0.5em 0 1em 0;
 		color: $dark-color-transparent;
+	}
+}
+
+.grid {
+	display: grid;
+	justify-content: stretch;
+	align-content: center;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	margin: 1em;
+	justify-items: stretch;
+	text-align: center;
+	gap: 1em;
+	@media (min-width: $tablet) {
+		justify-content: space-evenly;
+	}
+}
+
+.card {
+	height: 200px;
+
+	@media (min-width: $tablet) {
+		height: 250px;
 	}
 }
 

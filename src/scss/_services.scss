@@ -1,25 +1,11 @@
-.grid-service {
-	display: grid;
-	justify-content: stretch;
-	align-content: center;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	margin: 1em;
-	justify-items: stretch;
-	text-align: center;
-	gap: 1em;
-	@media (min-width: $tablet) {
-		justify-content: space-evenly;
-	}
-}
-
 .card-service {
-	margin: 0;
 	position: relative;
-	height: 200px;
+
+	margin: 0;
 
 	font-size: 0.85em;
 
-	background-size: cover;
+	background-size: initial;
 	background-position: center;
 	background-repeat: no-repeat;
 
@@ -27,8 +13,7 @@
 	align-items: center;
 	justify-content: center;
 
-	@media (min-width: $laptop) {
-		height: 250px;
+	@media (min-width: $tablet) {
 		font-size: 0.9em;
 	}
 

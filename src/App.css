@@ -46,6 +46,31 @@ h1 {
   color: rgba(51, 51, 51, 0.8);
 }
 
+.grid {
+  display: grid;
+  justify-content: stretch;
+  align-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  margin: 1em;
+  justify-items: stretch;
+  text-align: center;
+  gap: 1em;
+}
+@media (min-width: 768px) {
+  .grid {
+    justify-content: space-evenly;
+  }
+}
+
+.card {
+  height: 200px;
+}
+@media (min-width: 768px) {
+  .card {
+    height: 250px;
+  }
+}
+
 .light-background {
   background-color: rgb(255, 255, 255);
 }
@@ -305,37 +330,30 @@ h1 {
   background-image: url("images/pharmacy/office.jpg");
 }
 
-.grid-service {
-  display: grid;
-  justify-content: stretch;
-  align-content: center;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+.card-sales {
   margin: 1em;
-  justify-items: stretch;
-  text-align: center;
-  gap: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-@media (min-width: 768px) {
-  .grid-service {
-    justify-content: space-evenly;
-  }
+.card-sales img {
+  object-fit: contain;
+  height: 100%;
 }
 
 .card-service {
-  margin: 0;
   position: relative;
-  height: 200px;
+  margin: 0;
   font-size: 0.85em;
-  background-size: cover;
+  background-size: initial;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .card-service {
-    height: 250px;
     font-size: 0.9em;
   }
 }

@@ -16,7 +16,7 @@ export default function SaleList() {
 	}, []);
 
 	return (
-		<section className="grid">
+		<section>
 			{saleList.map((s, i) => (
 				<Sale
 					key={i}

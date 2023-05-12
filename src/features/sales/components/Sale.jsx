@@ -1,12 +1,15 @@
 export default function Sale({ sale }) {
-	let { title, imageUrl } = sale;
+	let { title, imageUrl, description } = sale;
 
 	return (
-		<figure>
+		<section
+			className="container light-background padding card
+		card-sales">
+			<article>{description}</article>
 			<img
 				src={`images/sales/${imageUrl}`}
 				alt={title}
 			/>
-		</figure>
+		</section>
 	);
 }

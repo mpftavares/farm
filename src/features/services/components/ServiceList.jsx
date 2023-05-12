@@ -16,7 +16,7 @@ export default function ServiceList() {
 	}, []);
 
 	return (
-		<section className="grid-service">
+		<section className="grid">
 			{serviceList.map((s, i) => (
 				<Service
 					key={i}
