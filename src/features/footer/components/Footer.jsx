@@ -29,7 +29,7 @@ export default function Footer() {
 			<article>
 				<Link to="/contacts">
 					<h1>
-						Contacto{' '}
+						Contacto
 						<span className="material-symbols-outlined footer-icon">call</span>
 					</h1>
 				</Link>

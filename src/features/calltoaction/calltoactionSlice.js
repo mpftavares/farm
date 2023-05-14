@@ -3,12 +3,14 @@ import { createSlice } from '@reduxjs/toolkit';
 const calltoactionSlice = createSlice({
 	name: 'calltoaction',
 	initialState: {
-		saleList: [],
-		modal: false,
-		selectedSale: null,
+		isOpen: false,
 	},
-	reducers: {},
+	reducers: {
+		updatePharmacyStatus: (state, action) => {
+			state.isOpen = action.payload;
+		},
+	},
 });
 
-export const {} = calltoactionSlice.actions;
+export const { updatePharmacyStatus } = calltoactionSlice.actions;
 export default calltoactionSlice.reducer;

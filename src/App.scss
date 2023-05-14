@@ -44,6 +44,18 @@ h1 {
 	font-size: 1.5em;
 }
 
+button {
+	font-family: $font-highlights;
+	font-size: 1.1em;
+	background-color: $accent-color;
+	color: $light-color;
+	border-radius: $radius;
+	padding: 10px 15px;
+	margin: 1em 0.5em;
+	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+
 .container {
 	margin: 1em;
 	border-radius: $radius;
@@ -79,6 +91,29 @@ h1 {
 	background-color: $light-color;
 }
 
+.padding {
+	padding: 1em;
+	@media (min-width: $laptop) {
+		padding: 2em;
+	}
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+
+	> * {
+		width: 200px;
+	}
+}
+
 @import 'scss/header';
 @import 'scss/form';
 @import 'scss/map';
@@ -88,10 +123,6 @@ h1 {
 @import 'scss/sales';
 @import 'scss/services';
 @import 'scss/modal';
-
-.clickable {
-	cursor: pointer;
-}
 
 .show-mobile {
 	@media (min-width: $tablet) {
@@ -110,12 +141,5 @@ h1 {
 	display: none;
 	@media (min-width: $laptop) {
 		display: flex;
-	}
-}
-
-.padding {
-	padding: 1em;
-	@media (min-width: $laptop) {
-		padding: 2em;
 	}
 }

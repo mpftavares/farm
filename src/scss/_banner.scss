@@ -53,3 +53,35 @@
 	background-image: url('images/pharmacy/products.jpg');
 	justify-content: flex-end;
 }
+
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.banner-open {
+	overflow: hidden;
+	background: linear-gradient(
+		45deg,
+		$primary-color,
+		$secondary-color,
+		$accent-color
+	);
+	background-size: 200% 200%;
+	animation: gradientAnimation 10s ease infinite;
+
+	color: $light-color;
+	text-align: center;
+	font-size: 1em;
+
+	h1 {
+		color: $light-color;
+	}
+}

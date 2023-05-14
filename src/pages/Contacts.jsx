@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import CallToAction from '../features/calltoaction/components/CallToAction';
+import Open from '../features/calltoaction/components/Open';
+import Location from '../features/contacts/components/Location';
 import Form from '../features/form/components/Form';
-import Map from '../features/map/components/Map';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -10,9 +10,9 @@ export default function Contacts() {
 
 	return (
 		<>
-			<CallToAction />
+			<Open />
+			<Location />
 			<Form />
-			<Map />
 		</>
 	);
 }
