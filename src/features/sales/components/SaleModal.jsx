@@ -8,6 +8,11 @@ export default function SaleModal() {
 
 	return (
 		<section className="modal-overlay">
+			<span
+				className="material-symbols-outlined close-icon"
+				onClick={() => dispatch(openModal())}>
+				close
+			</span>
 			<figure className="modal">
 				<img
 					src={`images/sales/${selectedSale}`}
