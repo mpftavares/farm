@@ -9,7 +9,7 @@ export default function SaleModal() {
 	return (
 		<section className="modal-overlay">
 			<span
-				className="material-symbols-outlined close-icon"
+				className="material-symbols-outlined close-icon clickable"
 				onClick={() => dispatch(openModal())}>
 				close
 			</span>

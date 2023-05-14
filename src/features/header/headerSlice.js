@@ -3,22 +3,22 @@ import { createSlice } from '@reduxjs/toolkit';
 const navSlice = createSlice({
 	name: 'nav',
 	initialState: {
-		hamburguerIcon: 'menu',
+		hamburgerIcon: 'menu',
 		navClass: 'nav hide-mobile',
 	},
 	reducers: {
 		closeNav: (state, action) => {
 			state.navClass = 'nav hide-mobile';
-			state.hamburguerIcon = 'menu';
+			state.hamburgerIcon = 'menu';
 		},
-		hamburguerClick: (state, action) => {
+		hamburgerClick: (state, action) => {
 			state.navClass =
 				state.navClass === 'nav hide-mobile' ? 'nav' : 'nav hide-mobile';
-			state.hamburguerIcon =
+			state.hamburgerIcon =
 				state.navClass === 'nav hide-mobile' ? 'menu' : 'close';
 		},
 	},
 });
 
-export const { closeNav, hamburguerClick } = navSlice.actions;
+export const { closeNav, hamburgerClick } = navSlice.actions;
 export default navSlice.reducer;

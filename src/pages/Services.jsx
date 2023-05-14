@@ -8,6 +8,7 @@ export default function Services() {
 	}, []);
 	return (
 		<>
+			<h1 className="show-mobile">Serviços farmacêuticos</h1>
 			<ServiceBanner />
 			<ServiceList />
 		</>

@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import store from './app/store';
 import App from './App.jsx';
-import Adress from './pages/Adress.jsx';
 import Contacts from './pages/Contacts.jsx';
 import Home from './pages/Home.jsx';
 import NotFound from './pages/NotFound.jsx';
@@ -11,6 +10,7 @@ import Sales from './pages/Sales.jsx';
 import Services from './pages/Services.jsx';
 import './index.css';
 import { Provider } from 'react-redux';
+import Mapa from './pages/Mapa';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
@@ -30,11 +30,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 							path="/services"
 							element={<Services />}></Route>
 						<Route
+							path="/mapa"
+							element={<Mapa />}></Route>
+						<Route
 							path="/sales"
 							element={<Sales />}></Route>
-						<Route
-							path="/adress"
-							element={<Adress />}></Route>
 						<Route
 							path="/contacts"
 							element={<Contacts />}></Route>

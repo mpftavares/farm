@@ -12,8 +12,15 @@
 		margin: 0 0 0.5em 0;
 	}
 
-	a {
+	p a {
 		color: $primary-color;
+	}
+
+	a,
+	a h1 {
+		&:hover {
+			color: $primary-color;
+		}
 	}
 
 	@media (min-width: $tablet) {

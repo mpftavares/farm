@@ -7,6 +7,7 @@ import SaleModal from './features/sales/components/SaleModal';
 
 function App() {
 	const isModalOpen = useSelector((state) => state.sales.modal);
+
 	return (
 		<>
 			{isModalOpen && <SaleModal />}

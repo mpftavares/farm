@@ -38,6 +38,10 @@ a {
 
 h1 {
 	font-family: $font-highlights;
+	color: $accent-color;
+	text-align: center;
+	margin: 0.5em;
+	font-size: 1.5em;
 }
 
 .container {
@@ -47,11 +51,6 @@ h1 {
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 	font-size: 0.95em;
-
-	h1 {
-		margin: 0.5em 0 1em 0;
-		color: $dark-color-transparent;
-	}
 }
 
 .grid {
@@ -85,7 +84,6 @@ h1 {
 @import 'scss/map';
 @import 'scss/footer';
 @import 'scss/contacts';
-@import 'scss/adress';
 @import 'scss/banner';
 @import 'scss/sales';
 @import 'scss/services';
@@ -93,6 +91,12 @@ h1 {
 
 .clickable {
 	cursor: pointer;
+}
+
+.show-mobile {
+	@media (min-width: $tablet) {
+		display: none;
+	}
 }
 
 .hide-mobile {

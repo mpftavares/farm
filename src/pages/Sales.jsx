@@ -8,6 +8,7 @@ export default function Sales() {
 	}, []);
 	return (
 		<>
+			<h1 className="show-mobile">Campanhas em vigor</h1>
 			<SalesBanner />
 			<SaleList />
 		</>

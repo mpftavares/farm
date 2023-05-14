@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
+import CallToAction from '../features/calltoaction/components/CallToAction';
 import Form from '../features/form/components/Form';
+import Map from '../features/map/components/Map';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -7,14 +9,10 @@ export default function Contacts() {
 	}, []);
 
 	return (
-		<div className="container light-background padding contacts">
-			<figure className="hide-tablet contacts-img">
-				<img
-					src="../../images/pharmacy/inside-left.jpg"
-					alt="pharmacy"
-				/>
-			</figure>
+		<>
+			<CallToAction />
 			<Form />
-		</div>
+			<Map />
+		</>
 	);
 }

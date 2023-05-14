@@ -1,6 +1,6 @@
 export default function HomeBanner() {
 	return (
-		<section className="container padding banner banner-home">
+		<section className="container padding banner banner-home hide-mobile">
 			<article>
 				<p>
 					"Somos uma equipa altamente especializada, em permanente formação e

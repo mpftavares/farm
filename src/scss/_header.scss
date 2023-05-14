@@ -59,9 +59,8 @@
 			}
 		}
 
-		.hamburguer {
+		.hamburger {
 			color: $light-color;
-			cursor: pointer;
 
 			@media (min-width: $tablet) {
 				display: none;

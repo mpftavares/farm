@@ -26,59 +26,68 @@ export default function Form() {
 	};
 
 	return (
-		<div>
-			<h1>Contacte-nos</h1>
-			<form
-				ref={form}
-				onSubmit={sendEmail}
-				className="form">
-				<label htmlFor="name">Nome:</label>
-				<input
-					type="text"
-					id="name"
-					name="name"
-					placeholder="Introduza o seu nome"
-					className="input"
-					autoComplete="off"
-					required
+		<section className="container light-background padding contacts">
+			<figure className="hide-tablet contacts-img">
+				<img
+					src="../../images/pharmacy/inside-left.jpg"
+					alt="pharmacy"
 				/>
+			</figure>
 
-				<label htmlFor="email">Telefone:</label>
-				<input
-					type="telephone"
-					name="telephone"
-					id="telephone"
-					placeholder="Introduza o seu número de telefone"
-					className="input"
-					autoComplete="off"
-					required
-				/>
+			<article>
+				<h1>Contacte-nos</h1>
+				<form
+					ref={form}
+					onSubmit={sendEmail}
+					className="form">
+					<label htmlFor="name">Nome:</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Introduza o seu nome"
+						className="input"
+						autoComplete="off"
+						required
+					/>
 
-				<label htmlFor="email">Email:</label>
-				<input
-					type="email"
-					name="email"
-					id="email"
-					placeholder="Introduza o seu email"
-					className="input"
-					autoComplete="off"
-				/>
+					<label htmlFor="email">Telefone:</label>
+					<input
+						type="telephone"
+						name="telephone"
+						id="telephone"
+						placeholder="Introduza o seu número de telefone"
+						className="input"
+						autoComplete="off"
+						required
+					/>
 
-				<label htmlFor="message">Assunto:</label>
-				<textarea
-					name="message"
-					id="message"
-					placeholder="Diga-nos em que podemos ajudar"
-					rows="5"
-					className="input"
-					autoComplete="off"
-					required></textarea>
-				<input
-					type="submit"
-					value="Submeter"
-					className="btn submit"
-				/>
-			</form>
-		</div>
+					<label htmlFor="email">Email:</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Introduza o seu email"
+						className="input"
+						autoComplete="off"
+					/>
+
+					<label htmlFor="message">Assunto:</label>
+					<textarea
+						name="message"
+						id="message"
+						placeholder="Diga-nos em que podemos ajudar"
+						rows="5"
+						className="input"
+						autoComplete="off"
+						required></textarea>
+					<input
+						type="submit"
+						value="Submeter"
+						className="btn submit clickable"
+					/>
+				</form>
+			</article>
+		</section>
 	);
 }

@@ -12,9 +12,7 @@ export default function Home() {
 		<>
 			<HomeBanner />
 			<Link to="/adress">
-				<div className="container">
-					<StaticMap />
-				</div>
+				<StaticMap />
 			</Link>
 		</>
 	);
