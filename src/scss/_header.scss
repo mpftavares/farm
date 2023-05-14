@@ -86,13 +86,7 @@
 		background-color: transparent;
 		padding: 1em;
 
-		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 		font-size: 0.9em;
-
-		.active {
-			color: $primary-color;
-			text-shadow: 1px 1px 2px $primary-color-transparent;
-		}
 	}
 	@media (min-width: $laptop) {
 		padding: 2em;
@@ -100,18 +94,41 @@
 	}
 
 	a {
-		padding: 0.5em;
 		color: $light-color;
 
+		padding: 0.3em 0.5em;
+
 		&:hover {
-			background-color: $primary-color-transparent;
+			background-color: $accent-color;
 		}
 
 		@media (min-width: $tablet) {
 			color: $dark-color-transparent;
+			padding: 0.4em 0.2em;
+			border-bottom: 2px solid transparent;
+			transform: translateY(2px);
 
 			&:hover {
 				background-color: transparent;
+				border-bottom: 2px solid $primary-color;
+			}
+			&.active {
+				border-bottom: 2px solid $primary-color;
+			}
+		}
+
+		@media (min-width: $laptop) {
+			margin: 0 1em;
+			border-bottom: 3px solid transparent;
+			transform: translateY(3px);
+			font-weight: bold;
+
+			&:hover {
+				background-color: transparent;
+				border-bottom: 3px solid $primary-color;
+			}
+			&.active {
+				border-bottom: 3px solid $primary-color;
 			}
 		}
 	}
