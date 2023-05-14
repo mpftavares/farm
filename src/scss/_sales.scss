@@ -3,7 +3,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-    cursor: pointer;
 
 	gap: 2em;
 
@@ -12,27 +11,26 @@
 		height: 100%;
 		width: auto;
 		border-radius: $radius;
+		cursor: zoom-in;
 	}
 
 	.description {
 		display: none;
-
 	}
 
 	@media (min-width: $smartphone-landscape) {
 		justify-content: space-between;
 
-        .description {
- 
-		@media (min-width: $smartphone-landscape) {
-			display: block;
-		}           
-        }
+		.description {
+			@media (min-width: $smartphone-landscape) {
+				display: block;
+			}
+		}
 	}
 }
 
 .row {
-    flex-direction: row;
+	flex-direction: row;
 }
 .row-reverse {
 	flex-direction: row-reverse;

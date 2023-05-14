@@ -1,0 +1,22 @@
+.modal-overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: $dark-color-transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal {
+	background-color: $light-color;
+	border: 1px solid #bebebe;
+	border-radius: 2px;
+	padding: 12px 16px;
+
+	height: 80vh;
+
+	cursor: zoom-out;
+}

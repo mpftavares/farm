@@ -16,14 +16,16 @@ export default function SaleList() {
 	}, []);
 
 	return (
-		<section>
-			{saleList.map((s, i) => (
-				<Sale
-					key={i}
-					index={i}
-					sale={s}
-				/>
-			))}
-		</section>
+		<>
+			<section>
+				{saleList.map((s, i) => (
+					<Sale
+						key={i}
+						index={i}
+						sale={s}
+					/>
+				))}
+			</section>
+		</>
 	);
 }
