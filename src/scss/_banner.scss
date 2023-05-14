@@ -7,15 +7,18 @@
 	min-height: 250px;
 
 	article {
-		background-color: $light-color-transparent;
-
-		padding: 1em;
-		border-radius: $radius;
-
-		color: $dark-color;
-
 		display: flex;
 		align-items: center;
+
+		h1 {
+			margin: 0;
+			color: $accent-color;
+			background-color: $light-color-transparent;
+			border-radius: $radius;
+			text-align: end;
+			padding: .5em;
+			font-size: 2em;
+		}
 
 		@media (min-width: $tablet) {
 			flex-basis: 60%;
@@ -30,8 +33,22 @@
 
 .banner-home {
 	background-image: url('images/pharmacy/inside-right.jpg');
+	article {
+		background-color: $light-color-transparent;
+
+		padding: 1em;
+		border-radius: $radius;
+
+		color: $dark-color;
+	}
 }
 
 .banner-services {
 	background-image: url('images/pharmacy/office.jpg');
+	justify-content: flex-end;
+}
+
+.banner-sales {
+	background-image: url('images/pharmacy/products.jpg');
+	justify-content: flex-end;
 }

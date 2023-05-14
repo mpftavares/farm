@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import HomeBanner from '../features/banners/HomeBanner';
+import HomeBanner from '../features/home/HomeBanner';
 import StaticMap from '../features/map/components/StaticMap';
 
 export default function Home() {

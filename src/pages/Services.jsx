@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import ServiceBanner from '../features/banners/ServiceBanner';
+import ServiceBanner from '../features/services/components/ServiceBanner';
 import ServiceList from '../features/services/components/ServiceList';
 
 export default function Services() {
