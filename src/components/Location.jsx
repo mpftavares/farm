@@ -3,7 +3,7 @@ import Contacts from './Contacts';
 
 export default function Location() {
 	return (
-		<p>
+		<>
 			<div className="container location">
 				<Contacts />
 				<section className="hide-mobile">
@@ -13,6 +13,6 @@ export default function Location() {
 			<section className="container show-mobile">
 				<Map />
 			</section>
-		</p>
+		</>
 	);
 }
