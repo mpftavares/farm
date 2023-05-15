@@ -112,6 +112,7 @@ button {
 .container-header {
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 @media (min-width: 768px) {
   .container-header {
@@ -435,6 +436,9 @@ button {
   font-size: 1em;
 }
 .banner-open h1 {
+  color: rgb(255, 255, 255);
+}
+.banner-open a {
   color: rgb(255, 255, 255);
 }
 

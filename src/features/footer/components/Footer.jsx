@@ -7,7 +7,7 @@ export default function Footer() {
 			<article>
 				<Link to="/adress">
 					<h1>
-						Localização{' '}
+						Localização
 						<span className="material-symbols-outlined footer-icon">
 							location_on
 						</span>
@@ -18,7 +18,7 @@ export default function Footer() {
 			</article>
 			<article>
 				<h1>
-					Horário{' '}
+					Horário
 					<span className="material-symbols-outlined footer-icon">
 						schedule
 					</span>

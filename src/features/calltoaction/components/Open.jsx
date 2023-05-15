@@ -4,15 +4,13 @@ import { updatePharmacyStatus } from '../calltoactionSlice';
 
 export default function CallToAction() {
 	const dispatch = useDispatch();
-	const isOpen = useSelector((state) => state.calltoaction.isOpen);
+	let isOpen = useSelector((state) => state.calltoaction.isOpen);
 
 	useEffect(() => {
 		const currentTime = new Date();
 		const currentDay = currentTime.getDay();
 		const currentHour = currentTime.getHours();
 		const currentMinute = currentTime.getMinutes();
-
-		let isOpen = false;
 
 		if (
 			(currentDay >= 1 &&
@@ -35,19 +33,31 @@ export default function CallToAction() {
 		dispatch(updatePharmacyStatus(isOpen));
 	});
 
-	// return <section>{isOpen ? <h1>Open</h1> : null}</section>;
+	return isOpen ? (
+		<section className="container padding banner-open">
+			<h1>Estamos abertos</h1>
+			<p>
+				Venha visitar-nos ou contacte-nos diretamente por{' '}
+				<a href="tel:21 752 4103">
+					telefone{' '}
+					<span className="material-symbols-outlined footer-icon">call</span>
+				</a>
+			</p>
+		</section>
+	) : null;
 
-	return (
-		<>
-			<section className="container padding banner-open">
-				<h1>Estamos abertos</h1>
-				<p>
-					Venha visitar-nos ou contacte-nos diretamente{' '}
-					<a href="tel:21 752 4103">
-						<span className="material-symbols-outlined footer-icon">call</span>
-					</a>
-				</p>
-			</section>
-		</>
-	);
+	// return (
+	// 	<>
+	// 		<section className="container padding banner-open">
+	// 			<h1>Estamos abertos</h1>
+	// 			<p>
+	// 				Venha visitar-nos ou contacte-nos diretamente por{' '}
+	// 				<a href="tel:21 752 4103">
+	// 					telefone{' '}
+	// 					<span className="material-symbols-outlined footer-icon">call</span>
+	// 				</a>
+	// 			</p>
+	// 		</section>
+	// 	</>
+	// );
 }
