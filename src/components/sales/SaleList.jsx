@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSales } from '../saleSlice';
-import Sale from './Sale';
+import { getSales } from './saleSlice';
+import Sale from './components/Sale';
 
 export default function SaleList() {
 	const { saleList } = useSelector((state) => state.sales);
@@ -17,7 +17,7 @@ export default function SaleList() {
 
 	return (
 		<>
-			<section>
+			<section className="grid">
 				{saleList.map((s, i) => (
 					<Sale
 						key={i}

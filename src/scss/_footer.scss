@@ -1,5 +1,11 @@
 .footer {
-	padding: 1em;
+	background-color: $secondary-color-transparent;
+	color: $dark-color;
+	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+
+	font-size: 0.95em;
+
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
@@ -8,7 +14,7 @@
 	text-align: center;
 
 	h1 {
-		color: $dark-color-transparent;
+		color: $primary-color;
 		margin: 0 0 0.5em 0;
 	}
 
@@ -26,6 +32,12 @@
 	@media (min-width: $tablet) {
 		flex-direction: row;
 		justify-content: space-evenly;
+		margin: 1em;
+		background-color: $light-color;
+
+		h1 {
+			color: $dark-color-transparent;
+		}
 	}
 }
 

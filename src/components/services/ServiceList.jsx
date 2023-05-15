@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getServices } from '../serviceSlice';
-import Service from './Service';
+import { getServices } from './serviceSlice';
+import Service from './components/Service';
 
 export default function ServiceList() {
 	const { serviceList } = useSelector((state) => state.services);

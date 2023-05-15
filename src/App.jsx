@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Footer from './features/footer/components/Footer';
-import Header from './features/header/components/Header';
-import SaleModal from './features/sales/components/SaleModal';
+import Header from './components/header/Header';
+import SaleModal from './components/sales/components/SaleModal';
+import Footer from './components/Footer';
 
 function App() {
 	const isModalOpen = useSelector((state) => state.sales.modal);
@@ -17,10 +17,9 @@ function App() {
 				</div>
 				<div className="outlet">
 					<Outlet />
-					<div className="container light-background padding">
-						<Footer />
-					</div>
 				</div>
+
+				<Footer />
 			</main>
 		</>
 	);

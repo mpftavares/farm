@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const calltoactionSlice = createSlice({
-	name: 'calltoaction',
+const wereopenSlice = createSlice({
+	name: 'wereopen',
 	initialState: {
 		isOpen: false,
 	},
@@ -12,5 +12,5 @@ const calltoactionSlice = createSlice({
 	},
 });
 
-export const { updatePharmacyStatus } = calltoactionSlice.actions;
-export default calltoactionSlice.reducer;
+export const { updatePharmacyStatus } = wereopenSlice.actions;
+export default wereopenSlice.reducer;

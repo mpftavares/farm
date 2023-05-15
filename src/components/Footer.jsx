@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
 	return (
-		<footer className="footer">
+		<footer className="footer light-background padding radius">
 			<article>
-				<Link to="/adress">
+				<Link to="/contacts">
 					<h1>
-						Localização
+						Localização{' '}
 						<span className="material-symbols-outlined footer-icon">
 							location_on
 						</span>
@@ -18,7 +18,7 @@ export default function Footer() {
 			</article>
 			<article>
 				<h1>
-					Horário
+					Horário{' '}
 					<span className="material-symbols-outlined footer-icon">
 						schedule
 					</span>
@@ -29,7 +29,7 @@ export default function Footer() {
 			<article>
 				<Link to="/contacts">
 					<h1>
-						Contacto
+						Contacto{' '}
 						<span className="material-symbols-outlined footer-icon">call</span>
 					</h1>
 				</Link>

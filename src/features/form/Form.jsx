@@ -29,7 +29,7 @@ export default function Form() {
 		<section className="container light-background padding contacts">
 			<figure className="hide-tablet contacts-img">
 				<img
-				className='radius'
+					className="radius"
 					src="../../images/pharmacy/inside-left.jpg"
 					alt="pharmacy"
 				/>

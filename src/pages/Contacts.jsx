@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import Open from '../features/calltoaction/components/Open';
-import Location from '../features/contacts/components/Location';
-import Form from '../features/form/components/Form';
+import Open from '../features/wereopen/Open';
+import Location from '../components/Location';
+import Form from '../features/form/Form';
 
 export default function Contacts() {
 	useEffect(() => {

@@ -1,7 +1,8 @@
 .container-header {
 	position: sticky;
 	top: 0;
-	z-index: 10;
+	z-index: 5;
+	margin-bottom: 1em;
 
 	@media (min-width: $tablet) {
 		margin: 1em;
@@ -23,6 +24,7 @@
 		padding: 1em;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	&-mobile {
@@ -44,7 +46,7 @@
 		}
 
 		.logo {
-			height: 60px;
+			height: 80px;
 			width: 250px;
 			background-size: contain;
 			background-position: center;
@@ -52,6 +54,7 @@
 			background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
 
 			@media (min-width: $tablet) {
+				margin-left: 1em;
 				background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
 			}
 
@@ -76,6 +79,7 @@
 	flex-direction: column;
 	background-color: $secondary-color;
 	font-family: $font-highlights;
+	padding: 5px;
 
 	@media (min-width: $tablet) {
 		flex-direction: row;
@@ -98,8 +102,9 @@
 
 		padding: 0.3em 0.5em;
 
-		&:hover {
+		&:hover, &:active {
 			background-color: $accent-color;
+			border-radius: $radius;
 		}
 
 		@media (min-width: $tablet) {
@@ -108,12 +113,10 @@
 			border-bottom: 2px solid transparent;
 			transform: translateY(2px);
 
-			&:hover {
+			&:hover, &.active  {
 				background-color: transparent;
 				border-bottom: 2px solid $primary-color;
-			}
-			&.active {
-				border-bottom: 2px solid $primary-color;
+				border-radius: 0;
 			}
 		}
 

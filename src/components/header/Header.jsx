@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { closeNav, hamburgerClick } from '../headerSlice';
-import Hamburger from './Hamburger';
-import Nav from './Nav';
+import { closeNav, hamburgerClick } from './headerSlice';
+import Hamburger from './components/Hamburger';
+import Nav from './components/Nav';
 
 export default function Header() {
 	let dispatch = useDispatch();

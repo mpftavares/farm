@@ -1,8 +1,9 @@
-.card-service {
+.service-card {
 	position: relative;
 
 	margin: 0;
-
+	height: 200px;
+	max-width: 280px;
 	font-size: 0.85em;
 
 	background-size: initial;
@@ -15,6 +16,7 @@
 
 	@media (min-width: $tablet) {
 		font-size: 0.9em;
+		height: 250px;
 	}
 
 	h1 {

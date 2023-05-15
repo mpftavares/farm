@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import HomeBanner from '../features/home/HomeBanner';
+
 import StaticMap from '../features/map/components/StaticMap';
-import Open from '../features/calltoaction/components/Open';
+import Open from '../features/wereopen/Open';
+import HomeBanner from '../components/Banners/HomeBanner';
 
 export default function Home() {
 	useEffect(() => {
