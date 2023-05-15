@@ -5,8 +5,8 @@ export default function Service({ service }) {
 		<article
 			className="container card card-service"
 			style={{ backgroundImage: `url(images/services/${imageUrl})` }}>
-			<h1>{title}</h1>
-			<div className="description ">
+			<h1 className="radius">{title}</h1>
+			<div className="description radius">
 				<p>{description}</p>
 			</div>
 		</article>

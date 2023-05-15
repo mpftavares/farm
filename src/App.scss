@@ -102,6 +102,10 @@ button {
 	cursor: pointer;
 }
 
+.radius {
+	border-radius: $radius;
+}
+
 .not-found {
 	display: flex;
 	flex-direction: column;

@@ -1,7 +1,7 @@
 export default function HomeBanner() {
 	return (
 		<section className="container padding banner banner-home hide-mobile">
-			<article>
+			<article className="radius">
 				<p>
 					"Somos uma equipa altamente especializada, em permanente formação e
 					actualização, com o objectivo de prestar o melhor serviço aos nossos
