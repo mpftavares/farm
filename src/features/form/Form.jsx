@@ -26,8 +26,8 @@ export default function Form() {
 	};
 
 	return (
-		<section className="container light-background padding contacts">
-			<figure className="hide-tablet contacts-img">
+		<section className="container light-background padding margin-bottom contact-form">
+			<figure className="show-laptop contact-form-img">
 				<img
 					className="radius"
 					src="../../images/pharmacy/inside-left.jpg"
@@ -36,11 +36,11 @@ export default function Form() {
 			</figure>
 
 			<article>
-				<h1>Contacte-nos</h1>
 				<form
 					ref={form}
 					onSubmit={sendEmail}
 					className="form">
+					<h1>Contacte-nos</h1>
 					<label htmlFor="name">Nome:</label>
 					<input
 						type="text"

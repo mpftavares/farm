@@ -6,9 +6,7 @@ export default function Service({ service }) {
 			className="container service-card"
 			style={{ backgroundImage: `url(images/services/${imageUrl})` }}>
 			<h1 className="radius">{title}</h1>
-			<div className="description radius">
-				<p>{description}</p>
-			</div>
+			<p className="description radius">{description}</p>
 		</article>
 	);
 }

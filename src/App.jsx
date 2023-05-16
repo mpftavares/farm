@@ -12,7 +12,7 @@ function App() {
 		<>
 			{isModalOpen && <SaleModal />}
 			<main className="App">
-				<div className="container-header">
+				<div className="container-header margin-bottom">
 					<Header />
 				</div>
 				<div className="outlet">

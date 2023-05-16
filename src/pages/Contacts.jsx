@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
 import Open from '../features/wereopen/Open';
-import Location from '../components/Location';
 import Form from '../features/form/Form';
+import Info from '../components/Info';
+import Map from '../features/map/components/Map';
+import Directions from '../components/Directions';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -11,7 +13,9 @@ export default function Contacts() {
 	return (
 		<>
 			<Open />
-			<Location />
+			<Info />
+			<Map />
+			<Directions />
 			<Form />
 		</>
 	);

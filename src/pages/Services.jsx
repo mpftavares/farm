@@ -9,7 +9,7 @@ export default function Services() {
 	}, []);
 	return (
 		<>
-			<h1 className="show-mobile">Serviços farmacêuticos</h1>
+			<h1 className="show-mobile mobile-title">Serviços farmacêuticos</h1>
 			<ServiceBanner />
 			<ServiceList />
 		</>

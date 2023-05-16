@@ -17,7 +17,7 @@ export default function SaleList() {
 
 	return (
 		<>
-			<section className="grid">
+			<section className="card-grid margin-bottom">
 				{saleList.map((s, i) => (
 					<Sale
 						key={i}

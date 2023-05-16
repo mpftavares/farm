@@ -32,7 +32,7 @@
 	@media (min-width: $tablet) {
 		flex-direction: row;
 		justify-content: space-evenly;
-		margin: 1em;
+		margin: 0 1rem 1rem;
 		background-color: $light-color;
 
 		h1 {

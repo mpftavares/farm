@@ -76,15 +76,15 @@
 	background-size: 200% 200%;
 	animation: gradientAnimation 10s ease infinite;
 
-	color: $light-color;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	text-align: center;
 	font-size: 1em;
 
-	h1 {
+	> * {
 		color: $light-color;
 	}
 
-	a {
-		color: $light-color;
-	}
 }
