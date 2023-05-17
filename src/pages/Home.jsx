@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import StaticMap from '../features/map/components/StaticMap';
 import Open from '../features/wereopen/Open';
-import HomeBanner from '../components/Banners/HomeBanner';
+import HomeBanner from '../components/HomeBanner';
 
 export default function Home() {
 	useEffect(() => {

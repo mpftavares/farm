@@ -23,6 +23,6 @@ export default function Directions() {
       };
 
   return (
-    <button onClick={handleGetDirections} className="clickable directions margin-bottom">Obter direcções</button>
+    <button onClick={handleGetDirections} className="clickable directions margin-bottom btn">Obter direcções</button>
   )
 }

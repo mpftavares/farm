@@ -1,0 +1,21 @@
+.mapa {
+    h2 {
+        color: $secondary-color;
+        font-size: 1.5em;
+        margin: .5em;
+    }
+	p {
+		text-indent: 1em;
+        line-height: 1.5em;
+	}
+}
+
+.accordion {
+    --bs-accordion-btn-focus-box-shadow: transparent;
+    --bs-accordion-active-bg: transparent;
+
+    .accordion-button {
+        padding: 0;
+    }
+}
+

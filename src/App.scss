@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.css';
 @import 'scss/variables';
 
 * {
@@ -53,7 +54,7 @@ h1 {
 	font-size: 1.5em;
 }
 
-button {
+.btn {
 	font-family: $font-highlights;
 	font-size: 1.1em;
 	background-color: $accent-color;
@@ -127,8 +128,6 @@ button {
 	}
 }
 
-
-
 @import 'scss/header';
 @import 'scss/form';
 @import 'scss/map';
@@ -138,7 +137,7 @@ button {
 @import 'scss/sales';
 @import 'scss/services';
 @import 'scss/modal';
-
+@import 'scss/mapa';
 
 .show-mobile {
 	@media (min-width: $tablet) {

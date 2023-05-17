@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.css';
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,8 @@ img {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
@@ -48,7 +50,7 @@ h1 {
   font-size: 1.5em;
 }
 
-button, .form input[type=submit] {
+.btn, .form input[type=submit] {
   font-family: "Raleway", sans-serif;
   font-size: 1.1em;
   background-color: rgb(154, 205, 50);
@@ -233,7 +235,7 @@ button, .form input[type=submit] {
   }
   .nav a:hover, .nav a.active {
     background-color: transparent;
-    border-bottom: 2px solid rgb(34, 139, 34);
+    border-bottom: 2px solid rgb(154, 205, 50);
     border-radius: 0;
   }
 }
@@ -246,10 +248,10 @@ button, .form input[type=submit] {
   }
   .nav a:hover {
     background-color: transparent;
-    border-bottom: 3px solid rgb(34, 139, 34);
+    border-bottom: 3px solid rgb(154, 205, 50);
   }
   .nav a.active {
-    border-bottom: 3px solid rgb(34, 139, 34);
+    border-bottom: 3px solid rgb(154, 205, 50);
   }
 }
 
@@ -372,7 +374,7 @@ button, .form input[type=submit] {
 .info a {
   color: rgb(34, 139, 34);
 }
-.info > * {
+.info article {
   margin-bottom: 1em;
 }
 @media (min-width: 768px) {
@@ -464,6 +466,11 @@ button, .form input[type=submit] {
   color: rgb(255, 255, 255);
 }
 
+.banner-mapa {
+  background-image: url("images/pharmacy/mapa-banner.jpeg");
+  justify-content: flex-end;
+}
+
 .sale-card {
   display: flex;
   flex-direction: column-reverse;
@@ -552,6 +559,24 @@ button, .form input[type=submit] {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.mapa h2 {
+  color: rgb(138, 190, 83);
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+.mapa p {
+  text-indent: 1em;
+  line-height: 1.5em;
+}
+
+.accordion {
+  --bs-accordion-btn-focus-box-shadow: transparent;
+  --bs-accordion-active-bg: transparent;
+}
+.accordion .accordion-button {
+  padding: 0;
 }
 
 @media (min-width: 768px) {

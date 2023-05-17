@@ -4,7 +4,7 @@ export default function NotFound() {
 	return (
 		<section className="container padding light-background not-found">
 			<p>Page not found</p>
-			<button className='clickable'>
+			<button className='clickable btn'>
 				<Link to="/home">Home</Link>
 			</button>
 		</section>

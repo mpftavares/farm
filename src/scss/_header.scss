@@ -114,7 +114,7 @@
 
 			&:hover, &.active  {
 				background-color: transparent;
-				border-bottom: 2px solid $primary-color;
+				border-bottom: 2px solid $accent-color;
 				border-radius: 0;
 			}
 		}
@@ -127,10 +127,10 @@
 
 			&:hover {
 				background-color: transparent;
-				border-bottom: 3px solid $primary-color;
+				border-bottom: 3px solid $accent-color;
 			}
 			&.active {
-				border-bottom: 3px solid $primary-color;
+				border-bottom: 3px solid $accent-color;
 			}
 		}
 	}
