@@ -1,0 +1,39 @@
+.open {
+	overflow: hidden;
+	background: linear-gradient(
+		45deg,
+		$primary-color,
+		$secondary-color,
+		$accent-color
+	);
+	background-size: 200% 200%;
+	animation: gradientAnimation 10s ease infinite;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 1em;
+	height: 100%;
+
+	> * {
+		color: $light-color;
+	}
+
+	a {
+		color: $light-color;
+	}
+}
+
+.open-grid {
+	@media (min-width: $tablet) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: stretch;
+		grid-gap: 1em;
+
+		.span-2r {
+			grid-row: span 2;
+		}
+	}
+}

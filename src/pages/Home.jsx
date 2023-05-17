@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
-import StaticMap from '../features/map/components/StaticMap';
-import Open from '../features/wereopen/Open';
 import HomeBanner from '../components/HomeBanner';
 import Highlights from '../features/Highlights';
+import { isOpen } from '../features/wereopen/isOpen';
+import OpenGrid from '../components/OpenGrid';
 
 export default function Home() {
 	useEffect(() => {
@@ -13,14 +12,14 @@ export default function Home() {
 
 	return (
 		<>
-			<Link to="/contacts">
-				<Open />
-			</Link>
 			<HomeBanner />
-			<Highlights/>
-			<Link to="/contacts">
-				<StaticMap />
-			</Link>
+			<Highlights />
+			{isOpen ? (
+				<>
+					<OpenGrid/>
+				</>
+			) : null}
+			
 		</>
 	);
 }

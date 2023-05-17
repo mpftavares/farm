@@ -578,6 +578,37 @@ h1 {
   padding: 0;
 }
 
+.open {
+  overflow: hidden;
+  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  height: 100%;
+}
+.open > * {
+  color: rgb(255, 255, 255);
+}
+.open a {
+  color: rgb(255, 255, 255);
+}
+
+@media (min-width: 768px) {
+  .open-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: stretch;
+    grid-gap: 1em;
+  }
+  .open-grid .span-2r {
+    grid-row: span 2;
+  }
+}
+
 @media (min-width: 768px) {
   .show-mobile {
     display: none;
