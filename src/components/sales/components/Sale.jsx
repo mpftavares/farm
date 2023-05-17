@@ -6,7 +6,7 @@ export default function Sale({ sale, index }) {
 	let dispatch = useDispatch();
 
 	return (
-		<article className={`container light-background padding sale-card`}>
+		<article className={`box light-background padding sale-card`}>
 			<p className="description">{description}</p>
 			<img
 				src={`images/sales/${imageUrl}`}

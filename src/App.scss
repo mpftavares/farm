@@ -46,6 +46,7 @@ a {
 
 p {
 	color: $dark-color;
+	margin-bottom: 0;
 }
 
 h1 {
@@ -71,7 +72,7 @@ h1 {
 	flex: 1;
 }
 
-.container {
+.box {
 	width: 100%;
 	border-radius: $radius;
 	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,

@@ -34,7 +34,7 @@ export default function CallToAction() {
 	});
 
 	return isOpen ? (
-		<section className="container padding margin-bottom banner-open">
+		<section className="box padding margin-bottom banner-open">
 			<h1>Estamos abertos</h1>
 			<p>
 				Venha visitar-nos ou contacte-nos diretamente por telefone{' '}
@@ -45,7 +45,7 @@ export default function CallToAction() {
 
 	// return (
 	// 	<>
-	// 		<section className="container padding banner-open">
+	// 		<section className="box padding banner-open">
 	// 			<h1>Estamos abertos</h1>
 	// 			<p>
 	// 				Venha visitar-nos ou contacte-nos diretamente por{' '}

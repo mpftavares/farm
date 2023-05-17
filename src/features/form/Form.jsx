@@ -26,7 +26,7 @@ export default function Form() {
 	};
 
 	return (
-		<section className="container light-background padding margin-bottom contact-form">
+		<section className="box light-background padding margin-bottom contact-form">
 			<figure className="show-laptop contact-form-img">
 				<img
 					className="radius"

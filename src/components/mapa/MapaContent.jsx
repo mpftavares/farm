@@ -2,7 +2,7 @@ import { Accordion } from 'react-bootstrap';
 
 export default function MapaContent() {
 	return (
-		<section className="container radius padding margin-bottom mapa">
+		<section className="box radius light-background padding margin-bottom mapa">
 			<article className="mapa-description">
 				<p>
 					A MAPA consiste na medição da pressão arterial durante um determinado
