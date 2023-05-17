@@ -50,7 +50,7 @@ h1 {
   font-size: 1.5em;
 }
 
-.btn, .form input[type=submit] {
+.btn {
   font-family: "Raleway", sans-serif;
   font-size: 1.1em;
   background-color: rgb(154, 205, 50);
@@ -285,6 +285,7 @@ h1 {
 .form input[type=submit] {
   align-self: center;
   margin: 1em 0.5em;
+  box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
 .home-map {
@@ -367,15 +368,13 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
+  gap: 1em;
 }
 .info h1 {
   margin-bottom: 0.5em;
 }
 .info a {
   color: rgb(34, 139, 34);
-}
-.info article {
-  margin-bottom: 1em;
 }
 @media (min-width: 768px) {
   .info {
