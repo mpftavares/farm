@@ -9,7 +9,7 @@ export default function Nav({ onClick, className }) {
 			<NavLink to="/services">Serviços</NavLink>
 			<NavLink to="/mapa">MAPA 48h</NavLink>
 			<NavLink to="/sales">Promoções</NavLink>
-			<NavLink to="/contacts">Contactos</NavLink>
+			<NavLink to="/contacts">Contacto</NavLink>
 		</nav>
 	);
 }

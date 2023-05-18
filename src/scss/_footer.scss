@@ -14,12 +14,12 @@
 	text-align: center;
 
 	h1 {
-		color: $primary-color;
+		color: $dark-color;
 		margin: 0 0 0.5em 0;
 	}
 
 	p a {
-		color: $primary-color;
+		color: $dark-color;
 	}
 
 	a,
@@ -37,6 +37,13 @@
 
 		h1 {
 			color: $dark-color-transparent;
+		}
+
+		a,
+		a h1 {
+			&:hover {
+				color: $secondary-color;
+			}
 		}
 	}
 }

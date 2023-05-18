@@ -4,6 +4,8 @@ import Info from '../components/Info';
 import Map from '../features/map/components/Map';
 import Directions from '../components/Directions';
 import WereOpen from '../features/wereopen/WereOpen';
+import Call from '../components/Call';
+import { isOpen } from '../features/wereopen/isOpen';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -12,11 +14,18 @@ export default function Contacts() {
 
 	return (
 		<>
-			<WereOpen />
-			<Info />
-			<Map />
-			<Directions />
+			{isOpen ? (
+				<>
+					<WereOpen />
+					<div className="dir-call">
+						<Directions />
+						<Call />
+					</div>
+				</>
+			) : null}
+
 			<Form />
+			<Map />
 		</>
 	);
 }

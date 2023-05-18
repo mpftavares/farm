@@ -46,3 +46,26 @@
 		}
 	}
 }
+
+.call {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.call,
+.directions {
+	span {
+		color: $primary-color;
+		margin-right: 5px;
+		font-size: 16px;
+	}
+}
+
+.dir-call {
+	@media (min-width: $smartphone-landscape) {
+		display: flex;
+		gap: 1em;
+	}
+}

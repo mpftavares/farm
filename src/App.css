@@ -13,7 +13,8 @@ img {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
@@ -57,8 +58,11 @@ h1 {
   color: rgb(255, 255, 255);
   border-radius: 4px;
   padding: 10px 15px;
-  width: 156px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+}
+.btn:hover {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: rgb(255, 255, 255);
 }
 
 .outlet {
@@ -315,11 +319,11 @@ h1 {
   text-align: center;
 }
 .footer h1 {
-  color: rgb(34, 139, 34);
+  color: rgb(51, 51, 51);
   margin: 0 0 0.5em 0;
 }
 .footer p a {
-  color: rgb(34, 139, 34);
+  color: rgb(51, 51, 51);
 }
 .footer a:hover,
 .footer a h1:hover {
@@ -334,6 +338,10 @@ h1 {
   }
   .footer h1 {
     color: rgba(51, 51, 51, 0.8);
+  }
+  .footer a:hover,
+  .footer a h1:hover {
+    color: rgb(138, 190, 83);
   }
 }
 
@@ -382,6 +390,27 @@ h1 {
   }
   .info > * {
     flex: 1;
+  }
+}
+
+.call {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.call span,
+.directions span {
+  color: rgb(34, 139, 34);
+  margin-right: 5px;
+  font-size: 16px;
+}
+
+@media (min-width: 480px) {
+  .dir-call {
+    display: flex;
+    gap: 1em;
   }
 }
 
@@ -600,12 +629,15 @@ h1 {
 @media (min-width: 768px) {
   .open-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr 2fr;
     justify-items: stretch;
     grid-gap: 1em;
   }
   .open-grid .span-2r {
     grid-row: span 2;
+  }
+  .open-grid .span-2c {
+    grid-column: span 2;
   }
 }
 

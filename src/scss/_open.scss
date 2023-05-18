@@ -28,12 +28,16 @@
 .open-grid {
 	@media (min-width: $tablet) {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr 1fr 2fr;
 		justify-items: stretch;
 		grid-gap: 1em;
 
 		.span-2r {
 			grid-row: span 2;
+		}
+
+		.span-2c {
+			grid-column: span 2;
 		}
 	}
 }
