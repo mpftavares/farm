@@ -10,11 +10,13 @@ export default function Home() {
 		document.title = 'Farmácia Patuleia | Home';
 	}, []);
 
+	let isPharmacyOpen = isOpen();
+
 	return (
 		<>
 			<HomeBanner />
 			<Highlights />
-			{isOpen ? (
+			{isPharmacyOpen ? (
 				<>
 					<OpenGrid/>
 				</>

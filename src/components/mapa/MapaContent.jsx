@@ -1,4 +1,5 @@
 import { Accordion } from 'react-bootstrap';
+import Call from '../Call';
 
 export default function MapaContent() {
 	return (
@@ -18,6 +19,11 @@ export default function MapaContent() {
 					posteriormente para um software que permite a análise dos dados
 					recolhidos. A MAPA deverá ter uma duração de 48 horas.
 				</p>
+				<div className='float-right'><Call/></div>
+				<p>
+					Marque o seu MAPA 48h presencialmente ou por telefone.
+				</p>
+				
 			</article>
 
 			<Accordion flush>

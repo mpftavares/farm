@@ -24,7 +24,7 @@ export default function Directions() {
 		<button
 			onClick={handleGetDirections}
 			className="clickable directions margin-bottom btn">
-			<span class="material-symbols-outlined">directions</span>Obter direcções
+			<span className="material-symbols-outlined">directions</span>Obter direcções
 		</button>
 	);
 }

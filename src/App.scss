@@ -133,6 +133,11 @@ h1 {
 	}
 }
 
+.float-right {
+	float: right;
+	margin: 1em 0 1em 1em;
+}
+
 @import 'scss/header';
 @import 'scss/form';
 @import 'scss/map';

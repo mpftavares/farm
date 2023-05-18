@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import Form from '../features/form/Form';
-import Info from '../components/Info';
 import Map from '../features/map/components/Map';
 import Directions from '../components/Directions';
 import WereOpen from '../features/wereopen/WereOpen';
@@ -12,9 +11,11 @@ export default function Contacts() {
 		document.title = 'Farmácia Patuleia | Contactos';
 	}, []);
 
+	let isPharmacyOpen = isOpen();
+
 	return (
 		<>
-			{isOpen ? (
+			{isPharmacyOpen ? (
 				<>
 					<WereOpen />
 					<div className="dir-call">
