@@ -10,12 +10,27 @@
 		line-height: 1.5em;
 		text-align: justify;
 	}
+
+	.mapa-description {
+		@media (min-width: $laptop) {
+			display: flex;
+			gap: 2em;
+
+			article {
+				flex: 2;
+			}
+
+			.appointment {
+				flex: 1;
+			}
+		}
+	}
 }
 
 .accordion {
 	--bs-accordion-btn-focus-box-shadow: transparent;
 	--bs-accordion-active-bg: transparent;
-    text-align: justify;
+	text-align: justify;
 
 	.accordion-button {
 		padding: 0;

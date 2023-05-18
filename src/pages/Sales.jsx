@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import SaleList from '../components/sales/SaleList';
-import SalesBanner from '../components/sales/components/SalesBanner';
+import SalesBanner from '../components/sales/SalesBanner';
+
 
 
 export default function Sales() {

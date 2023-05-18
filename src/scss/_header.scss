@@ -101,7 +101,8 @@
 
 		padding: 0.3em 0.5em;
 
-		&:hover, &:active {
+		&:hover,
+		&:active {
 			background-color: $accent-color;
 			border-radius: $radius;
 		}
@@ -112,7 +113,8 @@
 			border-bottom: 2px solid transparent;
 			transform: translateY(2px);
 
-			&:hover, &.active  {
+			&:hover,
+			&.active {
 				background-color: transparent;
 				border-bottom: 2px solid $accent-color;
 				border-radius: 0;

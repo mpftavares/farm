@@ -12,8 +12,8 @@ export default function Header() {
 	const classes = useSelector((state) => state.nav.navClass);
 
 	return (
-		<div className="header">
-			<header className="header-mobile">
+		<header className="header">
+			<div className="header-mobile">
 				<Link to="/home">
 					<div className="logo">{/* // logo as background image */}</div>
 				</Link>
@@ -21,11 +21,11 @@ export default function Header() {
 					onClick={() => dispatch(hamburgerClick())}
 					icon={icon}
 				/>
-			</header>
+			</div>
 			<Nav
 				onClick={() => dispatch(closeNav())}
 				className={classes}
 			/>
-		</div>
+		</header>
 	);
 }

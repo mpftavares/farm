@@ -34,10 +34,6 @@
 		margin-bottom: 0.5em;
 	}
 
-	a {
-		color: $primary-color;
-	}
-
 	@media (min-width: $tablet) {
 		flex-direction: row;
 
@@ -67,5 +63,20 @@
 	@media (min-width: $smartphone-landscape) {
 		display: flex;
 		gap: 1em;
+	}
+}
+
+.appointment {
+	margin: 1em 0;
+	.btn {
+		margin: 1em 0 0 0;
+	}
+
+	p {
+		text-align: center !important;
+	}
+
+	@media (min-width: $laptop) {
+		margin: 0;
 	}
 }

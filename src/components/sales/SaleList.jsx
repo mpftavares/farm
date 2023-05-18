@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSales } from './saleSlice';
-import Sale from './components/Sale';
+import Sale from './Sale';
 
 export default function SaleList() {
 	const { saleList } = useSelector((state) => state.sales);

@@ -1,4 +1,4 @@
-import StaticMap from "../features/map/components/StaticMap";
+import StaticMap from "../../features/map/components/StaticMap";
 
 export default function HomeBanner() {
 	return (

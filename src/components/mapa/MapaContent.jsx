@@ -1,30 +1,29 @@
 import { Accordion } from 'react-bootstrap';
-import Call from '../Call';
+import Call from '../contacts/Call';
+import Appointment from '../contacts/Appointment';
 
 export default function MapaContent() {
 	return (
 		<section className="box radius light-background padding margin-bottom mapa">
-			<article className="mapa-description">
-				<p>
-					A MAPA consiste na medição da pressão arterial durante um determinado
-					período de tempo em intervalos de 60 minutos, inclusivé durante a
-					noite, e permite estimar a média da pressão arterial durante o período
-					total do exame.
-				</p>
-				<p>
-					Trata-se de um método de medição automática da pressão arterial
-					realizada através de um dispositivo colocado na cintura do paciente
-					que insufla uma bolsa de borracha (manguito) instalada no braço. As
-					várias mediões são então armazenadas neste dispositivo e transferidas
-					posteriormente para um software que permite a análise dos dados
-					recolhidos. A MAPA deverá ter uma duração de 48 horas.
-				</p>
-				<div className='float-right'><Call/></div>
-				<p>
-					Marque o seu MAPA 48h presencialmente ou por telefone.
-				</p>
-				
-			</article>
+			<div className="mapa-description">
+				<article>
+					<p>
+						A MAPA consiste na medição da pressão arterial durante um
+						determinado período de tempo em intervalos de 60 minutos, inclusivé
+						durante a noite, e permite estimar a média da pressão arterial
+						durante o período total do exame.
+					</p>
+					<p>
+						Trata-se de um método de medição automática da pressão arterial
+						realizada através de um dispositivo colocado na cintura do paciente
+						que insufla uma bolsa de borracha (manguito) instalada no braço. As
+						várias mediões são então armazenadas neste dispositivo e
+						transferidas posteriormente para um software que permite a análise
+						dos dados recolhidos. A MAPA deverá ter uma duração de 48 horas.
+					</p>
+				</article>
+				<div className='appointment'><Appointment /></div>
+			</div>
 
 			<Accordion flush>
 				<Accordion.Item eventKey="0">

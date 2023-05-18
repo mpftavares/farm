@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-
-import HomeBanner from '../components/HomeBanner';
-import Highlights from '../features/Highlights';
-import { isOpen } from '../features/wereopen/isOpen';
-import OpenGrid from '../components/OpenGrid';
+import { isOpen } from '../features/status/isOpen';
+import HomeBanner from '../components/home/HomeBanner';
+import Highlights from '../components/home/Highlights';
+import OpenGrid from '../features/status/OpenGrid';
 
 export default function Home() {
 	useEffect(() => {

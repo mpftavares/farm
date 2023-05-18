@@ -1,19 +1,17 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updatePharmacyStatus } from './wereopenSlice';
+import { updatePharmacyStatus } from './statusSlice';
 
 export function isOpen() {
   const dispatch = useDispatch();
 
-  const isOpen = useSelector((state) => state.wereopen.isOpen);
+  let isOpen = useSelector((state) => state.status.isOpen);
 
   useEffect(() => {
     const currentTime = new Date();
     const currentDay = currentTime.getDay();
     const currentHour = currentTime.getHours();
     const currentMinute = currentTime.getMinutes();
-
-    let isOpenNow = false;
 
     if (
       (currentDay >= 1 && currentDay <= 6 && currentHour >= 9 && currentHour < 13) ||
@@ -24,11 +22,12 @@ export function isOpen() {
         currentMinute <= 59) ||
       (currentDay >= 1 && currentDay <= 5 && currentHour > 13 && currentHour < 20)
     ) {
-      isOpenNow = true;
+      isOpen = true;
     }
 
-    dispatch(updatePharmacyStatus(isOpenNow));
+    dispatch(updatePharmacyStatus(isOpen));
   }, [dispatch]);
 
   return isOpen;
+
 }

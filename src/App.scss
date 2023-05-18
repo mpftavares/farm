@@ -42,6 +42,7 @@ main {
 
 a {
 	text-decoration: none;
+	color: $primary-color;
 }
 
 p {
@@ -65,10 +66,10 @@ h1 {
 	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
-		&:hover {
-			background-color: $dark-color-transparent;
-			color: $light-color;
-		}
+	&:hover {
+		background-color: $dark-color-transparent;
+		color: $light-color;
+	}
 }
 
 .outlet {
@@ -83,6 +84,33 @@ h1 {
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 	font-size: 0.95em;
+}
+
+.animated-background {
+	overflow: hidden;
+	background: linear-gradient(
+		45deg,
+		$primary-color,
+		$secondary-color,
+		$accent-color
+	);
+	background-size: 200% 200%;
+	animation: gradientAnimation 10s ease infinite;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 1em;
+	height: 100%;
+
+	> * {
+		color: $light-color;
+	}
+
+	a {
+		color: $light-color;
+	}
 }
 
 .card-grid {
@@ -109,8 +137,8 @@ h1 {
 }
 
 .mobile-title {
-	margin-top: .2em;
-	margin-bottom: .6em;
+	margin-top: 0.2em;
+	margin-bottom: 0.6em;
 }
 
 .clickable {
@@ -131,11 +159,6 @@ h1 {
 	> * {
 		width: 200px;
 	}
-}
-
-.float-right {
-	float: right;
-	margin: 1em 0 1em 1em;
 }
 
 @import 'scss/header';

@@ -37,6 +37,7 @@ main {
 
 a {
   text-decoration: none;
+  color: rgb(34, 139, 34);
 }
 
 p {
@@ -74,6 +75,25 @@ h1 {
   border-radius: 4px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   font-size: 0.95em;
+}
+
+.animated-background {
+  overflow: hidden;
+  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+  height: 100%;
+}
+.animated-background > * {
+  color: rgb(255, 255, 255);
+}
+.animated-background a {
+  color: rgb(255, 255, 255);
 }
 
 .card-grid {
@@ -122,11 +142,6 @@ h1 {
 }
 .not-found > * {
   width: 200px;
-}
-
-.float-right {
-  float: right;
-  margin: 1em 0 1em 1em;
 }
 
 .box-header {
@@ -326,12 +341,8 @@ h1 {
   color: rgb(51, 51, 51);
   margin: 0 0 0.5em 0;
 }
-.footer p a {
+.footer p {
   color: rgb(51, 51, 51);
-}
-.footer a:hover,
-.footer a h1:hover {
-  color: rgb(34, 139, 34);
 }
 @media (min-width: 768px) {
   .footer {
@@ -385,9 +396,6 @@ h1 {
 .info h1 {
   margin-bottom: 0.5em;
 }
-.info a {
-  color: rgb(34, 139, 34);
-}
 @media (min-width: 768px) {
   .info {
     flex-direction: row;
@@ -415,6 +423,21 @@ h1 {
   .dir-call {
     display: flex;
     gap: 1em;
+  }
+}
+
+.appointment {
+  margin: 1em 0;
+}
+.appointment .btn {
+  margin: 1em 0 0 0;
+}
+.appointment p {
+  text-align: center !important;
+}
+@media (min-width: 992px) {
+  .appointment {
+    margin: 0;
   }
 }
 
@@ -603,6 +626,18 @@ h1 {
   line-height: 1.5em;
   text-align: justify;
 }
+@media (min-width: 992px) {
+  .mapa .mapa-description {
+    display: flex;
+    gap: 2em;
+  }
+  .mapa .mapa-description article {
+    flex: 2;
+  }
+  .mapa .mapa-description .appointment {
+    flex: 1;
+  }
+}
 
 .accordion {
   --bs-accordion-btn-focus-box-shadow: transparent;
@@ -611,25 +646,6 @@ h1 {
 }
 .accordion .accordion-button {
   padding: 0;
-}
-
-.open {
-  overflow: hidden;
-  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s ease infinite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 1em;
-  height: 100%;
-}
-.open > * {
-  color: rgb(255, 255, 255);
-}
-.open a {
-  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 768px) {

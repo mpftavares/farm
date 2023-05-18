@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
-import Form from '../features/form/Form';
 import Map from '../features/map/components/Map';
-import Directions from '../components/Directions';
-import WereOpen from '../features/wereopen/WereOpen';
-import Call from '../components/Call';
-import { isOpen } from '../features/wereopen/isOpen';
+import Open from '../features/status/Open';
+import { isOpen } from '../features/status/isOpen';
+import Directions from '../components/contacts/Directions';
+import Call from '../components/contacts/Call';import Form from '../features/Form';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -17,7 +16,7 @@ export default function Contacts() {
 		<>
 			{isPharmacyOpen ? (
 				<>
-					<WereOpen />
+					<Open />
 					<div className="dir-call">
 						<Directions />
 						<Call />

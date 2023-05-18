@@ -20,11 +20,11 @@ export default function Map() {
 	});
 
 	if (loadError) {
-		return <div>Error loading Google Maps API</div>;
+		return <span>Error loading Google Maps API</span>;
 	}
 
 	return (
-		<div className="box contact-map border-radius margin-bottom">
+		<section className="box contact-map border-radius margin-bottom">
 			{isLoaded && (
 				<GoogleMap
 					mapContainerStyle={responsive}
@@ -33,6 +33,6 @@ export default function Map() {
 					<Marker position={position} />
 				</GoogleMap>
 			)}
-		</div>
+		</section>
 	);
 }

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getServices } from '../serviceSlice';
+import { getServices } from './serviceSlice';
 import Service from './Service';
 
 export default function ServiceList() {
