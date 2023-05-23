@@ -16,25 +16,25 @@
 		display: grid;
 		place-items: center;
 
-        h3 {
-		font-size: 1.1em;
-	}
+		h3 {
+			font-size: 1.1em;
+		}
 	}
 
 	.call {
-		width: max-content;
+		width: initial;
 		margin-bottom: 0;
 	}
 
-    @media (min-width: $smartphone-landscape) {
-        height: 250px;
+	@media (min-width: $smartphone-landscape) {
+		height: 250px;
 
-        .carousel-item {
-            height: 250px;
-    
-            img {
-                height: 250px;
-            }
-        }
-    }
+		.carousel-item {
+			height: 250px;
+
+			img {
+				height: 250px;
+			}
+		}
+	}
 }

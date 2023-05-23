@@ -1,12 +1,44 @@
+.sales-grid {
+	@media (min-width: $smartphone-landscape) {
+		grid-template-columns: 1fr;
+	}
+	@media (min-width: $tablet) {
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	}
+}
 .sale-card {
 	display: flex;
 	flex-direction: column-reverse;
-	gap: 0.5em;
-	margin: 0;
 	padding: 2em;
 	max-width: 280px;
+	font-size: 0.9em;
+	gap: 1em;
+
+	.card-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
 
 	img {
 		cursor: zoom-in;
-	};
+	}
+
+	@media (min-width: $smartphone-landscape) {
+		flex-direction: row;
+		max-width: initial;
+		text-align: left;
+		align-items: center;
+	}
+
+	@media (min-width: $tablet) {
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+}
+
+.banner-sales {
+	background-image: url('images/pharmacy/products.jpg');
+	justify-content: flex-end;
 }

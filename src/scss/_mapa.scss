@@ -12,6 +12,12 @@
 	}
 
 	.mapa-description {
+		@media (min-width: $tablet) {
+			.call {
+				width: initial;
+			}
+		}
+
 		@media (min-width: $laptop) {
 			display: flex;
 			gap: 2em;
@@ -22,6 +28,9 @@
 
 			.appointment {
 				flex: 1;
+			}
+			.call {
+				width: 100%;
 			}
 		}
 	}
@@ -35,4 +44,9 @@
 	.accordion-button {
 		padding: 0;
 	}
+}
+
+.banner-mapa {
+	background-image: url('images/pharmacy/mapa-banner.jpeg');
+	justify-content: flex-end;
 }

@@ -1,9 +1,9 @@
+
 .service-card {
 	position: relative;
 
 	margin: 0;
 	height: 200px;
-	max-width: 280px;
 	font-size: 0.85em;
 
 	background-size: initial;
@@ -61,4 +61,9 @@
 			background-color: $dark-color-transparent;
 		}
 	}
+}
+
+.banner-services {
+	background-image: url('images/pharmacy/office.jpg');
+	justify-content: flex-end;
 }

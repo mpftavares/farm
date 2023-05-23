@@ -56,7 +56,6 @@ h1 {
   font-size: 1.1em;
   background-color: rgb(154, 205, 50);
   color: rgb(255, 255, 255);
-  border-radius: 4px;
   padding: 10px 15px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
@@ -430,7 +429,7 @@ h1 {
   margin: 1em 0;
 }
 .appointment .btn {
-  margin: 1em 0 0 0;
+  margin: 0.5em auto 0;
 }
 .appointment p {
   text-align: center !important;
@@ -485,16 +484,6 @@ h1 {
   color: rgb(51, 51, 51);
 }
 
-.banner-services {
-  background-image: url("images/pharmacy/office.jpg");
-  justify-content: flex-end;
-}
-
-.banner-sales {
-  background-image: url("images/pharmacy/products.jpg");
-  justify-content: flex-end;
-}
-
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
@@ -506,43 +495,58 @@ h1 {
     background-position: 0% 50%;
   }
 }
-.banner-open {
-  overflow: hidden;
-  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s ease infinite;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  font-size: 1em;
+@media (min-width: 480px) {
+  .sales-grid {
+    grid-template-columns: 1fr;
+  }
 }
-.banner-open > * {
-  color: rgb(255, 255, 255);
-}
-
-.banner-mapa {
-  background-image: url("images/pharmacy/mapa-banner.jpeg");
-  justify-content: flex-end;
+@media (min-width: 768px) {
+  .sales-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }
 
 .sale-card {
   display: flex;
   flex-direction: column-reverse;
-  gap: 0.5em;
-  margin: 0;
   padding: 2em;
   max-width: 280px;
+  font-size: 0.9em;
+  gap: 1em;
+}
+.sale-card .card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 .sale-card img {
   cursor: zoom-in;
+}
+@media (min-width: 480px) {
+  .sale-card {
+    flex-direction: row;
+    max-width: initial;
+    text-align: left;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .sale-card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+
+.banner-sales {
+  background-image: url("images/pharmacy/products.jpg");
+  justify-content: flex-end;
 }
 
 .service-card {
   position: relative;
   margin: 0;
   height: 200px;
-  max-width: 280px;
   font-size: 0.85em;
   background-size: initial;
   background-position: center;
@@ -592,6 +596,11 @@ h1 {
   background-color: rgba(51, 51, 51, 0.8);
 }
 
+.banner-services {
+  background-image: url("images/pharmacy/office.jpg");
+  justify-content: flex-end;
+}
+
 .modal-overlay {
   position: absolute;
   z-index: 10;
@@ -630,6 +639,11 @@ h1 {
   line-height: 1.5em;
   text-align: justify;
 }
+@media (min-width: 768px) {
+  .mapa .mapa-description .call {
+    width: initial;
+  }
+}
 @media (min-width: 992px) {
   .mapa .mapa-description {
     display: flex;
@@ -641,6 +655,9 @@ h1 {
   .mapa .mapa-description .appointment {
     flex: 1;
   }
+  .mapa .mapa-description .call {
+    width: 100%;
+  }
 }
 
 .accordion {
@@ -650,6 +667,11 @@ h1 {
 }
 .accordion .accordion-button {
   padding: 0;
+}
+
+.banner-mapa {
+  background-image: url("images/pharmacy/mapa-banner.jpeg");
+  justify-content: flex-end;
 }
 
 @media (min-width: 768px) {
@@ -665,6 +687,21 @@ h1 {
   .open-grid .span-2c {
     grid-column: span 2;
   }
+}
+
+.banner-open {
+  overflow: hidden;
+  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1em;
+}
+.banner-open > * {
+  color: rgb(255, 255, 255);
 }
 
 .carousel {
@@ -688,7 +725,7 @@ h1 {
   font-size: 1.1em;
 }
 .carousel .call {
-  width: max-content;
+  width: initial;
   margin-bottom: 0;
 }
 @media (min-width: 480px) {
