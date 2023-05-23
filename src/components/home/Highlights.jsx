@@ -1,47 +1,47 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
+import Call from '../contacts/Call';
 
 export default function Highlights() {
 	return (
-       <section className='margin-bottom'>
-          <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
-              alt="Second slide"
-            />
-    
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
-              alt="Third slide"
-            />
-    
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-       </section>
+		<section className="margin-bottom">
+			<Carousel className="radius">
+				<Carousel.Item>
+					<img
+						className="d-block w-100 radius"
+						src="./images/pharmacy/products.jpg"
+						alt="First slide"
+					/>
+					<Carousel.Caption className="radius">
+						<h3>Aproveite as várias campanhas que temos em vigor</h3>
+						<Link to="/sales"><button className="btn">Ver promoções</button></Link>
+					</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className="d-block w-100 radius"
+						src="./images/highlights/mapa.jpg"
+						alt="Second slide"
+					/>
+
+					<Carousel.Caption>
+						<h3>Realize a sua MAPA 48h connosco</h3>
+						<Link to="/mapa"><button className="btn">Mais informações</button></Link>
+					</Carousel.Caption>
+				</Carousel.Item>
+				<Carousel.Item>
+					<img
+						className="d-block w-100 radius"
+						src="./images/highlights/nutrition.jpg"
+						alt="Third slide"
+					/>
+
+					<Carousel.Caption>
+						<h3>Marque a sua consulta de nutrição connosco</h3>
+						<Call/>
+					</Carousel.Caption>
+				</Carousel.Item>
+			</Carousel>
+		</section>
 	);
 }

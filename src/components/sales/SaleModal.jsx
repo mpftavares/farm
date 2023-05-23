@@ -13,12 +13,12 @@ export default function SaleModal() {
 				onClick={() => dispatch(openModal())}>
 				close
 			</span>
-			<figure className="modal">
+
 				<img
+				className='modal-img'
 					src={`images/sales/${selectedSale}`}
 					onClick={() => dispatch(openModal())}
 				/>
-			</figure>
 		</section>
 	);
 }

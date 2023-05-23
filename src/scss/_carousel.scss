@@ -1,0 +1,40 @@
+.carousel {
+	height: 300px;
+
+	.carousel-item {
+		height: 300px;
+
+		img {
+			height: 300px;
+		}
+	}
+	.carousel-caption {
+		background-color: $light-color-transparent;
+		border-radius: $radius;
+		color: $dark-color;
+		padding: 1rem;
+		display: grid;
+		place-items: center;
+
+        h3 {
+		font-size: 1.1em;
+	}
+	}
+
+	.call {
+		width: max-content;
+		margin-bottom: 0;
+	}
+
+    @media (min-width: $smartphone-landscape) {
+        height: 250px;
+
+        .carousel-item {
+            height: 250px;
+    
+            img {
+                height: 250px;
+            }
+        }
+    }
+}
