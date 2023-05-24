@@ -3,7 +3,7 @@ import Appointment from '../contacts/Appointment';
 
 export default function MapaContent() {
 	return (
-		<section className="box radius light-background padding margin-bottom mapa">
+		<section className="box light-background padding margin-bottom mapa">
 			<div className="mapa-description">
 				<article>
 					<p>

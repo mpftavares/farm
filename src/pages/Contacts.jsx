@@ -5,6 +5,7 @@ import { isOpen } from '../features/status/isOpen';
 import Directions from '../components/contacts/Directions';
 import Call from '../components/contacts/Call';
 import Form from '../features/Form';
+import Info from '../components/contacts/Info';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -17,13 +18,19 @@ export default function Contacts() {
 		<>
 			{isPharmacyOpen ? (
 				<>
-					<div className='margin-bottom'><Open /></div>
+					<div className="margin-bottom">
+						<Open />
+					</div>
 
 					<div className="contact-buttons margin-bottom">
-						<Directions />
 						<Call />
+						<Directions />
+						
 					</div>
-					<Map />
+					<div className="margin-bottom info-map">
+						<Info />
+						<Map />
+					</div>
 				</>
 			) : null}
 

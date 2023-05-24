@@ -14,7 +14,6 @@
 
 		@media (min-width: $laptop) {
 			display: flex;
-			align-items: stretch;
 			gap: 2em;
 
 			> * {
@@ -27,19 +26,16 @@
 .info {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	text-align: center;
 	gap: 1em;
 
 	h1 {
-		margin-bottom: 0.5em;
+		margin-bottom: 0;
 	}
 
 	@media (min-width: $tablet) {
-		flex-direction: row;
-
-		> * {
-			flex: 1;
-		}
+		text-align: left;
 	}
 }
 
@@ -66,6 +62,30 @@
 
 	@media (min-width: $smartphone-landscape) {
 		flex-direction: row;
+	}
+}
+
+.contact-map {
+	height: 250px;
+	@media (min-width: $tablet) {
+		height: 303px;
+	}
+	@media (min-width: $laptop) {
+		height: 310px;
+	}
+
+}
+
+.info-map  {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	@media (min-width: $tablet) {
+		flex-direction: row;
+		> * {
+			flex-basis: 50%;
+		}
 	}
 }
 

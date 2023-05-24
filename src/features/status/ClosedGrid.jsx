@@ -7,7 +7,7 @@ export default function ClosedGrid() {
 	return (
 		<section className="closed-grid margin-bottom">
 			<Highlights />
-			<article className="box radius padding light-background span-2r">
+			<article className="box padding light-background span-2r">
 				<Form />
 			</article>
 			<Link to="/contacts">

@@ -6,7 +6,6 @@
 	@media (min-width: $tablet) {
 		display: grid;
 		grid-template-columns: 1fr 1fr 2fr;
-		justify-items: stretch;
 
 		.span-2r {
 			grid-row: span 2;

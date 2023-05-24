@@ -2,7 +2,7 @@
 
 export default function Info() {
 	return (
-		<section className="box padding light-background margin-bottom radius info">
+		<section className="box padding light-background info">
 
 				<article>
 					<h1>Horário</h1>

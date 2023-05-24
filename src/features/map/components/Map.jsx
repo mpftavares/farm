@@ -24,7 +24,7 @@ export default function Map() {
 	}
 
 	return (
-		<section className="box contact-map border-radius margin-bottom">
+		<section className="box contact-map">
 			{isLoaded && (
 				<GoogleMap
 					mapContainerStyle={responsive}
