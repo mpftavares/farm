@@ -19,40 +19,20 @@
 		padding: 0.5em;
 		font-size: 2em;
 	}
-
-	@media (min-width: $tablet) {
-		flex-basis: 45%;
-	}
-
-	@media (min-width: $laptop) {
-		flex-basis: 35%;
-	}
 }
 
 .banner-home {
 	background-image: url('images/pharmacy/inside-right.jpg');
 	align-items: stretch;
+	justify-content: flex-end;
 	article {
 		display: flex;
 		align-items: center;
-		flex-basis: 45%;
+		flex-basis: 50%;
+		margin: 0;
 		text-indent: 1em;
 		background-color: $light-color-transparent;
 		padding: 1em;
 		color: $dark-color;
 	}
 }
-
-
-@keyframes gradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-

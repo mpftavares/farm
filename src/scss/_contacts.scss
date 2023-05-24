@@ -59,10 +59,13 @@
 	}
 }
 
-.dir-call {
+.contact-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
 	@media (min-width: $smartphone-landscape) {
-		display: flex;
-		gap: 1em;
+		flex-direction: row;
 	}
 }
 

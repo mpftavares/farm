@@ -1,0 +1,59 @@
+.open-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	@media (min-width: $tablet) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 2fr;
+		justify-items: stretch;
+
+		.span-2r {
+			grid-row: span 2;
+		}
+
+		.span-2c {
+			grid-column: span 2;
+		}
+
+		.static-map {
+			height: 250px;
+			img {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.banner-open {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 1em;
+
+	> * {
+		color: $light-color;
+	}
+}
+
+.closed-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+
+	@media (min-width: $laptop) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		.span-2r {
+			grid-row: span 2;
+		}
+	}
+
+	.static-map {
+		height: 300px;
+		img {
+			height: 100%;
+		}
+	}
+}

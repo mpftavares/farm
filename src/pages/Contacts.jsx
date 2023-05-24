@@ -3,7 +3,8 @@ import Map from '../features/map/components/Map';
 import Open from '../features/status/Open';
 import { isOpen } from '../features/status/isOpen';
 import Directions from '../components/contacts/Directions';
-import Call from '../components/contacts/Call';import Form from '../features/Form';
+import Call from '../components/contacts/Call';
+import Form from '../features/Form';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -16,16 +17,28 @@ export default function Contacts() {
 		<>
 			{isPharmacyOpen ? (
 				<>
-					<Open />
-					<div className="dir-call">
+					<div className='margin-bottom'><Open /></div>
+
+					<div className="contact-buttons margin-bottom">
 						<Directions />
 						<Call />
 					</div>
+					<Map />
 				</>
 			) : null}
 
-			<Form />
-			<Map />
+			<section className="box light-background padding margin-bottom contact-form">
+				<figure className="show-laptop contact-form-img">
+					<img
+						className="radius"
+						src="../../images/pharmacy/inside-left.jpg"
+						alt="pharmacy"
+					/>
+				</figure>
+				<Form />
+			</section>
+
+			{isPharmacyOpen ? null : <Map />}
 		</>
 	);
 }

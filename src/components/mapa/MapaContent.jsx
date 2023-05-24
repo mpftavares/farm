@@ -1,5 +1,4 @@
 import { Accordion } from 'react-bootstrap';
-import Call from '../contacts/Call';
 import Appointment from '../contacts/Appointment';
 
 export default function MapaContent() {
@@ -7,8 +6,10 @@ export default function MapaContent() {
 		<section className="box radius light-background padding margin-bottom mapa">
 			<div className="mapa-description">
 				<article>
-					<p>A Farmácia Patuleia é uma Unidade de Apoio ao Hipertenso e realiza a MAPA, assumindo um papel importante na luta contra a hipertensão.
-</p>
+					<p>
+						A Farmácia Patuleia é uma Unidade de Apoio ao Hipertenso e realiza a
+						MAPA, assumindo um papel importante na luta contra a hipertensão.
+					</p>
 					<p>
 						A MAPA consiste na medição da pressão arterial durante um
 						determinado período de tempo em intervalos de 60 minutos, inclusivé
@@ -18,13 +19,15 @@ export default function MapaContent() {
 					<p>
 						Trata-se de um método de medição automática da pressão arterial
 						realizada através de um dispositivo colocado na cintura do paciente
-						que insufla um manguito colocado no braço. As
-						várias mediões são então armazenadas neste dispositivo e
-						transferidas posteriormente para um software que permite a análise
-						dos dados recolhidos. A MAPA deverá ter uma duração de 48 horas.
+						que insufla um manguito colocado no braço. As várias mediões são
+						então armazenadas neste dispositivo e transferidas posteriormente
+						para um software que permite a análise dos dados recolhidos. A MAPA
+						deverá ter uma duração de 48 horas.
 					</p>
 				</article>
-				<div className='appointment'><Appointment /></div>
+				<div className="appointment">
+					<Appointment />
+				</div>
 			</div>
 
 			<Accordion flush>
@@ -56,9 +59,7 @@ export default function MapaContent() {
 						<h2>Metodologia</h2>
 					</Accordion.Header>
 					<Accordion.Body>
-						<p>
-							O exame deve ser programado em dias de atividades habituais.
-						</p>
+						<p>O exame deve ser programado em dias de atividades habituais.</p>
 						<p>
 							Deve-se evitar a prática de exercícios físicos durante as 24 horas
 							que precedem o exame e durante o exame.

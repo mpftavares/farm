@@ -1,14 +1,15 @@
 .carousel {
-	height: 300px;
+	height: 250px;
 
 	.carousel-item {
-		height: 300px;
+		height: 250px;
 
 		img {
-			height: 300px;
+			height: 250px;
 		}
 	}
 	.carousel-caption {
+		border-radius: 0 !important;
 		background-color: $light-color-transparent;
 		border-radius: $radius;
 		color: $dark-color;
@@ -19,22 +20,14 @@
 		h3 {
 			font-size: 1.1em;
 		}
+
+		.btn {
+			font-size: 0.9em;
+		}
 	}
 
 	.call {
 		width: initial;
 		margin-bottom: 0;
-	}
-
-	@media (min-width: $smartphone-landscape) {
-		height: 250px;
-
-		.carousel-item {
-			height: 250px;
-
-			img {
-				height: 250px;
-			}
-		}
 	}
 }

@@ -23,8 +23,9 @@ export default function Directions() {
 	return (
 		<button
 			onClick={handleGetDirections}
-			className="clickable directions margin-bottom btn">
-			<span className="material-symbols-outlined">directions</span>Obter direcções
+			className="clickable directions btn">
+			<span className="material-symbols-outlined">directions</span>Obter
+			direcções
 		</button>
 	);
 }

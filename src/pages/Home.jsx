@@ -3,8 +3,7 @@ import { isOpen } from '../features/status/isOpen';
 import HomeBanner from '../components/home/HomeBanner';
 import Highlights from '../components/home/Highlights';
 import OpenGrid from '../features/status/OpenGrid';
-import StaticMap from '../features/map/components/StaticMap';
-import { Link } from 'react-router-dom';
+import ClosedGrid from '../features/status/ClosedGrid';
 
 export default function Home() {
 	useEffect(() => {
@@ -15,16 +14,14 @@ export default function Home() {
 
 	return (
 		<>
-			<HomeBanner />
-			<Highlights />
+			<div className='hide-mobile'><HomeBanner /></div>
 			{isPharmacyOpen ? (
 				<>
+					<div className='margin-bottom'><Highlights /></div>
 					<OpenGrid />
 				</>
 			) : (
-				<Link to="/contacts">
-					<StaticMap />
-				</Link>
+				<ClosedGrid/>
 			)}
 		</>
 	);

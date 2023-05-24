@@ -1,6 +1,18 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 @import 'scss/variables';
 
+@keyframes gradientAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -170,7 +182,7 @@ h1 {
 @import 'scss/services';
 @import 'scss/modal';
 @import 'scss/mapa';
-@import 'scss/open';
+@import 'scss/status';
 @import 'scss/carousel';
 
 .show-mobile {

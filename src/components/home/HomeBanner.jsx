@@ -1,8 +1,6 @@
-import StaticMap from "../../features/map/components/StaticMap";
-
 export default function HomeBanner() {
 	return (
-		<section className="box padding banner banner-home margin-bottom hide-mobile">
+		<section className="box banner banner-home margin-bottom padding">
 			<article className="radius">
 				<p>
 					"Somos uma equipa altamente especializada, em permanente formação e

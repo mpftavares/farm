@@ -1,4 +1,15 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -310,13 +321,6 @@ h1 {
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
-.home-map {
-  height: 250px;
-}
-.home-map img {
-  height: 100%;
-}
-
 .contact-map {
   height: 250px;
 }
@@ -418,10 +422,14 @@ h1 {
   font-size: 16px;
 }
 
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 @media (min-width: 480px) {
-  .dir-call {
-    display: flex;
-    gap: 1em;
+  .contact-buttons {
+    flex-direction: row;
   }
 }
 
@@ -459,42 +467,23 @@ h1 {
   padding: 0.5em;
   font-size: 2em;
 }
-@media (min-width: 768px) {
-  .banner {
-    flex-basis: 45%;
-  }
-}
-@media (min-width: 992px) {
-  .banner {
-    flex-basis: 35%;
-  }
-}
 
 .banner-home {
   background-image: url("images/pharmacy/inside-right.jpg");
   align-items: stretch;
+  justify-content: flex-end;
 }
 .banner-home article {
   display: flex;
   align-items: center;
-  flex-basis: 45%;
+  flex-basis: 50%;
+  margin: 0;
   text-indent: 1em;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 1em;
   color: rgb(51, 51, 51);
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @media (min-width: 480px) {
   .sales-grid {
     grid-template-columns: 1fr;
@@ -674,12 +663,16 @@ h1 {
   justify-content: flex-end;
 }
 
+.open-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 @media (min-width: 768px) {
   .open-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
     justify-items: stretch;
-    grid-gap: 1em;
   }
   .open-grid .span-2r {
     grid-row: span 2;
@@ -687,13 +680,15 @@ h1 {
   .open-grid .span-2c {
     grid-column: span 2;
   }
+  .open-grid .static-map {
+    height: 250px;
+  }
+  .open-grid .static-map img {
+    height: 100%;
+  }
 }
 
 .banner-open {
-  overflow: hidden;
-  background: linear-gradient(45deg, rgb(34, 139, 34), rgb(138, 190, 83), rgb(154, 205, 50));
-  background-size: 200% 200%;
-  animation: gradientAnimation 10s ease infinite;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -704,16 +699,38 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-.carousel {
+.closed-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media (min-width: 992px) {
+  .closed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .closed-grid .span-2r {
+    grid-row: span 2;
+  }
+}
+.closed-grid .static-map {
   height: 300px;
+}
+.closed-grid .static-map img {
+  height: 100%;
+}
+
+.carousel {
+  height: 250px;
 }
 .carousel .carousel-item {
-  height: 300px;
+  height: 250px;
 }
 .carousel .carousel-item img {
-  height: 300px;
+  height: 250px;
 }
 .carousel .carousel-caption {
+  border-radius: 0 !important;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   color: rgb(51, 51, 51);
@@ -724,20 +741,12 @@ h1 {
 .carousel .carousel-caption h3 {
   font-size: 1.1em;
 }
+.carousel .carousel-caption .btn {
+  font-size: 0.9em;
+}
 .carousel .call {
   width: initial;
   margin-bottom: 0;
-}
-@media (min-width: 480px) {
-  .carousel {
-    height: 250px;
-  }
-  .carousel .carousel-item {
-    height: 250px;
-  }
-  .carousel .carousel-item img {
-    height: 250px;
-  }
 }
 
 @media (min-width: 768px) {
