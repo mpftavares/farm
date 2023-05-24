@@ -1,4 +1,4 @@
-import { isOpen } from './isOpen';
+import {isOpen} from '../../app/isOpen';
 
 export default function Open() {
 	

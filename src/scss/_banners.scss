@@ -4,6 +4,7 @@
 	background-repeat: no-repeat;
 
 	display: flex;
+	justify-content: flex-end;
 	align-items: center;
 	min-height: 250px;
 
@@ -22,13 +23,13 @@
 }
 
 .banner-home {
+	height: 300px;
 	background-image: url('images/pharmacy/inside-right.jpg');
 	align-items: stretch;
-	justify-content: flex-end;
 	article {
 		display: flex;
 		align-items: center;
-		flex-basis: 50%;
+		flex-basis: 45%;
 		margin: 0;
 		text-indent: 1em;
 		background-color: $light-color-transparent;
@@ -36,3 +37,5 @@
 		color: $dark-color;
 	}
 }
+
+

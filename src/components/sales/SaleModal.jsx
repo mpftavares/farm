@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from './saleSlice';
+import { openModal } from '../../app/saleSlice';
 
 export default function SaleModal() {
 	let dispatch = useDispatch();

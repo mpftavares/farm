@@ -321,10 +321,6 @@ h1 {
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 }
 
-.directions {
-  width: 100%;
-}
-
 .footer {
   background-color: rgba(138, 190, 83, 0.85);
   color: rgb(51, 51, 51);
@@ -401,15 +397,15 @@ h1 {
   }
 }
 
-.call {
+.call-btn,
+.directions-btn {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.call span,
-.directions span {
+.call-btn span,
+.directions-btn span {
   color: rgb(34, 139, 34);
   margin-right: 5px;
   font-size: 16px;
@@ -440,20 +436,6 @@ h1 {
   }
 }
 
-.info-map {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-@media (min-width: 768px) {
-  .info-map {
-    flex-direction: row;
-  }
-  .info-map > * {
-    flex-basis: 50%;
-  }
-}
-
 .appointment {
   margin: 1em 0;
 }
@@ -474,6 +456,7 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   min-height: 250px;
   font-size: 1.1em;
@@ -490,14 +473,14 @@ h1 {
 }
 
 .banner-home {
+  height: 300px;
   background-image: url("images/pharmacy/inside-right.jpg");
   align-items: stretch;
-  justify-content: flex-end;
 }
 .banner-home article {
   display: flex;
   align-items: center;
-  flex-basis: 50%;
+  flex-basis: 45%;
   margin: 0;
   text-indent: 1em;
   background-color: rgba(255, 255, 255, 0.7);
@@ -550,7 +533,6 @@ h1 {
 
 .banner-sales {
   background-image: url("images/pharmacy/products.jpg");
-  justify-content: flex-end;
 }
 
 .service-card {
@@ -608,7 +590,6 @@ h1 {
 
 .banner-services {
   background-image: url("images/pharmacy/office.jpg");
-  justify-content: flex-end;
 }
 
 .modal-overlay {
@@ -650,7 +631,7 @@ h1 {
   text-align: justify;
 }
 @media (min-width: 768px) {
-  .mapa .mapa-description .call {
+  .mapa .mapa-description .call-btn {
     width: initial;
   }
 }
@@ -665,7 +646,7 @@ h1 {
   .mapa .mapa-description .appointment {
     flex: 1;
   }
-  .mapa .mapa-description .call {
+  .mapa .mapa-description .call-btn {
     width: 100%;
   }
 }
@@ -681,29 +662,28 @@ h1 {
 
 .banner-mapa {
   background-image: url("images/pharmacy/mapa-banner.jpeg");
-  justify-content: flex-end;
 }
 
-.open-grid {
+.open-home-grid {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 @media (min-width: 768px) {
-  .open-grid {
+  .open-home-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
   }
-  .open-grid .span-2r {
+  .open-home-grid .span-2r {
     grid-row: span 2;
   }
-  .open-grid .span-2c {
+  .open-home-grid .span-2c {
     grid-column: span 2;
   }
-  .open-grid .static-map {
+  .open-home-grid .static-map {
     height: 250px;
   }
-  .open-grid .static-map img {
+  .open-home-grid .static-map img {
     height: 100%;
   }
 }
@@ -719,24 +699,24 @@ h1 {
   color: rgb(255, 255, 255);
 }
 
-.closed-grid {
+.closed-home-grid {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 @media (min-width: 992px) {
-  .closed-grid {
+  .closed-home-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .closed-grid .span-2r {
+  .closed-home-grid .span-2r {
     grid-row: span 2;
   }
 }
-.closed-grid .static-map {
-  height: 300px;
+.closed-home-grid .static-map {
+  height: 305px;
 }
-.closed-grid .static-map img {
+.closed-home-grid .static-map img {
   height: 100%;
 }
 
@@ -763,7 +743,7 @@ h1 {
 .carousel .carousel-caption .btn {
   font-size: 0.9em;
 }
-.carousel .call {
+.carousel .call-btn {
   width: initial;
   margin-bottom: 0;
 }

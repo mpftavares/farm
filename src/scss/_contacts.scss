@@ -39,15 +39,12 @@
 	}
 }
 
-.call {
+.call-btn,
+.directions-btn {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-.call,
-.directions {
 	span {
 		color: $primary-color;
 		margin-right: 5px;
@@ -62,6 +59,7 @@
 
 	@media (min-width: $smartphone-landscape) {
 		flex-direction: row;
+
 	}
 }
 
@@ -72,20 +70,6 @@
 	}
 	@media (min-width: $laptop) {
 		height: 310px;
-	}
-
-}
-
-.info-map  {
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
-
-	@media (min-width: $tablet) {
-		flex-direction: row;
-		> * {
-			flex-basis: 50%;
-		}
 	}
 }
 

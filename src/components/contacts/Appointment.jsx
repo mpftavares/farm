@@ -1,4 +1,4 @@
-import Call from "./Call";
+import Call from "./CallBtn";
 
 export default function Appointment() {
 	return (

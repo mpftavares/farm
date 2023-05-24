@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
-import Map from '../features/map/components/Map';
-import Open from '../features/status/Open';
-import { isOpen } from '../features/status/isOpen';
-import Directions from '../components/contacts/Directions';
-import Call from '../components/contacts/Call';
-import Form from '../features/Form';
-import Info from '../components/contacts/Info';
+import Map from '../components/maps/Map';
+import Open from '../components/status/Open';
+import { isOpen } from '../app/isOpen';
+import DirectionsBtn from '../components/contacts/DirectionsBtn';
+import Call from '../components/contacts/CallBtn';
+import Form from '../components/contacts/Form';
 
 export default function Contacts() {
 	useEffect(() => {
@@ -24,12 +23,7 @@ export default function Contacts() {
 
 					<div className="contact-buttons margin-bottom">
 						<Call />
-						<Directions />
-						
-					</div>
-					<div className="margin-bottom info-map">
-						<Info />
-						<Map />
+						<DirectionsBtn />
 					</div>
 				</>
 			) : null}
@@ -44,8 +38,9 @@ export default function Contacts() {
 				</figure>
 				<Form />
 			</section>
-
-			{isPharmacyOpen ? null : <Map />}
+			<div className="margin-bottom">
+				<Map />
+			</div>
 		</>
 	);
 }

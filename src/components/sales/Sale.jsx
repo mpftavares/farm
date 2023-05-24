@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { openModal, setSelectedSale } from './saleSlice';
+import { openModal, setSelectedSale } from '../../app/saleSlice';
 
-export default function Sale({ sale, index }) {
+export default function Sale({sale}) {
 	let { id, title, imageUrl, description } = sale;
 	let dispatch = useDispatch();
 

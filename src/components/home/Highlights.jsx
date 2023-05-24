@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom';
-import Call from '../contacts/Call';
+import Call from '../contacts/CallBtn';
 
 export default function Highlights() {
 	return (

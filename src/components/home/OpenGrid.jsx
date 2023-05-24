@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
-import Call from '../../components/contacts/Call';
-import Directions from '../../components/contacts/Directions';
-import StaticMap from '../map/components/StaticMap';
-import Open from './Open';
+import Call from '../contacts/CallBtn';
+import DirectionsBtn from '../contacts/DirectionsBtn';
+import StaticMap from '../maps/StaticMap';
+import Open from '../status/Open';
 
 export default function OpenGrid() {
 	return (
-		<section className="open-grid margin-bottom">
+		<section className="open-home-grid margin-bottom">
 			<div className="span-2c">
 				<Open />
 			</div>
@@ -17,7 +17,7 @@ export default function OpenGrid() {
 			</div>
 			<div className="contact-buttons span-2c">
 				<Call />
-				<Directions />
+				<DirectionsBtn />
 			</div>
 		</section>
 	);

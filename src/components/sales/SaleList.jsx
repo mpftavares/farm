@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSales } from './saleSlice';
+import { getSales } from '../../app/saleSlice';
 import Sale from './Sale';
 
 export default function SaleList() {
@@ -18,13 +18,15 @@ export default function SaleList() {
 	return (
 		<>
 			<section className="card-grid sales-grid margin-bottom">
-				{saleList.map((s, i) => (
-					<Sale
-						key={i}
-						index={i}
-						sale={s}
-					/>
-				))}
+				{saleList
+					.filter((sale) => new Date(sale.expires) >= new Date())
+					.map((sale, index) => (
+						<Sale
+							key={index}
+							index={index}
+							sale={sale}
+						/>
+					))}
 			</section>
 		</>
 	);

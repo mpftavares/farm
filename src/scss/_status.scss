@@ -1,4 +1,4 @@
-.open-grid {
+.open-home-grid {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
@@ -36,7 +36,7 @@
 	}
 }
 
-.closed-grid {
+.closed-home-grid {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
@@ -50,7 +50,7 @@
 	}
 
 	.static-map {
-		height: 300px;
+		height: 305px;
 		img {
 			height: 100%;
 		}
