@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updatePharmacyStatus } from './statusSlice';
+import { updatePharmacyStatus, updateClosingTime } from './statusSlice';
+import data from '../data.json';
+import holidays from '../holidays.json';
 
 export function isOpen() {
 	const dispatch = useDispatch();
@@ -13,26 +15,70 @@ export function isOpen() {
 		const currentHour = currentTime.getHours();
 		const currentMinute = currentTime.getMinutes();
 
-		if (
-			(currentDay >= 1 &&
-				currentDay <= 6 &&
-				currentHour >= 9 &&
-				currentHour < 13) ||
-			(currentDay >= 1 &&
-				currentDay <= 5 &&
-				currentHour === 13 &&
-				currentMinute >= 45 &&
-				currentMinute <= 59) ||
-			(currentDay >= 1 &&
-				currentDay <= 5 &&
-				currentHour > 13 &&
-				currentHour < 20)
-		) {
-			isOpen = true;
+		const schedule = data.info.schedule;
+		const currentSchedule = schedule[currentDay];
+
+		const holidayList = holidays.map((holiday) => new Date(holiday.date).toDateString());
+
+		if (currentSchedule) {
+			for (const day of currentSchedule) {
+				const [openHour, openMinute] = day.open_time.split(':');
+				const [closeHour, closeMinute] = day.close_time.split(':');
+
+				if (
+					(currentHour > openHour && currentHour < closeHour) ||
+					(currentHour === openHour && currentMinute >= openMinute) ||
+					(currentHour === closeHour && currentMinute <= closeMinute)
+				) {
+					isOpen = true;
+				}
+			}
+		}
+
+		const currentDate = currentTime.toDateString();
+		if (holidayList.includes(currentDate)) {
+			isOpen = false;
 		}
 
 		dispatch(updatePharmacyStatus(isOpen));
-	}, [dispatch]);
+	}, []);
 
 	return isOpen;
 }
+
+
+export function closingTime() {
+
+	const dispatch = useDispatch();
+
+	let closingTime = useSelector((state) => state.status.closingTime);
+
+
+	useEffect(() => {
+	const currentTime = new Date();
+	const currentDay = currentTime.getDay();
+	const currentHour = currentTime.getHours();
+	const currentMinute = currentTime.getMinutes();
+  
+	const schedule = data.info.schedule;
+	const currentSchedule = schedule[currentDay];
+  
+	if (currentSchedule) {
+	  for (const slot of currentSchedule) {
+		const [openHour, openMinute] = slot.open_time.split(':');
+		const [closeHour, closeMinute] = slot.close_time.split(':');
+  
+		if (
+		  (currentHour > openHour && currentHour < closeHour) ||
+		  (currentHour === openHour && currentMinute >= openMinute) ||
+		  (currentHour === closeHour && currentMinute <= closeMinute)
+		) {
+		  closingTime = `${closeHour}:${closeMinute}`;
+		}
+	  }
+	}
+	dispatch(updateClosingTime(closingTime));
+}, []);
+
+	return closingTime;
+  }

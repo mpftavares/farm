@@ -3,6 +3,7 @@ import Highlights from './Highlights';
 import Form from '../contacts/Form';
 import StaticMap from '../maps/StaticMap';
 import { getDirections } from '../../app/getDirections';
+import Facebook from '../contacts/Facebook';
 
 export default function ClosedGrid() {
 	return (
