@@ -1,4 +1,5 @@
 .static-map {
+	height: 250px;
 	img {
 		height: 100%;
 	}
@@ -13,24 +14,9 @@
 }
 
 .closed-home-grid {
-	.static-map {
-		height: 250px;
-	}
-
 	@media (min-width: $laptop) {
 		.static-map {
-			height: 268px;
+			height: 300px;
 		}
-	}
-}
-
-.contact-map {
-	height: 250px;	
-	> * {
-		border-radius: $radius;
-	}
-
-	@media (min-width: $laptop) {
-	height: 350px;	
 	}
 }

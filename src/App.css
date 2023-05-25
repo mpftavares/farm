@@ -19,6 +19,10 @@
   text-decoration: none;
 }
 
+figure {
+  margin: 0;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -53,7 +57,7 @@ a {
 
 p {
   color: rgb(51, 51, 51);
-  margin-bottom: 0;
+  margin: 0.5em 0;
 }
 
 h1 {
@@ -62,9 +66,19 @@ h1 {
   font-size: 1.5em;
 }
 
+@media (min-width: 768px) {
+  .App {
+    margin: 1em;
+  }
+}
+
 .outlet {
-  margin: 0 1em;
-  flex: 1;
+  margin: 1em;
+}
+@media (min-width: 768px) {
+  .outlet {
+    margin: 1em 0;
+  }
 }
 
 .box {
@@ -72,6 +86,13 @@ h1 {
   border-radius: 4px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
   font-size: 0.95em;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .animated-background {
@@ -114,13 +135,20 @@ h1 {
   }
 }
 
+.padding-2 {
+  padding: 2em;
+}
+
 .margin-bottom {
   margin-bottom: 1em;
 }
 
+.margin-0 {
+  margin: 0;
+}
+
 .mobile-title {
   margin-top: 0.2em;
-  margin-bottom: 0.6em;
 }
 
 .clickable {
@@ -131,12 +159,6 @@ h1 {
   border-radius: 4px;
 }
 
-.not-found {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 .not-found > * {
   width: 200px;
 }
@@ -146,6 +168,10 @@ h1 {
   font-weight: 700;
   margin: 0 0.5em;
   color: #1877f2 !important;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .flex-column {
@@ -168,6 +194,9 @@ h1 {
   }
 }
 
+.static-map {
+  height: 250px;
+}
 .static-map img {
   height: 100%;
 }
@@ -178,24 +207,9 @@ h1 {
   }
 }
 
-.closed-home-grid .static-map {
-  height: 250px;
-}
 @media (min-width: 992px) {
   .closed-home-grid .static-map {
-    height: 268px;
-  }
-}
-
-.contact-map {
-  height: 250px;
-}
-.contact-map > * {
-  border-radius: 4px;
-}
-@media (min-width: 992px) {
-  .contact-map {
-    height: 350px;
+    height: 300px;
   }
 }
 
@@ -216,9 +230,6 @@ h1 {
 .directions-btn,
 .fb-btn {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .call-btn span,
 .directions-btn span,
@@ -228,37 +239,31 @@ h1 {
   font-size: 16px;
 }
 
-.box-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 5;
 }
 @media (min-width: 768px) {
-  .box-header {
-    margin: 1em;
+  .header {
+    position: static;
     border-radius: 4px;
+    padding: 1.5em 2em;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
     font-size: 0.95em;
-  }
-}
-@media (min-width: 992px) {
-  .box-header {
-    position: static;
-  }
-}
-
-@media (min-width: 768px) {
-  .header {
-    padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 }
+@media (min-width: 768px) and (min-width: 992px) {
+  .header {
+    padding: 1.75em 2em;
+  }
+}
 .header-mobile {
   padding: 0 1em;
-  gap: 2em;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -269,27 +274,16 @@ h1 {
 @media (min-width: 768px) {
   .header-mobile {
     padding: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: transparent;
     box-shadow: none;
   }
 }
 .header-mobile .logo {
-  height: 80px;
-  width: 250px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png");
-}
-@media (min-width: 768px) {
-  .header-mobile .logo {
-    margin-left: 1em;
-    background-image: url("../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png");
-  }
+  width: 220px;
 }
 @media (min-width: 992px) {
   .header-mobile .logo {
-    margin-left: 2em;
+    width: 300px;
   }
 }
 .header-mobile .hamburger {
@@ -305,24 +299,19 @@ h1 {
   display: flex;
   flex-direction: column;
   background-color: rgb(138, 190, 83);
-  font-family: "Raleway", sans-serif;
   padding: 5px;
 }
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: 1em;
     background-color: transparent;
-    padding: 1em;
-    font-size: 0.9em;
   }
 }
 @media (min-width: 992px) {
   .nav {
-    padding: 2em;
-    font-size: 1em;
+    gap: 3em;
   }
 }
 .nav a {
@@ -348,10 +337,8 @@ h1 {
 }
 @media (min-width: 992px) {
   .nav a {
-    margin: 0 1em;
     border-bottom: 3px solid transparent;
     transform: translateY(3px);
-    font-weight: bold;
   }
   .nav a:hover {
     background-color: transparent;
@@ -412,8 +399,8 @@ h1 {
   .footer {
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 1rem 1rem;
     background-color: rgb(255, 255, 255);
+    border-radius: 4px;
   }
   .footer h1, .footer p {
     color: rgba(51, 51, 51, 0.8);
@@ -455,6 +442,32 @@ h1 {
   flex-direction: column;
   gap: 1em;
 }
+@media (min-width: 768px) {
+  .contact-buttons {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992px) {
+  .contact-buttons {
+    flex-direction: column;
+  }
+}
+
+.contacts-open-grid .contact-map {
+  height: 250px;
+}
+.contacts-open-grid .contact-map > * {
+  border-radius: 4px;
+}
+@media (min-width: 992px) {
+  .contacts-open-grid .contact-map {
+    height: 350px;
+  }
+}
+
+.contacts-closed-grid .contact-map {
+  height: 250px;
+}
 
 .banner {
   background-size: cover;
@@ -481,6 +494,7 @@ h1 {
   height: 300px;
   background-image: url("images/pharmacy/inside-right.jpg");
   align-items: stretch;
+  justify-content: flex-start;
 }
 .banner-home article {
   display: flex;
@@ -504,15 +518,11 @@ h1 {
 .sale-card {
   display: flex;
   flex-direction: column-reverse;
-  padding: 2em;
   max-width: 280px;
   font-size: 0.9em;
   gap: 1em;
 }
 .sale-card .card-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
 }
 .sale-card img {
@@ -539,15 +549,11 @@ h1 {
 
 .service-card {
   position: relative;
-  margin: 0;
   height: 200px;
   font-size: 0.85em;
   background-size: initial;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 @media (min-width: 768px) {
   .service-card {
@@ -562,9 +568,6 @@ h1 {
   width: 90%;
   height: 60px;
   font-size: 1.1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 1;
 }
 .service-card .description {
@@ -578,9 +581,6 @@ h1 {
   color: rgb(255, 255, 255);
   padding: 1em;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .service-card:hover h1 {
   opacity: 0;
@@ -628,9 +628,7 @@ h1 {
   margin: 0.5em;
 }
 .mapa p {
-  line-height: 1.5em;
   text-align: justify;
-  margin-bottom: 0.5em;
 }
 @media (min-width: 768px) {
   .mapa .mapa-description .call-btn {
@@ -644,9 +642,6 @@ h1 {
   }
   .mapa .mapa-description article {
     flex: 2;
-  }
-  .mapa .mapa-description .appointment {
-    flex: 1;
   }
   .mapa .mapa-description .call-btn {
     width: 100%;
@@ -666,26 +661,15 @@ h1 {
   background-image: url("images/pharmacy/mapa-banner.jpeg");
 }
 
-.appointment {
-  margin: 1em 0;
-}
-.appointment .btn {
-  margin: 0.5em auto 0;
-}
 .appointment p {
-  text-align: center !important;
-}
-@media (min-width: 992px) {
-  .appointment {
-    margin: 0;
-  }
+  text-align: center;
 }
 
 .carousel .carousel-caption {
   border-radius: 0t;
   background-color: rgba(255, 255, 255, 0.7);
   color: rgb(51, 51, 51);
-  padding: 1rem;
+  padding: 1em;
   display: grid;
   place-items: center;
 }
@@ -697,7 +681,6 @@ h1 {
 }
 .carousel .call-btn {
   width: initial;
-  margin-bottom: 0;
 }
 
 .carousel, .carousel-item, .carousel-item img {

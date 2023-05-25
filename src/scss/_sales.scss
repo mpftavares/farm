@@ -9,15 +9,12 @@
 .sale-card {
 	display: flex;
 	flex-direction: column-reverse;
-	padding: 2em;
+
 	max-width: 280px;
 	font-size: 0.9em;
 	gap: 1em;
 
 	.card-img {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		margin: 0;
 	}
 

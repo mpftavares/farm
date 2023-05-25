@@ -2,17 +2,12 @@
 .service-card {
 	position: relative;
 
-	margin: 0;
 	height: 200px;
 	font-size: 0.85em;
 
 	background-size: initial;
 	background-position: center;
 	background-repeat: no-repeat;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
 	@media (min-width: $tablet) {
 		font-size: 0.9em;
@@ -26,10 +21,6 @@
 		width: 90%;
 		height: 60px;
 		font-size: 1.1em;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		opacity: 1;
 	}
@@ -45,10 +36,6 @@
 		color: $light-color;
 		padding: 1em;
 		box-sizing: border-box;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	&:hover {

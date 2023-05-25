@@ -19,13 +19,12 @@
 	@media (min-width: $tablet) {
 		flex-direction: row;
 		justify-content: space-evenly;
-		margin: 0 1rem 1rem;
 		background-color: $light-color;
+		border-radius: $radius;
 
 		h1, p {
 			color: $dark-color-transparent;
 		}
-
 
 		a,
 		a h1 {

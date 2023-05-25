@@ -29,7 +29,7 @@ export default function Map() {
 				<GoogleMap
 					mapContainerStyle={responsive}
 					center={position}
-					zoom={20}>
+					zoom={19}>
 					<Marker position={position} />
 				</GoogleMap>
 			)}

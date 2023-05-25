@@ -5,7 +5,7 @@ export default function MapaContent() {
 	return (
 		<section className="box light-background padding mapa">
 			<div className="mapa-description">
-				<article>
+				<article className='center-content'>
 					<p>
 						A Farmácia Patuleia é uma Unidade de Apoio ao Hipertenso e realiza a
 						MAPA, assumindo um papel importante na luta contra a hipertensão.
@@ -16,16 +16,8 @@ export default function MapaContent() {
 						durante a noite, e permite estimar a média da pressão arterial
 						durante o período total do exame.
 					</p>
-					<p>
-						Trata-se de um método de medição automática da pressão arterial
-						realizada através de um dispositivo colocado na cintura do paciente
-						que insufla um manguito colocado no braço. As várias mediões são
-						então armazenadas neste dispositivo e transferidas posteriormente
-						para um software que permite a análise dos dados recolhidos. A MAPA
-						deverá ter uma duração de 48 horas.
-					</p>
 				</article>
-				<div className="appointment">
+				<div className="appointment flex-1">
 					<Appointment />
 				</div>
 			</div>
@@ -59,38 +51,25 @@ export default function MapaContent() {
 						<h2>Metodologia</h2>
 					</Accordion.Header>
 					<Accordion.Body>
-						<p>O exame deve ser programado em dias de atividades habituais.</p>
 						<p>
-							Deve-se evitar a prática de exercícios físicos durante as 24 horas
-							que precedem o exame e durante o exame.
-						</p>
-						<p>
-							É importante tomar banho antes do exame, uma vez que não o poderá
-							fazer durante o exame.
+							A MAPA é um método de medição automática da pressão arterial
+							através de um dispositivo. As várias medições são então
+							armazenadas neste dispositivo e transferidas posteriormente para
+							um software que permite a análise dos dados recolhidos. A MAPA
+							deverá ter uma duração de 48 horas.
 						</p>
 						<p>
 							No momento do funcionamento do aparelho o paciente deverá manter o
 							braço em que está colocado o manguito estendido ao longo do corpo,
-							até que o mesmo seja totalmente desinsuflado. Este processo
-							geralmente ocorre a cada 60 minutos, sendo o processo idêntico à
-							medição da pressão arterial no consultório.
+							até que o mesmo seja totalmente desinsuflado. Este processo ocorre
+							a cada 60 minutos, sendo o processo idêntico à medição da pressão
+							arterial no consultório.
 						</p>
 						<p>
-							O dispositivo deverá ser retirado da cintura durante a noite,
-							sendo colocado sob a almofada ou numa mesa, permanecendo ligado ao
-							manguito pela mangueira de borracha. É importante que este
-							permaneça sempre acima da prega do cotovelo. Durante o período da
-							noite deve-se evitar dormir sobre o braço em que está colocado o
-							manguito.
-						</p>
-						<p>
-							Durante o exame, o paciente irá preenchendo um relatório onde
-							refere os medicamentos que tomou (nome, dose e horário), as
-							atividades realizadas; a ingestão de álcool, café ou consumo de
-							tabaco, o período do sono (horário em que adormeceu e acordou,
-							eventuais interrupções durante o sono e avaliação da qualidade do
-							sono), ocorrência de sintomas (tonturas, sensação de desmaio,
-							desmaio, dor de cabeça, etc.).
+							Durante o exame, o paciente irá preencher um relatório onde refere
+							os medicamentos que tomou, as atividades realizadas; a ingestão de
+							álcool, café ou consumo de tabaco, o período do sono e a
+							ocorrência de sintomas.
 						</p>
 					</Accordion.Body>
 				</Accordion.Item>
@@ -99,8 +78,11 @@ export default function MapaContent() {
 						<h2>Cuidados a ter</h2>
 					</Accordion.Header>
 					<Accordion.Body>
+						<p>O exame deve ser programado em dias de atividades habituais.</p>
+
 						<p>
-							A MAPA é um exame seguro e praticamente isento de complicações.
+							É importante tomar banho antes do exame, uma vez que não o poderá
+							fazer durante o exame.
 						</p>
 						<p>
 							Pode ocorrer desconforto no braço, geralmente tolerável, e

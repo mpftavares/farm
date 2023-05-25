@@ -1,6 +1,6 @@
 export default function Footer() {
 	return (
-		<footer className="footer light-background padding radius">
+		<footer className="footer light-background padding">
 			<article>
 				<h1>
 					Localização{' '}

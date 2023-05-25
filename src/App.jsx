@@ -12,10 +12,8 @@ function App() {
 		<>
 			{isModalOpen && <SaleModal />}
 			<main className="App">
-				<div className="box-header margin-bottom">
 					<Header />
-				</div>
-				<div className="outlet margin-bottom">
+				<div className="outlet flex-1 margin-bottom">
 					<Outlet />
 				</div>
 

@@ -1,34 +1,29 @@
-.box-header {
+.header {
 	position: sticky;
 	top: 0;
 	z-index: 5;
 
 	@media (min-width: $tablet) {
-		margin: 1em;
+		position: static;	
 		border-radius: $radius;
+		padding: 1.5em 2em;
 		background-color: $light-color;
 		box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
 			rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 		font-size: 0.95em;
-	}
-
-	@media (min-width: $laptop) {
-		position: static;
-	}
-}
-
-.header {
-	@media (min-width: $tablet) {
-		padding: 1em;
+		
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+	
+	@media (min-width: $laptop) {
+		padding: 1.75em 2em;
+	}
 	}
 
 	&-mobile {
 		padding: 0 1em;
-		gap: 2em;
 		height: 80px;
 		display: flex;
 		justify-content: space-between;
@@ -40,25 +35,15 @@
 		@media (min-width: $tablet) {
 			// logo
 			padding: 0;
-			background-color: $light-color;
+			background-color: transparent;
 			box-shadow: none;
 		}
 
 		.logo {
-			height: 80px;
-			width: 250px;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png');
-
-			@media (min-width: $tablet) {
-				margin-left: 1em;
-				background-image: url('../images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png');
-			}
+			width: 220px;
 
 			@media (min-width: $laptop) {
-				margin-left: 2em;
+				width: 300px;
 			}
 		}
 
@@ -77,23 +62,17 @@
 	display: flex;
 	flex-direction: column;
 	background-color: $secondary-color;
-	font-family: $font-highlights;
 	padding: 5px;
 
 	@media (min-width: $tablet) {
 		flex-direction: row;
-		justify-content: space-between;
 		align-items: center;
 		gap: 1em;
 
 		background-color: transparent;
-		padding: 1em;
-
-		font-size: 0.9em;
 	}
 	@media (min-width: $laptop) {
-		padding: 2em;
-		font-size: 1em;
+		gap: 3em;
 	}
 
 	a {
@@ -122,10 +101,8 @@
 		}
 
 		@media (min-width: $laptop) {
-			margin: 0 1em;
 			border-bottom: 3px solid transparent;
 			transform: translateY(3px);
-			font-weight: bold;
 
 			&:hover {
 				background-color: transparent;

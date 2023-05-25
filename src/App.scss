@@ -22,6 +22,10 @@
 	text-decoration: none;
 }
 
+figure {
+	margin: 0;
+}
+
 img {
 	width: 100%;
 	height: auto;
@@ -59,7 +63,7 @@ a {
 
 p {
 	color: $dark-color;
-	margin-bottom: 0;
+	margin: 0.5em 0;
 }
 
 h1 {
@@ -68,9 +72,17 @@ h1 {
 	font-size: 1.5em;
 }
 
+.App {
+	@media (min-width: $tablet) {
+		margin: 1em;
+	}
+}
+
 .outlet {
-	margin: 0 1em;
-	flex: 1;
+	margin: 1em;
+	@media (min-width: $tablet) {
+		margin: 1em 0;
+	}
 }
 
 .box {
@@ -80,6 +92,13 @@ h1 {
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 	font-size: 0.95em;
+}
+
+.center-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .animated-background {
@@ -128,13 +147,20 @@ h1 {
 	}
 }
 
+.padding-2 {
+	padding: 2em;
+}
+
 .margin-bottom {
 	margin-bottom: 1em;
 }
 
+.margin-0 {
+	margin: 0;
+}
+
 .mobile-title {
 	margin-top: 0.2em;
-	margin-bottom: 0.6em;
 }
 
 .clickable {
@@ -146,12 +172,6 @@ h1 {
 }
 
 .not-found {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	text-align: center;
-
 	> * {
 		width: 200px;
 	}
@@ -162,6 +182,10 @@ h1 {
 	font-weight: 700;
 	margin: 0 0.5em;
 	color: #1877f2 !important;
+}
+
+.flex-1 {
+	flex: 1;
 }
 
 .flex-column {

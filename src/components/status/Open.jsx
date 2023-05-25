@@ -6,9 +6,9 @@ export default function Open() {
 	const isPharmacyOpen = isOpen();
 
 	return isPharmacyOpen ? (
-		<section className="box padding animated-background">
+		<section className="box padding-2 animated-background center-content">
 			<h1>Estamos abertos até às {openUntil}</h1>
-			<p>
+			<p className='margin-0'>
 				Visite-nos ou contacte-nos diretamente por telefone{' '}
 				<span className="material-symbols-outlined footer-icon">call</span>
 			</p>
