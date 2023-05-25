@@ -23,67 +23,8 @@
 	}
 }
 
-.info {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	text-align: center;
-	gap: 1em;
-
-	h1 {
-		margin-bottom: 0;
-	}
-
-	@media (min-width: $tablet) {
-		text-align: left;
-	}
-}
-
-.call-btn,
-.directions-btn {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	span {
-		color: $primary-color;
-		margin-right: 5px;
-		font-size: 16px;
-	}
-}
-
 .contact-buttons {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
-
-	@media (min-width: $smartphone-landscape) {
-		flex-direction: row;
-
-	}
-}
-
-.contact-map {
-	height: 250px;
-	@media (min-width: $tablet) {
-		height: 303px;
-	}
-	@media (min-width: $laptop) {
-		height: 310px;
-	}
-}
-
-.appointment {
-	margin: 1em 0;
-	.btn {
-		margin: 0.5em auto 0;
-	}
-
-	p {
-		text-align: center !important;
-	}
-
-	@media (min-width: $laptop) {
-		margin: 0;
-	}
 }

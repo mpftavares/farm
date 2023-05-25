@@ -1,0 +1,36 @@
+.static-map {
+	img {
+		height: 100%;
+	}
+}
+
+.open-home-grid {
+	@media (min-width: $laptop) {
+		.static-map {
+			height: 236px;
+		}
+	}
+}
+
+.closed-home-grid {
+	.static-map {
+		height: 250px;
+	}
+
+	@media (min-width: $laptop) {
+		.static-map {
+			height: 268px;
+		}
+	}
+}
+
+.contact-map {
+	height: 250px;	
+	> * {
+		border-radius: $radius;
+	}
+
+	@media (min-width: $laptop) {
+	height: 350px;	
+	}
+}

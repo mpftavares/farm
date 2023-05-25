@@ -17,7 +17,7 @@ export default function SaleList() {
 
 	return (
 		<>
-			<section className="card-grid sales-grid margin-bottom">
+			<section className="card-grid sales-grid">
 				{saleList
 					.filter((sale) => new Date(sale.expires) >= new Date())
 					.map((sale, index) => (

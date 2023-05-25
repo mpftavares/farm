@@ -1,6 +1,6 @@
 export default function HomeBanner() {
 	return (
-		<section className="box banner banner-home margin-bottom padding">
+		<section className="box banner banner-home padding">
 			<article className="radius">
 				<p>
 					"Somos uma equipa altamente especializada, em permanente formação e

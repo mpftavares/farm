@@ -14,16 +14,19 @@ export function isOpen() {
 		const currentDay = currentTime.getDay();
 		const currentHour = currentTime.getHours();
 		const currentMinute = currentTime.getMinutes();
+		const currentDate = currentTime.toDateString();
 
 		const schedule = data.info.schedule;
 		const currentSchedule = schedule[currentDay];
 
-		const holidayList = holidays.map((holiday) => new Date(holiday.date).toDateString());
+		const holidayList = holidays.map((holiday) =>
+			new Date(holiday.date).toDateString()
+		);
 
 		if (currentSchedule) {
-			for (const day of currentSchedule) {
-				const [openHour, openMinute] = day.open_time.split(':');
-				const [closeHour, closeMinute] = day.close_time.split(':');
+			for (const timeslot of currentSchedule) {
+				const [openHour, openMinute] = timeslot.open_time.split(':');
+				const [closeHour, closeMinute] = timeslot.close_time.split(':');
 
 				if (
 					(currentHour > openHour && currentHour < closeHour) ||
@@ -35,7 +38,6 @@ export function isOpen() {
 			}
 		}
 
-		const currentDate = currentTime.toDateString();
 		if (holidayList.includes(currentDate)) {
 			isOpen = false;
 		}
@@ -46,39 +48,36 @@ export function isOpen() {
 	return isOpen;
 }
 
-
 export function closingTime() {
-
 	const dispatch = useDispatch();
 
 	let closingTime = useSelector((state) => state.status.closingTime);
 
-
 	useEffect(() => {
-	const currentTime = new Date();
-	const currentDay = currentTime.getDay();
-	const currentHour = currentTime.getHours();
-	const currentMinute = currentTime.getMinutes();
-  
-	const schedule = data.info.schedule;
-	const currentSchedule = schedule[currentDay];
-  
-	if (currentSchedule) {
-	  for (const slot of currentSchedule) {
-		const [openHour, openMinute] = slot.open_time.split(':');
-		const [closeHour, closeMinute] = slot.close_time.split(':');
-  
-		if (
-		  (currentHour > openHour && currentHour < closeHour) ||
-		  (currentHour === openHour && currentMinute >= openMinute) ||
-		  (currentHour === closeHour && currentMinute <= closeMinute)
-		) {
-		  closingTime = `${closeHour}:${closeMinute}`;
+		const currentTime = new Date();
+		const currentDay = currentTime.getDay();
+		const currentHour = currentTime.getHours();
+		const currentMinute = currentTime.getMinutes();
+
+		const schedule = data.info.schedule;
+		const currentSchedule = schedule[currentDay];
+
+		if (currentSchedule) {
+			for (const slot of currentSchedule) {
+				const [openHour, openMinute] = slot.open_time.split(':');
+				const [closeHour, closeMinute] = slot.close_time.split(':');
+
+				if (
+					(currentHour > openHour && currentHour < closeHour) ||
+					(currentHour === openHour && currentMinute >= openMinute) ||
+					(currentHour === closeHour && currentMinute <= closeMinute)
+				) {
+					closingTime = `${closeHour}:${closeMinute}`;
+				}
+			}
 		}
-	  }
-	}
-	dispatch(updateClosingTime(closingTime));
-}, []);
+		dispatch(updateClosingTime(closingTime));
+	}, []);
 
 	return closingTime;
-  }
+}

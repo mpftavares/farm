@@ -68,21 +68,6 @@ h1 {
 	font-size: 1.5em;
 }
 
-.btn {
-	font-family: $font-highlights;
-	font-size: 1.1em;
-	background-color: $accent-color;
-	color: $light-color;
-	padding: 10px 15px;
-	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
-
-	&:hover {
-		background-color: $dark-color-transparent;
-		color: $light-color;
-	}
-}
-
 .outlet {
 	margin: 0 1em;
 	flex: 1;
@@ -172,6 +157,33 @@ h1 {
 	}
 }
 
+.facebook {
+	font-size: 2em;
+	font-weight: 700;
+	margin: 0 0.5em;
+	color: #1877f2 !important;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.flex-laptop {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	@media (min-width: $laptop) {
+		flex-direction: row;
+		> * {
+			flex-basis: 50%;
+		}
+	}
+}
+
+@import 'scss/maps';
+@import 'scss/buttons';
 @import 'scss/header';
 @import 'scss/form';
 @import 'scss/footer';
@@ -181,7 +193,6 @@ h1 {
 @import 'scss/services';
 @import 'scss/modal';
 @import 'scss/mapa';
-@import 'scss/status';
 @import 'scss/carousel';
 
 .show-mobile {

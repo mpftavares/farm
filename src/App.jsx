@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import './App.css';
-import Footer from './layouts/Footer';
-import Header from './layouts/Header';
+import Footer from './components/Footer';
+import Header from './components/header/Header';
 import SaleModal from './components/sales/SaleModal';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
 				<div className="box-header margin-bottom">
 					<Header />
 				</div>
-				<div className="outlet">
+				<div className="outlet margin-bottom">
 					<Outlet />
 				</div>
 

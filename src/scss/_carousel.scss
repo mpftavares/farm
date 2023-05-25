@@ -1,13 +1,4 @@
 .carousel {
-	height: 250px;
-
-	.carousel-item {
-		height: 250px;
-
-		img {
-			height: 250px;
-		}
-	}
 	.carousel-caption {
 		border-radius: 0t;
 		background-color: $light-color-transparent;
@@ -28,5 +19,14 @@
 	.call-btn {
 		width: initial;
 		margin-bottom: 0;
+	}
+
+}
+
+
+.carousel, .carousel-item, .carousel-item img {
+	height: 250px;
+	@media (min-width: $tablet) {
+		height: 300px;
 	}
 }

@@ -2,8 +2,11 @@ import { useEffect } from 'react';
 import { isOpen } from '../app/isOpen';
 import HomeBanner from '../components/home/HomeBanner';
 import Highlights from '../components/home/Highlights';
-import OpenGrid from '../components/home/OpenGrid';
-import ClosedGrid from '../components/home/ClosedGrid';
+import Open from '../components/status/Open';
+import Closed from '../components/status/Closed';
+import Facebook from '../components/contacts/Facebook';
+import StaticMap from '../components/maps/StaticMap';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
 	useEffect(() => {
@@ -14,14 +17,44 @@ export default function Home() {
 
 	return (
 		<>
-			<div className='hide-mobile'><HomeBanner /></div>
 			{isPharmacyOpen ? (
-				<>
-					<div className='margin-bottom'><Highlights /></div>
-					<OpenGrid />
-				</>
+				<div className="open-home-grid flex-column">
+					<Link to="/contacts">
+						<Open />
+					</Link>
+
+					<div className="hide-mobile">
+						<HomeBanner />
+					</div>
+
+					<section className="flex-laptop">
+						<Highlights />
+						<div className="flex-column">
+							<StaticMap />
+							<Facebook />
+						</div>
+					</section>
+				</div>
 			) : (
-				<ClosedGrid/>
+				<div className="closed-home-grid flex-column">
+					<div className="hide-mobile">
+						<HomeBanner />
+					</div>
+					<Highlights />
+
+					<section className="flex-laptop">
+						<div className="flex-column">
+							<Closed />
+							<div className="show-laptop">
+								<Facebook />
+							</div>
+						</div>
+						<StaticMap />
+						<div className="hide-laptop">
+							<Facebook />
+						</div>
+					</section>
+				</div>
 			)}
 		</>
 	);

@@ -1,16 +1,16 @@
-import {isOpen} from '../../app/isOpen';
-import {closingTime} from '../../app/isOpen';
+import { isOpen } from '../../app/isOpen';
+import { closingTime } from '../../app/isOpen';
 
 export default function Open() {
+	const openUntil = closingTime();
+	const isPharmacyOpen = isOpen();
 
-	const openUntil = closingTime(); 
-	
-	return isOpen ? (
+	return isPharmacyOpen ? (
 		<section className="box padding animated-background">
 			<h1>Estamos abertos até às {openUntil}</h1>
 			<p>
-				Visite-nos ou contacte-nos diretamente por <a href="tel:21 752 4103">telefone</a>
-				
+				Visite-nos ou contacte-nos diretamente por telefone{' '}
+				<span className="material-symbols-outlined footer-icon">call</span>
 			</p>
 		</section>
 	) : null;

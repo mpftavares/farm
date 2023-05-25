@@ -1,6 +1,5 @@
 .footer {
-	background-color: $secondary-color-transparent;
-	color: $dark-color;
+	background-color: $dark-color-transparent;
 	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
 		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
@@ -13,13 +12,8 @@
 
 	text-align: center;
 
-	h1 {
-		color: $dark-color;
-		margin: 0 0 0.5em 0;
-	}
-
-	p {
-		color: $dark-color;
+	h1, p {
+		color: $light-color;
 	}
 
 	@media (min-width: $tablet) {
@@ -28,9 +22,10 @@
 		margin: 0 1rem 1rem;
 		background-color: $light-color;
 
-		h1 {
+		h1, p {
 			color: $dark-color-transparent;
 		}
+
 
 		a,
 		a h1 {

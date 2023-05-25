@@ -9,10 +9,10 @@ export default function Sales() {
 		document.title = 'Farmácia Patuleia | Promoções';
 	}, []);
 	return (
-		<>
+		<div className='flex-column'>
 			<h1 className="show-mobile mobile-title">Campanhas em vigor</h1>
 			<SalesBanner />
 			<SaleList />
-		</>
+		</div>
 	);
 }

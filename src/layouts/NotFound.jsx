@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 
 export default function NotFound() {
 	return (
-		<section className="box padding light-background not-found">
+		<section className="flex-column box padding light-background not-found">
 			<p>Página não encontrada</p>
-			<button className='clickable btn'>
-				<Link to="/home">Home</Link>
-			</button>
+			<Link to="/home">
+				<button className="clickable btn">Home</button>
+			</Link>
 		</section>
 	);
 }

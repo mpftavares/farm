@@ -1,7 +1,10 @@
 export default function Facebook() {
-  return (
-    <section className="radius padding animated-background">
-			<p>Siga a sua farmácia no facebook</p><img src="" alt="facebook" />
-		</section>
-  )
+	return (
+		<a
+			className="clickable btn fb-btn"
+			href="https://www.facebook.com/FarmaciaPatuleia"
+			target="_blank">
+			Siga a sua farmácia no <span className="facebook">f</span>
+		</a>
+	);
 }
