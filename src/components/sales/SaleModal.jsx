@@ -7,7 +7,7 @@ export default function SaleModal() {
 	const { selectedSale } = useSelector((state) => state.sales);
 
 	return (
-		<section className="modal-overlay">
+		<section className="modal-overlay center-content">
 			<span
 				className="material-symbols-outlined close-icon clickable"
 				onClick={() => dispatch(openModal())}>
