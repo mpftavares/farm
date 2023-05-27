@@ -63,6 +63,9 @@ p {
 h1 {
   font-family: "Raleway", sans-serif;
   color: rgb(121, 193, 66);
+}
+
+h2 {
   font-size: 1.5em;
 }
 
@@ -106,6 +109,11 @@ span {
   text-align: center;
   grid-gap: 1em;
 }
+@media (min-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .padding {
   padding: 1em;
@@ -132,7 +140,7 @@ span {
   flex: 1;
 }
 
-.flex-column {
+.flex-col {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -150,10 +158,6 @@ span {
   .flex-laptop > * {
     flex-basis: 50%;
   }
-}
-
-.not-found > * {
-  width: 200px;
 }
 
 .light-background {
@@ -380,16 +384,15 @@ span {
 
 .footer {
   background-color: rgba(56, 56, 56, 0.8);
-  font-size: 0.95em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
   font-size: 0.75em;
   text-align: center;
 }
+.footer h1 {
+  font-size: 1.5em;
+}
 .footer h1,
 .footer p {
-  color: rgb(255, 255, 255);
+  color: rgb(239, 239, 239);
 }
 .footer a,
 .footer span {
@@ -517,11 +520,6 @@ span {
   font-size: 1.1em;
 }
 
-@media (min-width: 480px) {
-  .sales-grid {
-    grid-template-columns: 1fr;
-  }
-}
 @media (min-width: 768px) {
   .sales-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -557,46 +555,30 @@ span {
 }
 
 .service-card {
-  position: relative;
-  height: 200px;
-  font-size: 0.85em;
-  background-size: initial;
-  background-position: center;
-  background-repeat: no-repeat;
+  text-align: left;
+}
+.service-card img {
+  height: 150px;
+}
+.service-card h2 {
+  color: rgb(121, 193, 66);
+}
+.service-card .flex-col {
+  gap: 0.5em;
 }
 @media (min-width: 768px) {
   .service-card {
-    font-size: 0.9em;
-    height: 250px;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
   }
-}
-.service-card h1 {
-  color: rgb(255, 255, 255);
-  background-color: rgba(121, 193, 66, 0.85);
-  padding: 0.5em;
-  width: 90%;
-  height: 60px;
-  font-size: 1.1em;
-  opacity: 1;
-}
-.service-card .description {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  opacity: 0;
-  color: rgb(255, 255, 255);
-  padding: 1em;
-  box-sizing: border-box;
-}
-.service-card:hover h1 {
-  opacity: 0;
-}
-.service-card:hover .description {
-  opacity: 1;
-  background-color: rgba(56, 56, 56, 0.8);
+  .service-card img {
+    height: 100%;
+    width: 250px;
+  }
+  .service-card .flex-col {
+    gap: 1em;
+  }
 }
 
 .modal-overlay {
@@ -722,9 +704,12 @@ span {
   }
 }
 
+.not-found > * {
+  width: 200px;
+}
+
 .powered {
-  font-size: 0.5em;
-  line-height: 2em;
+  font-size: 0.6em;
   text-align: center;
   margin: 0;
   background-color: rgba(56, 56, 56, 0.8);
@@ -734,5 +719,6 @@ span {
   .powered {
     background-color: transparent;
     color: rgba(56, 56, 56, 0.8);
+    line-height: 2em;
   }
 }/*# sourceMappingURL=App.css.map */

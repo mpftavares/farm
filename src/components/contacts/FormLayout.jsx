@@ -7,7 +7,6 @@ export default function FormLayout() {
 				<img
 					className="radius"
 					src="../../images/pharmacy/inside-left.jpg"
-					alt="pharmacy"
 				/>
 			</figure>
 			<Form />

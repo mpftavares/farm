@@ -14,10 +14,12 @@ export default function Contacts() {
 	const isPharmacyOpen = isOpen();
 
 	return isPharmacyOpen ? (
-		<div className="contacts-open-grid flex-column">
+		<div className="contacts-open-grid flex-col">
 			<div className="flex-laptop">
-				<div className='flex-column'>
-					<div className='flex-1'><Open /></div>
+				<div className="flex-col">
+					<div className="flex-1">
+						<Open />
+					</div>
 					<div className="contact-buttons">
 						<Call />
 						<DirectionsBtn />
@@ -28,7 +30,7 @@ export default function Contacts() {
 			<FormLayout />
 		</div>
 	) : (
-		<div className="contacts-closed-grid flex-column">
+		<div className="contacts-closed-grid flex-col">
 			<FormLayout />
 			<Map />
 		</div>

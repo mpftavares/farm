@@ -2,11 +2,15 @@ export default function Service({ service }) {
 	let { title, imageUrl, description } = service;
 
 	return (
-		<article
-			className="box service-card center-content margin-0"
-			style={{ backgroundImage: `url(images/services/${imageUrl})` }}>
-			<h1 className="radius center-content">{title}</h1>
-			<p className="description radius">{description}</p>
+		<article className="box service-card light-background margin-0 padding-2 flex-col">
+			<img
+				src={`/images/services/${imageUrl}`}
+				className="radius"
+			/>
+			<div className="flex-col">
+				<h2 className="mobile-title margin-0">{title}</h2>
+				<p className="margin-0">{description}</p>
+			</div>
 		</article>
 	);
 }

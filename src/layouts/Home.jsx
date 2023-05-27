@@ -18,7 +18,7 @@ export default function Home() {
 	return (
 		<>
 			{isPharmacyOpen ? (
-				<div className="open-home-grid flex-column">
+				<div className="open-home-grid flex-col">
 					<Link to="/contacts">
 						<Open />
 					</Link>
@@ -29,21 +29,21 @@ export default function Home() {
 
 					<section className="flex-laptop">
 						<Highlights />
-						<div className="flex-column">
+						<div className="flex-col">
 							<StaticMap />
 							<Facebook />
 						</div>
 					</section>
 				</div>
 			) : (
-				<div className="closed-home-grid flex-column">
+				<div className="closed-home-grid flex-col">
 					<div className="hide-mobile">
 						<HomeBanner />
 					</div>
 					<Highlights />
 
 					<section className="flex-laptop">
-						<div className="flex-column">
+						<div className="flex-col">
 							<Closed />
 							<div className="show-laptop">
 								<Facebook />

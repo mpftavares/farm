@@ -9,7 +9,6 @@ export default function Highlights() {
 					<img
 						className="d-block w-100 radius"
 						src="images/pharmacy/products.jpg"
-						alt="First slide"
 					/>
 					<Carousel.Caption className="radius">
 						<h3>Aproveite as campanhas que temos em vigor</h3>
@@ -22,7 +21,6 @@ export default function Highlights() {
 					<img
 						className="d-block w-100 radius"
 						src="images/pharmacy/mapa-banner.jpeg"
-						alt="Second slide"
 					/>
 
 					<Carousel.Caption>
@@ -36,7 +34,6 @@ export default function Highlights() {
 					<img
 						className="d-block w-100 radius"
 						src="images/highlights/nutrition.jpg"
-						alt="Third slide"
 					/>
 
 					<Carousel.Caption>

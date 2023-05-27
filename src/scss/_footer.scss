@@ -1,18 +1,16 @@
 .footer {
 	background-color: $dark-color-transparent;
 
-	font-size: 0.95em;
-
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
 	font-size: 0.75em;
-
 	text-align: center;
+
+	h1 {
+		font-size: 1.5em;
+	}
 
 	h1,
 	p {
-		color: $light-color;
+		color: $background-color;
 	}
 
 	a,

@@ -7,7 +7,7 @@ export default function Mapa() {
 		document.title = 'Farmácia Patuleia | MAPA 48h';
 	}, []);
 	return (
-		<div className="flex-column">
+		<div className="flex-col">
 			<h1 className="show-mobile mobile-title">MAPA 48h</h1>
 			<MapaBanner />
 			<MapaContent />

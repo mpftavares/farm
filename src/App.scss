@@ -64,6 +64,9 @@ p {
 h1 {
 	font-family: $font-highlights;
 	color: $secondary-color;
+}
+
+h2 {
 	font-size: 1.5em;
 }
 
@@ -108,6 +111,9 @@ span {
 	justify-items: center;
 	text-align: center;
 	grid-gap: 1em;
+	@media (min-width: $smartphone-landscape) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .padding {
@@ -133,7 +139,7 @@ span {
 	flex: 1;
 }
 
-.flex-column {
+.flex-col {
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
@@ -148,12 +154,6 @@ span {
 		> * {
 			flex-basis: 50%;
 		}
-	}
-}
-
-.not-found {
-	> * {
-		width: 200px;
 	}
 }
 
@@ -198,9 +198,15 @@ span {
 	}
 }
 
+.not-found {
+	> * {
+		width: 200px;
+	}
+}
+
 .powered {
-	font-size: .5em;
-	line-height: 2em;
+	font-size: 0.6em;
+
 	text-align: center;
 	margin: 0;
 	background-color: $dark-color-transparent;
@@ -208,5 +214,6 @@ span {
 	@media (min-width: $tablet) {
 		background-color: transparent;
 		color: $dark-color-transparent;
+		line-height: 2em;
 	}
 }

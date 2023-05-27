@@ -11,7 +11,6 @@ export default function Sale({sale}) {
 			<figure className="card-img center-content">
 				<img
 					src={`images/sales/${imageUrl}`}
-					alt={title}
 					onClick={() => {
 						dispatch(setSelectedSale(id));
 						dispatch(openModal());
