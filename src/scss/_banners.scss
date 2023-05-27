@@ -1,4 +1,6 @@
 .banner {
+	background-color: $light-color;
+
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -6,9 +8,7 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	min-height: 250px;
-
-	font-size: 1.1em;
+	min-height: 150px;
 
 	h1 {
 		margin: 0;
@@ -24,7 +24,7 @@
 
 .banner-home {
 	height: 300px;
-	background-image: url('images/pharmacy/inside-right.jpg');
+
 	align-items: stretch;
 	justify-content: flex-start;
 	article {
@@ -33,7 +33,6 @@
 		flex-basis: 45%;
 		background-color: $light-color-transparent;
 		padding: 1em;
+		font-size: 1.1em;
 	}
 }
-
-

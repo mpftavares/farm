@@ -1,7 +1,5 @@
 .footer {
 	background-color: $dark-color-transparent;
-	box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
-		rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 
 	font-size: 0.95em;
 
@@ -12,8 +10,14 @@
 
 	text-align: center;
 
-	h1, p {
+	h1,
+	p {
 		color: $light-color;
+	}
+
+	a,
+	span {
+		color: $secondary-color-transparent;
 	}
 
 	@media (min-width: $tablet) {
@@ -21,9 +25,16 @@
 		justify-content: space-evenly;
 		background-color: $light-color;
 		border-radius: $radius;
-
-		h1, p {
+		box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px,
+			rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+		h1,
+		p {
 			color: $dark-color-transparent;
+		}
+
+		a,
+		span {
+			color: $secondary-color;
 		}
 
 		a,

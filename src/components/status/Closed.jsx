@@ -6,9 +6,9 @@ export default function Closed() {
 const isPharmacyOpen = isOpen();
 
 	return isPharmacyOpen ? null : (
-		<section className="box padding animated-background">
+		<section className="box padding center-content dark-background">
 			<h1>Estamos encerrados</h1>
-			<p className='margin-bottom'>Pode contactar-nos através do formulário</p>
+			<p className='margin-bottom'>Contacte-nos através do formulário disponível</p>
             <ContactBtn/>
 		</section>
 	);

@@ -1,0 +1,43 @@
+.light-background {
+	background-color: $light-color;
+}
+
+.dark-background {
+
+	background-color: $dark-color-transparent;
+	h1,
+	p {
+		color: $light-color;
+	}
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-background {
+overflow: hidden;
+background: linear-gradient(
+    45deg,
+    $primary-color,
+    $secondary-color,
+    $accent-color
+);
+background-size: 200% 200%;
+animation: gradientAnimation 10s ease infinite;
+
+h1,
+p {
+    text-align: center;
+    color: $light-color;
+}
+}
+
