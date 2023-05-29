@@ -520,6 +520,10 @@ span {
   font-size: 1.1em;
 }
 
+.status h1 {
+  font-size: 2em;
+}
+
 @media (min-width: 768px) {
   .sales-grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

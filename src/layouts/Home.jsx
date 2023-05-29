@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { isOpen } from '../app/isOpen';
 import HomeBanner from '../components/home/HomeBanner';
 import Highlights from '../components/home/Highlights';
 import Open from '../components/status/Open';
@@ -7,13 +6,14 @@ import Closed from '../components/status/Closed';
 import Facebook from '../components/contacts/Facebook';
 import StaticMap from '../components/maps/StaticMap';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Home() {
 	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Home';
 	}, []);
 
-	let isPharmacyOpen = isOpen();
+	const isPharmacyOpen = useSelector((state) => state.status.isOpen);
 
 	return (
 		<>
