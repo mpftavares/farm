@@ -29,5 +29,11 @@
 	@media (min-width: $tablet) {
 		flex-direction: column-reverse;
 		text-align: center;
+		img {
+			transition: 200ms;
+		}
+		img:hover {
+			transform: scale(1.02);
+		}
 	}
 }

@@ -556,6 +556,12 @@ span {
     flex-direction: column-reverse;
     text-align: center;
   }
+  .sale-card img {
+    transition: 200ms;
+  }
+  .sale-card img:hover {
+    transform: scale(1.02);
+  }
 }
 
 .service-card {
