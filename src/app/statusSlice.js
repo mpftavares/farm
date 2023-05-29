@@ -7,7 +7,7 @@ const statusSlice = createSlice({
 		closingTime: null,
 	},
 	reducers: {
-		updatePharmacyStatus: (state, action) => {
+		updateStatus: (state, action) => {
 			state.isOpen = action.payload;
 		},
 		updateClosingTime: (state, action) => {
@@ -16,5 +16,5 @@ const statusSlice = createSlice({
 	},
 });
 
-export const { updatePharmacyStatus, updateClosingTime } = statusSlice.actions;
+export const { updateStatus, updateClosingTime } = statusSlice.actions;
 export default statusSlice.reducer;

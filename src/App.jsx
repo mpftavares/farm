@@ -4,17 +4,12 @@ import './App.css';
 import Footer from './components/Footer';
 import Header from './components/header/Header';
 import SaleModal from './components/sales/SaleModal';
-import { status } from './app/status';
-import { updatePharmacyStatus} from './app/statusSlice';
+import useStatus from './utils/useStatus';
 
 function App() {
 	const isModalOpen = useSelector((state) => state.sales.modal);
 
-	const isPharmacyOpen = status();
-
-	const dispatch = useDispatch();
-
-	dispatch(updatePharmacyStatus(isPharmacyOpen));
+	useStatus();
 
 	return (
 		<>

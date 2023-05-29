@@ -10,34 +10,34 @@ const currentDate = currentTime.toDateString();
 const schedule = data.info.schedule;
 const currentSchedule = schedule[currentDay];
 
-export const status = () => {
-	const holidayList = holidays.map((holiday) =>
-		new Date(holiday.date).toDateString()
-	);
+// export const status = () => {
+// 	const holidayList = holidays.map((holiday) =>
+// 		new Date(holiday.date).toDateString()
+// 	);
 
-	let isOpen = false;
+// 	let isOpen = false;
 
-	if (currentSchedule) {
-		for (const timeslot of currentSchedule) {
-			const [openHour, openMinute] = timeslot.open_time.split(':');
-			const [closeHour, closeMinute] = timeslot.close_time.split(':');
+// 	if (currentSchedule) {
+// 		for (const timeslot of currentSchedule) {
+// 			const [openHour, openMinute] = timeslot.open_time.split(':');
+// 			const [closeHour, closeMinute] = timeslot.close_time.split(':');
 
-			if (
-				(currentHour > openHour && currentHour < closeHour) ||
-				(currentHour === openHour && currentMinute >= openMinute) ||
-				(currentHour === closeHour && currentMinute <= closeMinute)
-			) {
-				isOpen = true;
-			}
-		}
-	}
+// 			if (
+// 				(currentHour > openHour && currentHour < closeHour) ||
+// 				(currentHour === openHour && currentMinute >= openMinute) ||
+// 				(currentHour === closeHour && currentMinute <= closeMinute)
+// 			) {
+// 				isOpen = true;
+// 			}
+// 		}
+// 	}
 
-	if (holidayList.includes(currentDate)) {
-		isOpen = false;
-	}
+// 	if (holidayList.includes(currentDate)) {
+// 		isOpen = false;
+// 	}
 
-	return isOpen;
-};
+// 	return isOpen;
+// };
 
 export const closingTime = () => {
 	let closingTime = '';

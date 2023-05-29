@@ -1,4 +1,4 @@
-import { closingTime } from '../../app/status';
+import { closingTime } from '../../utils/status';
 
 export default function Open() {
 	const openUntil = closingTime();
