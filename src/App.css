@@ -226,6 +226,9 @@ span {
   background-color: rgba(56, 56, 56, 0.8);
   color: rgb(255, 255, 255);
 }
+.btn:hover span {
+  color: rgb(121, 193, 66);
+}
 
 .call-btn,
 .directions-btn,

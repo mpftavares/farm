@@ -3,14 +3,10 @@ import { createSlice } from '@reduxjs/toolkit';
 const saleSlice = createSlice({
 	name: 'sales',
 	initialState: {
-		saleList: [],
 		modal: false,
 		selectedSale: null,
 	},
 	reducers: {
-		getSales: (state, action) => {
-			state.saleList = action.payload;
-		},
 		openModal: (state, action) => {
 			state.modal = !state.modal;
 		},

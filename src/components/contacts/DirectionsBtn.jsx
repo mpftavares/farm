@@ -1,4 +1,4 @@
-import {getDirections} from '../../app/getDirections';
+import { getDirections } from '../../app/directions';
 
 export default function DirectionsBtn() {
 	return (
