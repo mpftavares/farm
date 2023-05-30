@@ -1,4 +1,4 @@
-import useFetch from '../../utils/useFetch';
+import useFetch from '../../utils/fetch';
 import Service from './Service';
 
 export default function ServiceList() {

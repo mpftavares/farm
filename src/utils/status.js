@@ -1,5 +1,7 @@
 import data from '../data.json';
 import holidays from '../holidays.json';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateStatus } from '../app/statusSlice';
 
 const currentTime = new Date();
 const currentDay = currentTime.getDay();
@@ -7,37 +9,38 @@ const currentHour = currentTime.getHours();
 const currentMinute = currentTime.getMinutes();
 const currentDate = currentTime.toDateString();
 
+const holidayList = holidays.map((holiday) =>
+	new Date(holiday.date).toDateString()
+);
+
 const schedule = data.info.schedule;
 const currentSchedule = schedule[currentDay];
 
-// export const status = () => {
-// 	const holidayList = holidays.map((holiday) =>
-// 		new Date(holiday.date).toDateString()
-// 	);
+export const useStatus = () => {
+	let isOpen = useSelector((state) => state.fetch.isOpen);
+	let dispatch = useDispatch();
 
-// 	let isOpen = false;
+	if (currentSchedule) {
+		for (const timeslot of currentSchedule) {
+			const [openHour, openMinute] = timeslot.open_time.split(':');
+			const [closeHour, closeMinute] = timeslot.close_time.split(':');
 
-// 	if (currentSchedule) {
-// 		for (const timeslot of currentSchedule) {
-// 			const [openHour, openMinute] = timeslot.open_time.split(':');
-// 			const [closeHour, closeMinute] = timeslot.close_time.split(':');
+			if (
+				(currentHour > openHour && currentHour < closeHour) ||
+				(currentHour === openHour && currentMinute >= openMinute) ||
+				(currentHour === closeHour && currentMinute <= closeMinute)
+			) {
+				isOpen = true;
+			}
+		}
+	}
 
-// 			if (
-// 				(currentHour > openHour && currentHour < closeHour) ||
-// 				(currentHour === openHour && currentMinute >= openMinute) ||
-// 				(currentHour === closeHour && currentMinute <= closeMinute)
-// 			) {
-// 				isOpen = true;
-// 			}
-// 		}
-// 	}
+	if (holidayList.includes(currentDate)) {
+		isOpen = false;
+	}
 
-// 	if (holidayList.includes(currentDate)) {
-// 		isOpen = false;
-// 	}
-
-// 	return isOpen;
-// };
+	dispatch(updateStatus(isOpen));
+};
 
 export const closingTime = () => {
 	let closingTime = '';

@@ -18,3 +18,4 @@ const statusSlice = createSlice({
 
 export const { updateStatus, updateClosingTime } = statusSlice.actions;
 export default statusSlice.reducer;
+

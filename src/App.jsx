@@ -1,10 +1,10 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import Header from './components/header/Header';
 import SaleModal from './components/sales/SaleModal';
-import useStatus from './utils/useStatus';
+import { useStatus } from './utils/status';
 
 function App() {
 	const isModalOpen = useSelector((state) => state.sales.modal);
@@ -15,7 +15,7 @@ function App() {
 		<>
 			{isModalOpen && <SaleModal />}
 			<main className="App">
-					<Header />
+				<Header />
 				<div className="outlet flex-1 margin-bottom">
 					<Outlet />
 				</div>

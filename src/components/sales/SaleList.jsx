@@ -1,5 +1,5 @@
 import Sale from './Sale';
-import useFetch from '../../utils/useFetch';
+import useFetch from '../../utils/fetch';
 
 export default function SaleList() {
 	const saleList = useFetch('http://localhost:3000/saleList');
