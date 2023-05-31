@@ -17,13 +17,15 @@ const schedule = data.info.schedule;
 const currentSchedule = schedule[currentDay];
 
 export const useStatus = () => {
-	let isOpen = useSelector((state) => state.fetch.isOpen);
+	let isOpen = useSelector((state) => state.status.isOpen);
 	let dispatch = useDispatch();
 
 	if (currentSchedule) {
-		for (const timeslot of currentSchedule) {
-			const [openHour, openMinute] = timeslot.open_time.split(':');
-			const [closeHour, closeMinute] = timeslot.close_time.split(':');
+		for (const timeSlot of currentSchedule) {
+			const [openHourStr, openMinute] = timeSlot.open_time.split(':');
+			const [closeHourStr, closeMinute] = timeSlot.close_time.split(':');
+			const openHour = Number(openHourStr);
+			const closeHour = Number(closeHourStr);
 
 			if (
 				(currentHour > openHour && currentHour < closeHour) ||
@@ -46,9 +48,11 @@ export const closingTime = () => {
 	let closingTime = '';
 
 	if (currentSchedule) {
-		for (const slot of currentSchedule) {
-			const [openHour, openMinute] = slot.open_time.split(':');
-			const [closeHour, closeMinute] = slot.close_time.split(':');
+		for (const timeSlot of currentSchedule) {
+			const [openHourStr, openMinute] = timeSlot.open_time.split(':');
+			const [closeHourStr, closeMinute] = timeSlot.close_time.split(':');
+			const openHour = Number(openHourStr);
+			const closeHour = Number(closeHourStr);
 
 			if (
 				(currentHour > openHour && currentHour < closeHour) ||

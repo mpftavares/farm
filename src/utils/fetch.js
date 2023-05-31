@@ -12,7 +12,7 @@ const useFetch = (url) => {
 			.then((resp) => resp.json())
 			.then((data) => dispatch(setData(data)))
 			.catch((err) => console.log('Error: ', err));
-	}, [url]);
+	}, [url, dispatch]);
 
 	return data;
 };
