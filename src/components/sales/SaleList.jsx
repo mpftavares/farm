@@ -12,7 +12,7 @@ export default function SaleList() {
 	}, [dispatch]);
 
 	if (loading) {
-		return <h1>Loading...</h1>;
+		return <h2>Loading...</h2>;
 	}
 
 	return (

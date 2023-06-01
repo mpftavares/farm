@@ -1,7 +1,6 @@
 import data from '../data.json';
 import holidays from '../holidays.json';
-import { useDispatch, useSelector } from 'react-redux';
-import { updateStatus } from '../app/statusSlice';
+import { useSelector } from 'react-redux';
 
 const currentTime = new Date();
 const currentDay = currentTime.getDay();
@@ -16,9 +15,8 @@ const holidayList = holidays.map((holiday) =>
 const schedule = data.info.schedule;
 const currentSchedule = schedule[currentDay];
 
-export const useStatus = () => {
+export const isOpen = () => {
 	let isOpen = useSelector((state) => state.status.isOpen);
-	let dispatch = useDispatch();
 
 	if (currentSchedule) {
 		for (const timeSlot of currentSchedule) {
@@ -41,7 +39,7 @@ export const useStatus = () => {
 		isOpen = false;
 	}
 
-	dispatch(updateStatus(isOpen));
+	return isOpen;
 };
 
 export const closingTime = () => {

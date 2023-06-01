@@ -12,10 +12,9 @@ const statusSlice = createSlice({
 		},
 		updateClosingTime: (state, action) => {
 			state.closingTime = action.payload;
-		}
+		},
 	},
 });
 
 export const { updateStatus, updateClosingTime } = statusSlice.actions;
 export default statusSlice.reducer;
-

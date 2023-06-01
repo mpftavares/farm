@@ -1,15 +1,23 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import './App.css';
+import { updateStatus } from './app/statusSlice';
 import Footer from './components/Footer';
 import Header from './components/header/Header';
 import SaleModal from './components/sales/SaleModal';
-import { useStatus } from './utils/status';
+import { isOpen } from './utils/status';
 
 function App() {
 	const isModalOpen = useSelector((state) => state.sales.modal);
 
-	useStatus();
+	const isPharmacyOpen = isOpen();
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(updateStatus(isPharmacyOpen));
+	}, [dispatch]);
 
 	return (
 		<>
@@ -21,7 +29,7 @@ function App() {
 				</div>
 
 				<Footer />
-				<p className="powered">Powered by marianatavares &copy; 2023</p>	
+				<p className="powered">Powered by marianatavares &copy; 2023</p>
 			</main>
 		</>
 	);
