@@ -1,12 +1,23 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSales } from '../../app/saleSlice';
 import Sale from './Sale';
-import useFetch from '../../utils/fetch';
 
 export default function SaleList() {
-	const saleList = useFetch('http://localhost:3000/saleList');
+	let dispatch = useDispatch();
+	let { loading, sales } = useSelector((state) => state.sales);
+
+	useEffect(() => {
+		dispatch(getSales());
+	}, [dispatch]);
+
+	if (loading) {
+		return <h1>Loading...</h1>;
+	}
 
 	return (
 		<section className="card-grid sales-grid">
-			{saleList
+			{sales
 				.filter((sale) => new Date(sale.expires) >= new Date())
 				.map((sale, index) => (
 					<Sale
