@@ -613,6 +613,11 @@ span {
   }
 }
 
+@media (min-width: 768px) {
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+}
 .modal-overlay {
   position: fixed;
   z-index: 10;

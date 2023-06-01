@@ -25,3 +25,9 @@
 		}
 	}
 }
+
+@media (min-width: $tablet) {
+	.row-reverse {
+		flex-direction: row-reverse;
+	}
+}

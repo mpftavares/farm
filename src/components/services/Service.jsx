@@ -1,8 +1,13 @@
 export default function Service({ service }) {
-	let { title, imageUrl, description } = service;
+	let { id, title, imageUrl, description } = service;
+
+	const isEvenId = id % 2 != 0;
+	const className = `box service-card light-background margin-0 padding-2 flex-col ${
+		isEvenId ? 'row-reverse' : ''
+	}`;
 
 	return (
-		<article className="box service-card light-background margin-0 padding-2 flex-col">
+		<article className={className}>
 			<img
 				src={`/images/services/${imageUrl}`}
 				className="radius"
