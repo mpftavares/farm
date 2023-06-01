@@ -21,6 +21,7 @@ function App() {
 				</div>
 
 				<Footer />
+				<p className="powered">Powered by marianatavares &copy; 2023</p>	
 			</main>
 		</>
 	);

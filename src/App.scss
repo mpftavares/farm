@@ -33,6 +33,7 @@ body {
 	cursor: default;
 }
 
+// main
 .App {
 	display: flex;
 	flex-direction: column;
@@ -40,7 +41,7 @@ body {
 	min-height: 100vh;
 
 	@media (min-width: $tablet) {
-		padding: 1em;
+		padding: 1em 1em 0 1em;
 	}
 }
 
@@ -82,6 +83,10 @@ span {
 
 .clickable {
 	cursor: pointer;
+}
+
+.cursor-default {
+	cursor: default;
 }
 
 .box {
@@ -201,19 +206,5 @@ span {
 .not-found {
 	> * {
 		width: 200px;
-	}
-}
-
-.powered {
-	font-size: 0.6em;
-
-	text-align: center;
-	margin: 0;
-	background-color: $dark-color-transparent;
-	color: $dark-color;
-	@media (min-width: $tablet) {
-		background-color: transparent;
-		color: $dark-color-transparent;
-		line-height: 2em;
 	}
 }

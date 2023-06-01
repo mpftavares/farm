@@ -48,3 +48,19 @@
 	color: $primary-color;
 	font-size: 0.8em;
 }
+
+
+.powered {
+	font-size: 0.6em;
+
+	text-align: center;
+	margin: 0;
+	background-color: $dark-color-transparent;
+	color: $dark-color;
+	@media (min-width: $tablet) {
+		background-color: transparent;
+		color: $dark-color-transparent;
+		margin-top: 1em;
+	}
+}
+

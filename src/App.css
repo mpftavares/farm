@@ -37,7 +37,7 @@ body {
 }
 @media (min-width: 768px) {
   .App {
-    padding: 1em;
+    padding: 1em 1em 0 1em;
   }
 }
 
@@ -81,6 +81,10 @@ span {
 
 .clickable {
   cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
 }
 
 .box {
@@ -428,6 +432,21 @@ span {
   font-size: 0.8em;
 }
 
+.powered {
+  font-size: 0.6em;
+  text-align: center;
+  margin: 0;
+  background-color: rgba(56, 56, 56, 0.8);
+  color: rgb(56, 56, 56);
+}
+@media (min-width: 768px) {
+  .powered {
+    background-color: transparent;
+    color: rgba(56, 56, 56, 0.8);
+    margin-top: 1em;
+  }
+}
+
 .contact-form h1 {
   font-size: 1.5em;
 }
@@ -719,19 +738,4 @@ span {
 
 .not-found > * {
   width: 200px;
-}
-
-.powered {
-  font-size: 0.6em;
-  text-align: center;
-  margin: 0;
-  background-color: rgba(56, 56, 56, 0.8);
-  color: rgb(56, 56, 56);
-}
-@media (min-width: 768px) {
-  .powered {
-    background-color: transparent;
-    color: rgba(56, 56, 56, 0.8);
-    line-height: 2em;
-  }
 }/*# sourceMappingURL=App.css.map */

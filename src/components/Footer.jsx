@@ -8,9 +8,12 @@ export default function Footer() {
 						location_on
 					</span>
 				</h1>
-
-				<p>Alameda das Linhas de Torres 262-A</p>
-				<p>1750-152 Lisboa</p>
+				<a
+					className="cursor-default"
+					href="intent://38.77343753166,-9.161105400048587#Intent;scheme=geo;action=android.intent.action.VIEW;end">
+					<p>Alameda das Linhas de Torres 262-A</p>
+					<p>1750-152 Lisboa</p>
+				</a>
 			</article>
 			<article>
 				<h1>
