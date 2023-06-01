@@ -19,7 +19,7 @@ const saleSlice = createSlice({
 			state.modal = !state.modal;
 		},
 		setSelectedSale: (state, action) => {
-			state.selectedSale = state.saleList[action.payload].imageUrl;
+			state.selectedSale = state.sales[action.payload].imageUrl;
 		},
 	},
 	extraReducers(builder) {

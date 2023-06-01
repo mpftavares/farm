@@ -586,6 +586,16 @@ span {
   }
 }
 
+.expires {
+  font-size: 0.8em;
+  color: rgb(7, 99, 36);
+}
+@media (min-width: 768px) {
+  .expires {
+    text-align: right;
+  }
+}
+
 .service-card {
   text-align: left;
 }
