@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import store from './app/store';
 import App from './App.jsx';
 import Contacts from './layouts/Contacts.jsx';
@@ -15,7 +15,7 @@ import Mapa from './layouts/Mapa';
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<Provider store={store}>
-			<BrowserRouter>
+			<HashRouter>
 				<Routes>
 					<Route
 						path="/"
@@ -43,7 +43,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 							element={<NotFound />}></Route>
 					</Route>
 				</Routes>
-			</BrowserRouter>
+			</HashRouter>
 		</Provider>
 	</React.StrictMode>
 );
