@@ -19,11 +19,11 @@
 	.call-btn {
 		width: initial;
 	}
-
 }
 
-
-.carousel, .carousel-item, .carousel-item img {
+.carousel,
+.carousel-item,
+.carousel-item img {
 	height: 250px;
 	@media (min-width: $tablet) {
 		height: 300px;

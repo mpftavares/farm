@@ -5,7 +5,7 @@ export default function MapaContent() {
 	return (
 		<section className="box light-background padding mapa">
 			<div className="mapa-description">
-				<article className='center-content'>
+				<article className="center-content">
 					<p>
 						A Farmácia Patuleia é uma Unidade de Apoio ao Hipertenso e realiza a
 						MAPA, assumindo um papel importante na luta contra a hipertensão.

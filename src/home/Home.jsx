@@ -7,8 +7,13 @@ import Facebook from '../features/Facebook';
 import StaticMap from '../features/StaticMap';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { scrollToTop } from '../app/scrollToTop';
 
 export default function Home() {
+	useEffect(() => {
+		scrollToTop();
+	}, []);
+
 	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Home';
 	}, []);

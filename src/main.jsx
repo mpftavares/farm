@@ -8,7 +8,6 @@ import Home from './home/Home.jsx';
 import NotFound from './features/NotFound.jsx';
 import Sales from './sales/Sales.jsx';
 import Services from './services/Services.jsx';
-import './index.css';
 import { Provider } from 'react-redux';
 import Mapa from './mapa/Mapa';
 

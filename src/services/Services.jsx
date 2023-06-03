@@ -1,8 +1,13 @@
 import { useEffect } from 'react';
+import { scrollToTop } from '../app/scrollToTop';
 import ServiceBanner from './ServiceBanner';
 import ServiceList from './ServiceList';
 
 export default function Services() {
+	useEffect(() => {
+		scrollToTop();
+	}, []);
+
 	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Serviços';
 	}, []);

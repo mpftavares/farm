@@ -14,11 +14,11 @@ export default function SaleModal() {
 				close
 			</span>
 
-				<img
-				className='modal-img'
-					src={`images/sales/${selectedSale}`}
-					onClick={() => dispatch(openModal())}
-				/>
+			<img
+				className="modal-img"
+				src={`images/sales/${selectedSale}`}
+				onClick={() => dispatch(openModal())}
+			/>
 		</section>
 	);
 }

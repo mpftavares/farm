@@ -5,8 +5,13 @@ import DirectionsBtn from '../features/DirectionsBtn';
 import Call from '../features/CallBtn';
 import FormLayout from '../features/FormLayout';
 import { useSelector } from 'react-redux';
+import { scrollToTop } from '../app/scrollToTop';
 
 export default function Contacts() {
+	useEffect(() => {
+		scrollToTop();
+	}, []);
+
 	useEffect(() => {
 		document.title = 'Farmácia Patuleia | Contactos';
 	}, []);

@@ -7,7 +7,7 @@ export default function Sale({ sale }) {
 
 	return (
 		<article className={`box light-background sale-card padding-2`}>
-			<div className='description'>
+			<div className="description">
 				<p>{description}</p>
 				<p className="expires">Válido até {expires}</p>
 			</div>

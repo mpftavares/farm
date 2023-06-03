@@ -711,11 +711,15 @@ span {
   width: initial;
 }
 
-.carousel, .carousel-item, .carousel-item img {
+.carousel,
+.carousel-item,
+.carousel-item img {
   height: 250px;
 }
 @media (min-width: 768px) {
-  .carousel, .carousel-item, .carousel-item img {
+  .carousel,
+  .carousel-item,
+  .carousel-item img {
     height: 300px;
   }
 }

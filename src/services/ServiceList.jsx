@@ -13,7 +13,11 @@ export default function ServiceList() {
 	}, [dispatch]);
 
 	if (loading) {
-		return <div className='center-content'><Loader/></div>;
+		return (
+			<div className="center-content">
+				<Loader />
+			</div>
+		);
 	}
 
 	return (
