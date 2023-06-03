@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import MapaBanner from '../components/mapa/MapaBanner';
-import MapaContent from '../components/mapa/MapaContent';
+import MapaBanner from './MapaBanner';
+import MapaContent from './MapaContent';
 
 export default function Mapa() {
 	useEffect(() => {

@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import store from './app/store';
 import App from './App.jsx';
-import Contacts from './layouts/Contacts.jsx';
-import Home from './layouts/Home.jsx';
-import NotFound from './layouts/NotFound.jsx';
-import Sales from './layouts/Sales.jsx';
-import Services from './layouts/Services.jsx';
+import Contacts from './contacts/Contacts.jsx';
+import Home from './home/Home.jsx';
+import NotFound from './features/NotFound.jsx';
+import Sales from './sales/Sales.jsx';
+import Services from './services/Services.jsx';
 import './index.css';
 import { Provider } from 'react-redux';
-import Mapa from './layouts/Mapa';
+import Mapa from './mapa/Mapa';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>

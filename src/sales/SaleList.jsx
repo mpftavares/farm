@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSales } from '../../app/saleSlice';
+import { getSales } from '../app/saleSlice';
+import Loader from '../features/Loader';
 import Sale from './Sale';
 
 export default function SaleList() {
@@ -12,7 +13,7 @@ export default function SaleList() {
 	}, [dispatch]);
 
 	if (loading) {
-		return <h2>Loading...</h2>;
+		return <div className='center-content'><Loader/></div>;
 	}
 
 	return (

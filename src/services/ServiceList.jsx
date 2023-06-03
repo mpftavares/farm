@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getServices } from '../../app/serviceSlice';
+import { getServices } from '../app/serviceSlice';
+import Loader from '../features/Loader';
 import Service from './Service';
 
 export default function ServiceList() {
@@ -12,7 +13,7 @@ export default function ServiceList() {
 	}, [dispatch]);
 
 	if (loading) {
-		return <h2>Loading...</h2>;
+		return <div className='center-content'><Loader/></div>;
 	}
 
 	return (

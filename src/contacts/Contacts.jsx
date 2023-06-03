@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-import Map from '../components/maps/Map';
-import Open from '../components/status/Open';
-import DirectionsBtn from '../components/contacts/DirectionsBtn';
-import Call from '../components/contacts/CallBtn';
-import FormLayout from '../components/contacts/FormLayout';
+import Map from '../features/Map';
+import Open from '../features/Open';
+import DirectionsBtn from '../features/DirectionsBtn';
+import Call from '../features/CallBtn';
+import FormLayout from '../features/FormLayout';
 import { useSelector } from 'react-redux';
 
 export default function Contacts() {

@@ -1,4 +1,4 @@
-import { getDirections } from '../../utils/directions';
+import { getDirections } from '../app/directions';
 
 export default function StaticMap() {
 	const apiKey = 'AIzaSyCxosBXe5qZ96cgCqV9966gIZ8Js0wQXhU';

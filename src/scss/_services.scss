@@ -1,5 +1,5 @@
 .service-card {
-	text-align: left;
+	text-align: center;
 
 	img {
 		height: 150px;
@@ -15,6 +15,7 @@
 		flex-direction: row;
 		gap: 1em;
 		align-items: center;
+		text-align: right;
 
 		img {
 			height: 100%;
@@ -29,5 +30,6 @@
 @media (min-width: $tablet) {
 	.row-reverse {
 		flex-direction: row-reverse;
+		text-align: left;
 	}
 }

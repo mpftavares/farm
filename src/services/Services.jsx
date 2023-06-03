@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import ServiceBanner from '../components/services/ServiceBanner';
-import ServiceList from '../components/services/ServiceList';
+import ServiceBanner from './ServiceBanner';
+import ServiceList from './ServiceList';
 
 export default function Services() {
 	useEffect(() => {

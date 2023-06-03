@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import HomeBanner from '../components/home/HomeBanner';
-import Highlights from '../components/home/Highlights';
-import Open from '../components/status/Open';
-import Closed from '../components/status/Closed';
-import Facebook from '../components/contacts/Facebook';
-import StaticMap from '../components/maps/StaticMap';
+import HomeBanner from './HomeBanner';
+import Highlights from './Highlights';
+import Open from '../features/Open';
+import Closed from '../features/Closed';
+import Facebook from '../features/Facebook';
+import StaticMap from '../features/StaticMap';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 

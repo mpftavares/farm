@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { closeNav, hamburgerClick } from '../../app/headerSlice';
+import { closeNav, hamburgerClick } from '../app/headerSlice';
 import Hamburger from './Hamburger';
 import Nav from './Nav';
 

@@ -1,4 +1,4 @@
-import ContactBtn from '../contacts/ContactBtn';
+import ContactBtn from '../features/ContactBtn';
 
 export default function Closed() {
 

@@ -189,7 +189,7 @@ span {
 }
 .animated-background {
   overflow: hidden;
-  background: linear-gradient(45deg, rgb(7, 99, 36), rgb(121, 193, 66), rgb(154, 205, 50));
+  background: linear-gradient(45deg, rgb(7, 99, 36), rgb(121, 193, 66), #9acd32);
   background-size: 200% 200%;
   animation: gradientAnimation 10s ease infinite;
 }
@@ -221,7 +221,7 @@ span {
 .btn {
   font-family: "Raleway", sans-serif;
   font-size: 1.1em;
-  background-color: rgb(154, 205, 50);
+  background-color: #9acd32;
   color: rgb(255, 255, 255);
   padding: 10px 15px;
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
@@ -326,7 +326,7 @@ span {
   padding: 0.3em 0.5em;
 }
 .nav a:hover, .nav a:active {
-  background-color: rgb(154, 205, 50);
+  background-color: #9acd32;
   border-radius: 4px;
 }
 @media (min-width: 768px) {
@@ -338,7 +338,7 @@ span {
   }
   .nav a:hover, .nav a.active {
     background-color: transparent;
-    border-bottom: 2px solid rgb(154, 205, 50);
+    border-bottom: 2px solid #9acd32;
     border-radius: 0;
   }
 }
@@ -349,10 +349,10 @@ span {
   }
   .nav a:hover {
     background-color: transparent;
-    border-bottom: 3px solid rgb(154, 205, 50);
+    border-bottom: 3px solid #9acd32;
   }
   .nav a.active {
-    border-bottom: 3px solid rgb(154, 205, 50);
+    border-bottom: 3px solid #9acd32;
   }
 }
 
@@ -520,7 +520,7 @@ span {
 .banner h1 {
   margin: 0;
   flex-basis: 35%;
-  color: rgb(154, 205, 50);
+  color: #9acd32;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 4px;
   text-align: end;
@@ -597,7 +597,7 @@ span {
 }
 
 .service-card {
-  text-align: left;
+  text-align: center;
 }
 .service-card img {
   height: 150px;
@@ -613,6 +613,7 @@ span {
     flex-direction: row;
     gap: 1em;
     align-items: center;
+    text-align: right;
   }
   .service-card img {
     height: 100%;
@@ -626,6 +627,7 @@ span {
 @media (min-width: 768px) {
   .row-reverse {
     flex-direction: row-reverse;
+    text-align: left;
   }
 }
 .modal-overlay {

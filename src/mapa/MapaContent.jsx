@@ -1,5 +1,5 @@
 import { Accordion } from 'react-bootstrap';
-import Appointment from '../contacts/Appointment';
+import Appointment from '../features/Appointment';
 
 export default function MapaContent() {
 	return (

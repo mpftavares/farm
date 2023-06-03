@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import SaleList from '../components/sales/SaleList';
-import SalesBanner from '../components/sales/SalesBanner';
+import SaleList from './SaleList';
+import SalesBanner from './SalesBanner';
 
 export default function Sales() {
 	useEffect(() => {
