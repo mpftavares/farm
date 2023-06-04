@@ -9,7 +9,7 @@ export default function Service({ service }) {
 	return (
 		<article className={className}>
 			<img
-				src={`/images/services/${imageUrl}`}
+				src={`images/services/${imageUrl}`}
 				className="radius"
 			/>
 			<div className="flex-col">

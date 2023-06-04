@@ -6,7 +6,7 @@ export default function FormLayout() {
 			<figure className="show-laptop contact-form-img">
 				<img
 					className="radius"
-					src="../../images/pharmacy/inside-left.jpg"
+					src="images/pharmacy/inside-left.jpg"
 				/>
 			</figure>
 			<Form />

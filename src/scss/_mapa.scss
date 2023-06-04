@@ -11,12 +11,6 @@
 
 	.mapa-description {
 		@media (min-width: $tablet) {
-			.call-btn {
-				width: initial;
-			}
-		}
-
-		@media (min-width: $laptop) {
 			display: flex;
 			gap: 2em;
 

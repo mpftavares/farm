@@ -663,11 +663,6 @@ span {
   text-align: justify;
 }
 @media (min-width: 768px) {
-  .mapa .mapa-description .call-btn {
-    width: initial;
-  }
-}
-@media (min-width: 992px) {
   .mapa .mapa-description {
     display: flex;
     gap: 2em;
