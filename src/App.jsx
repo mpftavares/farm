@@ -7,13 +7,8 @@ import Footer from './features/Footer';
 import Header from './header/Header';
 import SaleModal from './sales/SaleModal';
 import { isOpen } from './app/status';
-import data from './data.json';
-import holidays from './holidays.json';
 
 function App() {
-	// to include JSON files on build
-	data;
-	holidays;
 
 	const isModalOpen = useSelector((state) => state.sales.modal);
 

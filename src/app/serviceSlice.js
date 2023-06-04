@@ -1,10 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
+// export const getServices = createAsyncThunk(
+// 	'[Services] getServices',
+// 	async () =>
+// 		await fetch('http://localhost:3000/serviceList').then((resp) => resp.json())
+// );
+
 export const getServices = createAsyncThunk(
 	'[Services] getServices',
 	async () =>
-		await fetch('http://localhost:3000/serviceList').then((resp) => resp.json())
-);
+	  await fetch('https://joaogoncalves.net/flag/mariana/data.json')
+		.then((resp) => resp.json())
+		.then((data) => data.serviceList)
+  );
 
 const serviceSlice = createSlice({
 	name: '[Services] services',
