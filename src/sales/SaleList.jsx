@@ -6,7 +6,7 @@ import Sale from './Sale';
 
 export default function SaleList() {
 	let dispatch = useDispatch();
-	let { loading, sales } = useSelector((state) => state.sales);
+	let { loading, sales, error } = useSelector((state) => state.sales);
 
 	useEffect(() => {
 		dispatch(getSales());
@@ -18,6 +18,10 @@ export default function SaleList() {
 				<Loader />
 			</div>
 		);
+	}
+
+	if (error) {
+		return <span>Error loading data</span>;
 	}
 
 	return (

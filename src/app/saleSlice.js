@@ -13,6 +13,7 @@ const saleSlice = createSlice({
 		modal: false,
 		selectedSale: null,
 		loading: false,
+		error: false,
 	},
 	reducers: {
 		openModal: (state, action) => {
@@ -33,6 +34,7 @@ const saleSlice = createSlice({
 			})
 			.addCase(getSales.rejected, (state) => {
 				state.loading = false;
+				state.error = true;
 			});
 	},
 });

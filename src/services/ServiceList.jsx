@@ -6,7 +6,7 @@ import Service from './Service';
 
 export default function ServiceList() {
 	let dispatch = useDispatch();
-	const { loading, services } = useSelector((state) => state.services);
+	const { loading, services, error } = useSelector((state) => state.services);
 
 	useEffect(() => {
 		dispatch(getServices());
@@ -18,6 +18,10 @@ export default function ServiceList() {
 				<Loader />
 			</div>
 		);
+	}
+
+	if (error) {
+		return <span>Error loading data</span>;
 	}
 
 	return (

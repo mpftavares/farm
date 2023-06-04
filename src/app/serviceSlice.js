@@ -11,6 +11,7 @@ const serviceSlice = createSlice({
 	initialState: {
 		services: [],
 		loading: false,
+		error: false,
 	},
 	reducers: {},
 	extraReducers: (builder) => {
@@ -24,6 +25,7 @@ const serviceSlice = createSlice({
 			})
 			.addCase(getServices.rejected, (state) => {
 				state.loading = false;
+				state.error = true;
 			});
 	},
 });
