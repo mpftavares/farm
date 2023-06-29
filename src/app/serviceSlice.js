@@ -9,7 +9,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const getServices = createAsyncThunk(
 	'[Services] getServices',
 	async () =>
-	  await fetch('https://joaogoncalves.net/flag/mariana/data.json')
+		await fetch('https://mpftavares.github.io/farm_patuleia/data.json')
 		.then((resp) => resp.json())
 		.then((data) => data.serviceList)
   );
