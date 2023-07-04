@@ -1,9 +1,9 @@
 {
-  "name": "farm",
-  "private": true,
+  "name": "farm_patuleia",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mpftavares.github.io/farm_patuleia",  
+  "homepage": "https://mpftavares.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
