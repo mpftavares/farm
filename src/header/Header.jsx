@@ -17,7 +17,7 @@ export default function Header() {
 				<Link to="/home">
 					<figure className="logo show-mobile">
 						<img
-							src="images/logo/resolution-logo-white-on-transparent-background.png"
+							src="images/logo/logo-white-on-transparent-background.png"
 							alt="logo"
 						/>
 					</figure>
