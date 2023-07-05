@@ -1,4 +1,4 @@
-import data from '../data.json';
+import data from '../db.json';
 import holidays from '../holidays.json';
 import { useSelector } from 'react-redux';
 

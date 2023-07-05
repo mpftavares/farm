@@ -9,7 +9,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const getServices = createAsyncThunk(
 	'[Services] getServices',
 	async () =>
-		await fetch('https://github.com/mpftavares/farm_patuleia/blob/master/src/data.json')
+		await fetch('https://github.com/mpftavares/farm_patuleia/blob/gh-pages/https://github.com/mpftavares/farm_patuleia/blob/gh-pages/db.json')
 			.then((resp) => resp.json())
 			.then((data) => data.serviceList)
 );
