@@ -3,6 +3,7 @@ import navSlice from './headerSlice';
 import saleSlice from './saleSlice';
 import statusSlice from './statusSlice';
 import serviceSlice from './serviceSlice';
+import directionSlice from './directionSlice';
 
 export default configureStore({
 	reducer: {
@@ -10,5 +11,6 @@ export default configureStore({
 		sales: saleSlice,
 		status: statusSlice,
 		services: serviceSlice,
+		directions: directionSlice,
 	},
 });

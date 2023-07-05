@@ -7,10 +7,14 @@ import Footer from './features/Footer';
 import Header from './header/Header';
 import SaleModal from './sales/SaleModal';
 import { isOpen } from './app/status';
+import DirectionModal from './features/DirectionModal';
+
 
 function App() {
 
-	const isModalOpen = useSelector((state) => state.sales.modal);
+	const isSaleModalOpen = useSelector((state) => state.sales.modal);
+
+	const isDirectionModalOpen = useSelector((state) => state.directions.modal);
 
 	const isPharmacyOpen = isOpen();
 
@@ -22,7 +26,8 @@ function App() {
 
 	return (
 		<>
-			{isModalOpen && <SaleModal />}
+			{isSaleModalOpen && <SaleModal />}
+			{isDirectionModalOpen && <DirectionModal />}
 			<main className="App">
 				<Header />
 				<div className="outlet flex-1 margin-bottom">

@@ -17,7 +17,8 @@ img {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
@@ -643,7 +644,7 @@ span {
 
 .modal-img {
   display: block;
-  max-width: 80vh;
+  max-width: 80vw;
   padding: 5px;
   cursor: zoom-out;
 }
@@ -653,6 +654,13 @@ span {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.modal-content {
+  max-width: 80vw;
+}
+.modal-content h1 {
+  font-size: 1.5em;
 }
 
 .mapa h2 {
