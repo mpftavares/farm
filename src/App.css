@@ -634,6 +634,7 @@ span {
 }
 .modal-overlay {
   position: fixed;
+  padding: 1em;
   z-index: 10;
   top: 0;
   left: 0;
@@ -657,7 +658,7 @@ span {
 }
 
 .modal-content {
-  max-width: 80vw;
+  max-width: 500px;
 }
 .modal-content h1 {
   font-size: 1.5em;

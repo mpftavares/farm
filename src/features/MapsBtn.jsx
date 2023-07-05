@@ -5,8 +5,10 @@ export default function MapsBtn() {
 		<button
 			onClick={getDirections}
 			className="clickable directions-btn btn center-content">
-			<span className="material-symbols-outlined">directions</span>
-			Abrir Maps
+			<p>
+				<span className="material-symbols-outlined">directions</span>
+				Abrir Maps
+			</p>
 		</button>
 	);
 }
