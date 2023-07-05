@@ -17,13 +17,13 @@ export default function Header() {
 				<Link to="/home">
 					<figure className="logo show-mobile">
 						<img
-							src="images/logo/farmacia-patuleia-high-resolution-logo-white-on-transparent-background.png"
+							src="images/logo/logo-white-on-transparent-background.png"
 							alt="logo"
 						/>
 					</figure>
 					<figure className="logo hide-mobile">
 						<img
-							src="images/logo/farmacia-patuleia-high-resolution-logo-color-on-transparent-background.png"
+							src="images/logo/logo-color-on-transparent-background.png"
 							alt="logo"
 						/>
 					</figure>
