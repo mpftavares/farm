@@ -9,7 +9,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const getSales = createAsyncThunk(
 	'[Sales] getSales',
 	async () =>
-		await fetch('https://github.com/mpftavares/farm_patuleia/blob/gh-pages/db.json')
+		await fetch('https://github.com/mpftavares/farm_patuleia/blob/master/src/db.json')
 			.then((resp) => resp.json())
 			.then((data) => data.saleList)
 );
