@@ -1,11 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// export const getSales = createAsyncThunk(
-// 	'[Sales] getSales',
-// 	async () =>
-// 		await fetch('http://localhost:3000/saleList').then((resp) => resp.json())
-// );
-
 export const getSales = createAsyncThunk(
 	'[Sales] getSales',
 	async () =>
